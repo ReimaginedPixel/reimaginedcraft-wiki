@@ -1,0 +1,105 @@
+{
+  "id": "network-overview",
+  "title": "ReimaginedCraft Network",
+  "scope": "network",
+  "summary": "ReimaginedCraft is a small Minecraft network made up of a lobby server and a minigame server, joined together behind a single connection point. Every player lands in the Hub first, then travels to the Diamond Trophy minigame server (and back) without needing to reconnect manually. An account's identity, rank, and most of its progress follow the player between servers rather than resetting on each one.",
+  "how_it_works": "When a player connects, they are placed on the Hub, the network's lobby. The Hub is where players spawn in, chat, use cosmetics, play the parkour course, fight in the PvP zone, and pick what to do next. From the Hub, players travel to Diamond Trophy, the network's co-op minigame server, either through the server selector menu, portal NPCs, or by typing the game's command directly. Diamond Trophy hosts Quest for the Golden Trophy, a party-based dungeon run through a series of acts; when a run or session ends (or if a player leaves), they are sent back to the Hub automatically. If the Hub itself is temporarily restarting or unreachable, a player is held briefly on a bare holding server called Limbo until it comes back, rather than being disconnected outright. Because a shared account system sits underneath both servers, a player's rank, friends list, tags, network level, and collected bag items look and behave the same no matter which server they are standing on; only a handful of things (explained below) are tied to whichever server a player is currently on.",
+  "how_to_access": "Connect to the network with the address provided by network staff or its community links; new accounts are placed on the Hub automatically on first join. Moving between the Hub and Diamond Trophy is done in-game, either via the Hub's server selector menu/hotbar item (also reachable with /servers, /selector, /play, /games or /minigames), a portal NPC, or the /gt (or /goldentrophy) command to join or return to a Golden Trophy game.",
+  "entries": [
+    {
+      "id": "hub",
+      "name": "Hub",
+      "description": "The network's lobby and first-join server. It is a social and cosmetic space rather than a minigame: players spawn here between games, chat, browse the store and their profile, equip cosmetics, and play two standalone lobby activities (a parkour course and a PvP arena).",
+      "category": "server",
+      "how_to_get": "Automatic — every player is placed on the Hub the first time they connect, and returns here by default after leaving Diamond Trophy or using /hub.",
+      "how_to_use": "Use /hub or /spawn to return here from anywhere. From the Hub, open the server selector to travel to Diamond Trophy, open your profile with /profile (aliases /me, /prof) to see friends/stats/achievements/tags/leaderboards, open the store with /store (aliases /shop, /buy), or try the parkour course with /parkour start.",
+      "rank_requirement": null,
+      "icon_hint": "a small floating grass-and-stone lobby island with a signpost and a hot-air-balloon-style banner, cheerful pastel colors",
+      "notes": "Player rank/permissions are anchored on the Hub, but a rank itself is recognized across the whole network, not just here."
+    },
+    {
+      "id": "diamondtrophy",
+      "name": "Diamond Trophy",
+      "description": "The network's minigame server, home to Quest for the Golden Trophy: a co-op run through a sequence of combat acts, with a shared pre-lobby, private party \"dorm\" rooms, and rank-based room sizes.",
+      "category": "server",
+      "how_to_get": "Reached from the Hub via the server selector menu, a portal NPC, or by typing /gt (or /goldentrophy) directly.",
+      "how_to_use": "Use /gt (or /goldentrophy) to join a game, leave one, ready up, or follow/accept/decline an invite from a partied friend. Use /dormroom or /room to return to your party's private dorm room while waiting. Team up first with /party invite, accept, decline, list, kick and leader (or the shorthand /invite <player>), which also lets you pull a friend over from another server into your party.",
+      "rank_requirement": null,
+      "icon_hint": "a golden trophy cup sitting on a small floating arena platform with faint sparkle particles",
+      "notes": "Everything about the actual game — mob encounters, acts, dorm rooms, and the party system used to team up for a run — lives entirely on this server; the Hub only points players toward it."
+    },
+    {
+      "id": "limbo",
+      "name": "Limbo",
+      "description": "A minimal fallback holding area, not a place to play. It only appears if the Hub is temporarily down or restarting.",
+      "category": "server",
+      "how_to_get": "Never entered on purpose — a player is placed here automatically only if the Hub cannot be reached at the moment they connect or are sent back.",
+      "how_to_use": "There is nothing to do here; it exists purely so a player stays connected instead of being kicked. Once the Hub is available again, rejoining normally returns a player to it.",
+      "rank_requirement": null,
+      "icon_hint": "a plain grey void platform with a single flickering lantern, sparse and empty",
+      "notes": "No shops, cosmetics, or commands function here — it is intentionally bare."
+    }
+  ],
+  "systems_breakdown": [
+    {
+      "system": "ranks",
+      "scope": "network",
+      "note": "A player's purchased or earned rank is recognized on every server; rank data is centrally managed and not something a player sets per server."
+    },
+    {
+      "system": "friends",
+      "scope": "network",
+      "note": "The friends list, requests, and online/offline + which-server presence are the same everywhere and update in real time even across servers."
+    },
+    {
+      "system": "party",
+      "scope": "diamondtrophy",
+      "note": "Grouping up with /party is a Diamond Trophy feature (used for shared dorm rooms and game invites), but it can invite friends who are currently on a different server, pulling them over automatically."
+    },
+    {
+      "system": "tags",
+      "scope": "network",
+      "note": "Chat tags a player equips show the same way on every server."
+    },
+    {
+      "system": "levels-achievements",
+      "scope": "network",
+      "note": "The account-wide network level (and achievements) are shared everywhere and visible with /level; Diamond Trophy additionally has its own separate in-game level track that only tracks progress made there."
+    },
+    {
+      "system": "bag",
+      "scope": "network",
+      "note": "Everything a player collects — items, cosmetics, materials, crate rewards — lives in one bag that is identical no matter which server they open it from."
+    },
+    {
+      "system": "daily-chest",
+      "scope": "network",
+      "note": "The daily reward chest and its streak are shared network-wide, though its rewards can include both network coins and Diamond Trophy coins."
+    },
+    {
+      "system": "currencies",
+      "scope": "mixed",
+      "note": "Some currency is shared across the whole network (a network coin wallet, used for network-wide purchases), while Diamond Trophy also awards its own in-game coins earned and spent only within that server's games."
+    },
+    {
+      "system": "quest-board",
+      "scope": "hub",
+      "note": "The quest board menu is opened on the Hub (by command or a placed notice-board), but quests can track things a player does anywhere on the network, and rewards pay out network-wide."
+    },
+    {
+      "system": "cosmetics",
+      "scope": "hub",
+      "note": "Cosmetics are bought/equipped through Hub menus, but once owned they are stored in the network-wide bag and stay equipped when a player travels to Diamond Trophy."
+    },
+    {
+      "system": "materials",
+      "scope": "mixed",
+      "note": "Crafting materials are gathered while playing and are stored in the shared network-wide bag; the open question below notes what could not be confirmed about exactly where each material type is gathered."
+    }
+  ],
+  "related_systems": ["ranks", "friends-party", "tags", "levels-achievements", "bag", "daily-chest", "currencies", "quest-board", "hub-cosmetics", "cosmetics-altar", "materials-and-rarity", "hub-guis", "diamondtrophy-gameplay"],
+  "open_questions": [
+    "Whether any part of the quest board, cosmetics, or materials systems can be interacted with directly on Diamond Trophy (versus only stored/synced there) was not independently re-verified for this file — see each system's own data file for the authoritative breakdown.",
+    "The exact ids other systems use in their own data files are assumed to match the slugs listed in related_systems/systems_breakdown here; confirm against those files if the ids differ."
+  ]
+}

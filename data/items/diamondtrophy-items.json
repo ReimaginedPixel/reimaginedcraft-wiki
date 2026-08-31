@@ -1,0 +1,151 @@
+{
+  "id": "diamondtrophy-items",
+  "title": "Diamond Trophy Items & Props",
+  "scope": "diamondtrophy",
+  "summary": "Diamond Trophy has no fixed class/kit system -- players grab weapons for free from armory racks each run, and spend the run's own score-coin currency on purely cosmetic weapon skins. This file also covers the FistWatch menu item and the dorm's basketball toy.",
+  "how_it_works": "There is no loadout-select screen: a player's weapon is whatever they physically take from a weapon rack in the armory (and any acts that place extra racks), and it resets to nothing at the start of the next run. Cosmetic weapon skins bought with score coins are purely visual reskins of the same weapon types and carry no gameplay difference.",
+  "entries": [
+    {
+      "id": "fist-watch",
+      "name": "FistWatch",
+      "description": "A wrist-mounted watch/communicator item automatically given to every player on the Diamond Trophy server. It's the main out-of-combat menu: joining or making a room, your party, your friends and invites, and your owned weapon skins all live behind it.",
+      "category": "gui-icon",
+      "how_to_get": "Given automatically in your last hotbar slot whenever you join the server or a game; it can't be dropped, moved, or stored away.",
+      "how_to_use": "Right-click it to open the Watch menu.",
+      "rank_requirement": null,
+      "icon_hint": "a chunky orange-and-cream wrist-mounted digital watch/communicator, glowing screen, sci-fi game-show prop style",
+      "notes": "Automatically removed when you leave a game or dorm.",
+      "icon": "assets/icons/diamondtrophy-items/fist-watch.png"
+    },
+    {
+      "id": "armory-weapon-racks",
+      "name": "Armory Weapon Racks",
+      "description": "Wall-mounted weapon racks (invisible item frames holding a visible weapon) found in the armory and scattered through the acts. They are the closest thing Diamond Trophy has to a loadout system: no menu, just walk up and take one.",
+      "category": "other",
+      "how_to_get": "Left- or right-click a loaded rack to take its weapon -- a sword, bow, crossbow or shield. Each individual rack gives out one weapon and stays empty until the next run restocks it.",
+      "how_to_use": "Carry the weapon into the acts. A sword can dual-wield an offhand copy of itself for a lighter side-attack (right-click an enemy with it), and a shield can be carried alongside any weapon. A sword and a bow cannot be held at the same time, but a crossbow can be paired with a sword. Bows and crossbows never run out of arrows during a run.",
+      "rank_requirement": null,
+      "icon_hint": "a wooden weapon rack mounted on a stone armory wall, holding a sword, a bow and a small round shield",
+      "notes": null
+    },
+    {
+      "id": "lava-sword",
+      "name": "Lava Sword",
+      "description": "A cosmetic sword skin with a glowing orange-to-red lava finish. Purely visual -- no gameplay difference from a plain sword.",
+      "category": "cosmetic",
+      "how_to_get": "Buy for 250 score coins from the weapon skin wall in the armory (right-click the framed skin, then confirm the purchase in chat).",
+      "how_to_use": "Equip from the FistWatch's Bag screen; only one sword skin can be equipped at a time.",
+      "rank_requirement": null,
+      "icon_hint": "a sword with a glowing lava-orange to deep-red blade, faint ember particles",
+      "icon": "assets/icons/diamondtrophy-items/lava-sword.png"
+    },
+    {
+      "id": "umbrella-sword",
+      "name": "Umbrella Sword",
+      "description": "A cosmetic sword skin with a cool cyan-to-blue gradient finish.",
+      "category": "cosmetic",
+      "how_to_get": "Buy for 100 score coins from the weapon skin wall in the armory.",
+      "how_to_use": "Equip from the FistWatch's Bag screen; only one sword skin can be equipped at a time.",
+      "rank_requirement": null,
+      "icon_hint": "a sword blade in a bright cyan-to-blue gradient, sleek and glossy",
+      "icon": "assets/icons/diamondtrophy-items/umbrella-sword.png"
+    },
+    {
+      "id": "red-sword",
+      "name": "Red Sword",
+      "description": "A cosmetic sword skin in a deep red-to-orange gradient -- the cheapest sword skin on the wall.",
+      "category": "cosmetic",
+      "how_to_get": "Buy for 20 score coins from the weapon skin wall in the armory.",
+      "how_to_use": "Equip from the FistWatch's Bag screen; only one sword skin can be equipped at a time.",
+      "rank_requirement": null,
+      "icon_hint": "a sword with a dark maroon-to-red gradient blade",
+      "icon": "assets/icons/diamondtrophy-items/red-sword.png"
+    },
+    {
+      "id": "construction-bow",
+      "name": "Construction Bow",
+      "description": "A cosmetic bow skin styled in warm orange-to-yellow tones.",
+      "category": "cosmetic",
+      "how_to_get": "Buy for 150 score coins from the weapon skin wall in the armory.",
+      "how_to_use": "Equip from the FistWatch's Bag screen; only one bow skin can be equipped at a time.",
+      "rank_requirement": null,
+      "icon_hint": "a wooden bow with orange-to-yellow banded limbs, hazard-stripe style",
+      "icon": "assets/icons/diamondtrophy-items/construction-bow.png"
+    },
+    {
+      "id": "natural-bow",
+      "name": "Natural Bow",
+      "description": "A cosmetic bow skin in an earthy green gradient finish.",
+      "category": "cosmetic",
+      "how_to_get": "Buy for 200 score coins from the weapon skin wall in the armory.",
+      "how_to_use": "Equip from the FistWatch's Bag screen; only one bow skin can be equipped at a time.",
+      "rank_requirement": null,
+      "icon_hint": "a wooden bow with a mossy green-to-light-green gradient and leaf-like grain",
+      "icon": "assets/icons/diamondtrophy-items/natural-bow.png"
+    },
+    {
+      "id": "construction-crossbow",
+      "name": "Construction Crossbow",
+      "description": "A cosmetic crossbow skin styled in warm orange-to-yellow tones, matching the Construction Bow.",
+      "category": "cosmetic",
+      "how_to_get": "Buy for 150 score coins from the weapon skin wall in the armory.",
+      "how_to_use": "Equip from the FistWatch's Bag screen; only one crossbow skin can be equipped at a time.",
+      "rank_requirement": null,
+      "icon_hint": "a crossbow with orange-to-yellow banded limbs, hazard-stripe style",
+      "icon": "assets/icons/diamondtrophy-items/construction-crossbow.png"
+    },
+    {
+      "id": "black-shield",
+      "name": "Black Shield",
+      "description": "A cosmetic shield skin in a matte grey-to-black gradient -- one of the cheapest skins on the wall.",
+      "category": "cosmetic",
+      "how_to_get": "Buy for 5 score coins from the weapon skin wall in the armory.",
+      "how_to_use": "Equip from the FistWatch's Bag screen.",
+      "rank_requirement": null,
+      "icon_hint": "a round wooden shield painted in a dark slate-to-black gradient",
+      "icon": "assets/icons/diamondtrophy-items/black-shield.png"
+    },
+    {
+      "id": "purple-shield",
+      "name": "Purple Shield",
+      "description": "A cosmetic shield skin in a violet-to-indigo gradient.",
+      "category": "cosmetic",
+      "how_to_get": "Buy for 5 score coins from the weapon skin wall in the armory.",
+      "how_to_use": "Equip from the FistWatch's Bag screen.",
+      "rank_requirement": null,
+      "icon_hint": "a round wooden shield painted in a bright violet-to-indigo gradient",
+      "icon": "assets/icons/diamondtrophy-items/purple-shield.png"
+    },
+    {
+      "id": "galaxy-shield",
+      "name": "Galaxy Shield",
+      "description": "A cosmetic shield skin styled like a starry night sky in purple and pink tones.",
+      "category": "cosmetic",
+      "how_to_get": "Buy for 5 score coins from the weapon skin wall in the armory.",
+      "how_to_use": "Equip from the FistWatch's Bag screen.",
+      "rank_requirement": null,
+      "icon_hint": "a round wooden shield painted like a starry galaxy in deep purple and pink",
+      "icon": "assets/icons/diamondtrophy-items/galaxy-shield.png"
+    },
+    {
+      "id": "basketball",
+      "name": "Basketball",
+      "description": "A bouncy, throwable toy ball found in the dorm room's social area (and occasionally placed inside a game room, such as one act). It's purely for fun -- realistic bounce-off-the-floor-and-walls physics with no scoring or hoop involved.",
+      "category": "other",
+      "how_to_get": "Right-click (or left-click) a resting ball to pick it up. Each room normally has one \"source\" ball; while it's checked out, a fresh one won't appear at its spot until it's freed up again.",
+      "how_to_use": "Right-click to throw it in the direction you're looking. It bounces off floors and walls, slowing down until it comes to rest (or a thrown ball left alone long enough eventually returns to its spot). You can only carry one basketball at a time, and it can't be taken out of the room it belongs to.",
+      "rank_requirement": null,
+      "icon_hint": "a classic orange basketball with black seam lines and small bounce/motion lines beneath it",
+      "notes": "No hoop or point-scoring mechanic exists for this feature at this time -- it currently plays as a physics toy rather than a competitive minigame with a winner.",
+      "icon": "assets/icons/diamondtrophy-items/basketball.png"
+    }
+  ],
+  "related_systems": [
+    "diamondtrophy-gameplay",
+    "diamondtrophy-guis",
+    "currencies"
+  ],
+  "open_questions": [
+    "Whether a hoop / scoring objective for the basketball is planned but not yet built, versus intentionally just a physics toy, was not documented anywhere found."
+  ]
+}

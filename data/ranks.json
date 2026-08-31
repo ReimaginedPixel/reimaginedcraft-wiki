@@ -1,0 +1,208 @@
+{
+  "id": "ranks",
+  "title": "Ranks",
+  "scope": "network",
+  "summary": "ReimaginedCraft has ten network ranks, from the base Player rank up through five staff/creator ranks to the network Owner. A player's rank is stored once, network-wide, so it looks identical no matter which server (Hub, Diamond Trophy, etc.) they're standing on. Owner, Admin, Moderator, Chat Mod and Media are staff or content-creator ranks handed out by the team; VIP, MVIP, Elite and Champion are the donor ladder. Reaching a higher rank also raises limits in a few other systems, like Diamond Trophy room sizes and Quest Board daily slots.",
+  "how_it_works": "Every player's rank is a single shared value (their LuckPerms primary group) read from one canonical list that every plugin on the network uses, so the ladder's names, colors and badge icons never drift between servers. Any group that isn't one of the ten ranks below - including having no rank at all - is treated as the base Player rank.\n\nRank shows up in several places at once:\n- Chat: your name is drawn in your rank's color with your rank's badge glyph in front of it (the badge needs the server's ItemsAdder resource pack loaded to render as an icon; otherwise it's just the colored name). Hovering a player's name in chat pops up a small card naming their rank.\n- Floating nameplate: the name that floats above a player's head in the world is colored by rank too, on every server.\n- Chat cooldown: each rank has its own minimum delay between chat messages, and it gets shorter the higher the rank - the base Player rank waits the longest, VIP and MVIP wait a little less, Elite less still, and Chat Mod, Media, Champion, Moderator, Admin and Owner can send messages back-to-back with no forced delay at all.\n- Emoji glyphs: only ranked players (VIP and above, plus every staff/creator rank) can use the network's emoji glyphs in chat messages; the base Player rank cannot.\n- Join/leave lines: every rank has its own join and leave chat line. Media and Champion additionally get a distinct arrival line (with their own join sound) instead of the plain line everyone else gets.\n- Message color: Champion and Elite chat messages are tinted (a warm cream for Champion, a light lavender for Elite) instead of plain white/gray like every other rank.\n- Profile menu: opening /profile shows a rank card (badge + colored rank name) for whichever player's profile is open, including friends.\n- Friends list & leaderboards: other players' names show up in their own rank color anywhere a name list appears - the friends list, incoming friend requests, and leaderboard rows.\n- Hub perks: a handful of hub quality-of-life perks (auto-flight around the hub, an extra mid-air double jump, and extra mid-air dash charges on the launcher/glider) exist in the game and are unlocked by permission rather than being available to everyone. Which exact rank tier is granted which of these isn't something a player can see from outside the game.\n\nReaching a higher rank also raises limits in a couple of separately-documented systems - see related_systems for details.",
+  "how_to_access": "Your rank is visible passively any time you talk in chat or open your profile - there's no dedicated rank list command yet. /profile (aliases /me, /prof) shows a rank card for your own account or, from the friends/leaderboard pages, for another player. Clicking your own rank badge in chat currently tries to open a '/ranks' command, but that command doesn't exist on the network yet, so nothing happens. /store (aliases /shop, /buy) is meant to be where VIP/MVIP/Elite/Champion are purchased, but right now it only shows an action-bar message that the store is 'coming soon' - there is no live purchase flow. Until a store goes live, every rank (staff, creator and donor alike) is granted directly by the ReimaginedCraft team.",
+  "entries": [
+    {
+      "id": "owner",
+      "name": "Owner",
+      "color": "#F5802A",
+      "weight": 90,
+      "category": "staff",
+      "description": "The rank held by the person who runs the ReimaginedCraft network.",
+      "how_to_get": "Not obtainable by players - this is the network owner's own rank.",
+      "perks": [
+        "Orange name and badge everywhere a name is shown: chat, the floating nameplate above your head, your profile card, friends list, and leaderboard rows",
+        "No forced delay between chat messages",
+        "Can use the network's emoji glyphs in chat"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a small glowing orange crown with a single gem, Minecraft-item-icon style",
+      "notes": "Highest weight on the ladder (90).",
+      "icon": "assets/icons/ranks/owner.png"
+    },
+    {
+      "id": "admin",
+      "name": "Admin",
+      "color": "#E8484F",
+      "weight": 80,
+      "category": "staff",
+      "description": "Network administrator.",
+      "how_to_get": "Appointed by the ReimaginedCraft team - not purchasable or earned in-game.",
+      "perks": [
+        "Red name and badge everywhere a name is shown: chat, the floating nameplate above your head, your profile card, friends list, and leaderboard rows",
+        "No forced delay between chat messages",
+        "Can use the network's emoji glyphs in chat"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a red shield badge with a small gear or wrench, Minecraft-item-icon style",
+      "notes": null,
+      "icon": "assets/icons/ranks/admin.png"
+    },
+    {
+      "id": "moderator",
+      "name": "Moderator",
+      "color": "#E857AA",
+      "weight": 70,
+      "category": "staff",
+      "description": "Keeps the network safe.",
+      "how_to_get": "Appointed by the ReimaginedCraft team - not purchasable or earned in-game.",
+      "perks": [
+        "Pink/magenta name and badge everywhere a name is shown: chat, the floating nameplate above your head, your profile card, friends list, and leaderboard rows",
+        "No forced delay between chat messages",
+        "Can use the network's emoji glyphs in chat"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a magenta shield or gavel badge, Minecraft-item-icon style",
+      "notes": null,
+      "icon": "assets/icons/ranks/moderator.png"
+    },
+    {
+      "id": "chatmod",
+      "name": "Chat Mod",
+      "color": "#3A86EF",
+      "weight": 60,
+      "category": "staff",
+      "description": "Keeps chat friendly.",
+      "how_to_get": "Appointed by the ReimaginedCraft team - not purchasable or earned in-game.",
+      "perks": [
+        "Blue name and badge everywhere a name is shown: chat, the floating nameplate above your head, your profile card, friends list, and leaderboard rows",
+        "No forced delay between chat messages",
+        "Can use the network's emoji glyphs in chat"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a blue speech-bubble badge with a small checkmark, Minecraft-item-icon style",
+      "notes": null,
+      "icon": "assets/icons/ranks/chatmod.png"
+    },
+    {
+      "id": "media",
+      "name": "Media",
+      "color": "#1FD4A2",
+      "weight": 50,
+      "category": "staff",
+      "description": "Official content creator for the network.",
+      "how_to_get": "Granted by the ReimaginedCraft team to official content creators - not purchasable or earned in-game.",
+      "perks": [
+        "Teal name and badge everywhere a name is shown: chat, the floating nameplate above your head, your profile card, friends list, and leaderboard rows",
+        "No forced delay between chat messages",
+        "Can use the network's emoji glyphs in chat",
+        "Gets its own arrival line when joining the network ('has arrived') with its own join sound, instead of the plain join line everyone else gets"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a teal video-camera badge with a small star, Minecraft-item-icon style",
+      "notes": "Outranks every donor rank (weight 50 vs. Champion's 40) despite not being a moderation rank.",
+      "icon": "assets/icons/ranks/media.png"
+    },
+    {
+      "id": "champion",
+      "name": "Champion",
+      "color": "#F0C84E",
+      "weight": 40,
+      "category": "donor",
+      "description": "The top rank on the donor ladder.",
+      "how_to_get": "Meant to be purchased through the in-game store; the store is not live yet (see how_to_access), so it is currently granted directly by the ReimaginedCraft team.",
+      "perks": [
+        "Gold name and badge everywhere a name is shown: chat, floating nameplate, profile card, friends list, and leaderboard rows",
+        "No forced delay between chat messages",
+        "Can use the network's emoji glyphs in chat",
+        "Chat messages are tinted a warm cream color instead of plain white",
+        "Gets its own arrival line when joining the network ('entered the server') with its own join sound, instead of the plain join line lower ranks get"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a small gold trophy badge with a sparkle, Minecraft-item-icon style",
+      "notes": "A large internal planning document (docs/RANK_PERKS.md) lists many more proposed donor perks - hub cosmetics (auras, trails, hats, pets, gadgets), priority queue tiers, a monthly wallet-coin stipend, per-game cosmetic skin lines, and more - but almost all of it is marked as not yet built, so it is left out of this entry. See open_questions.",
+      "icon": "assets/icons/ranks/champion.png"
+    },
+    {
+      "id": "elite",
+      "name": "Elite",
+      "color": "#D867D8",
+      "weight": 30,
+      "category": "donor",
+      "description": "The third tier of the donor ladder.",
+      "how_to_get": "Meant to be purchased through the in-game store; the store is not live yet (see how_to_access), so it is currently granted directly by the ReimaginedCraft team.",
+      "perks": [
+        "Purple/magenta name and badge everywhere a name is shown: chat, floating nameplate, profile card, friends list, and leaderboard rows",
+        "Only a 1-second minimum delay between chat messages (shorter than VIP/MVIP, longer than the ranks above it which have none)",
+        "Can use the network's emoji glyphs in chat",
+        "Chat messages are tinted a light lavender color instead of plain white"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a purple gem badge with a small spark, Minecraft-item-icon style",
+      "notes": "See the Champion entry's note about the larger, mostly-unbuilt perk catalog.",
+      "icon": "assets/icons/ranks/elite.png"
+    },
+    {
+      "id": "mvip",
+      "name": "MVIP",
+      "color": "#4ECDE0",
+      "weight": 20,
+      "category": "donor",
+      "description": "The second tier of the donor ladder.",
+      "how_to_get": "Meant to be purchased through the in-game store; the store is not live yet (see how_to_access), so it is currently granted directly by the ReimaginedCraft team.",
+      "perks": [
+        "Cyan name and badge everywhere a name is shown: chat, floating nameplate, profile card, friends list, and leaderboard rows",
+        "A 2-second minimum delay between chat messages, the same as VIP",
+        "Can use the network's emoji glyphs in chat"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a cyan gem badge, Minecraft-item-icon style",
+      "notes": "See the Champion entry's note about the larger, mostly-unbuilt perk catalog.",
+      "icon": "assets/icons/ranks/mvip.png"
+    },
+    {
+      "id": "vip",
+      "name": "VIP",
+      "color": "#7FCE4E",
+      "weight": 10,
+      "category": "donor",
+      "description": "The entry tier of the donor ladder.",
+      "how_to_get": "Meant to be purchased through the in-game store; the store is not live yet (see how_to_access), so it is currently granted directly by the ReimaginedCraft team.",
+      "perks": [
+        "Green name and badge everywhere a name is shown: chat, floating nameplate, profile card, friends list, and leaderboard rows",
+        "A 2-second minimum delay between chat messages, the same as MVIP",
+        "Can use the network's emoji glyphs in chat"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a green star badge, Minecraft-item-icon style",
+      "notes": "See the Champion entry's note about the larger, mostly-unbuilt perk catalog.",
+      "icon": "assets/icons/ranks/vip.png"
+    },
+    {
+      "id": "player",
+      "name": "Player",
+      "color": "#9A9AA4",
+      "weight": 0,
+      "category": "default",
+      "description": "The starting rank everyone has before being granted anything higher.",
+      "how_to_get": "Automatic - every account is Player from the moment it first joins, until the team grants it a higher rank.",
+      "perks": [
+        "Still shows a small gray 'Player' badge and gray name in chat, on your floating nameplate, and on your profile card - the same display slots every other rank uses, just in the default color",
+        "A 3-second minimum delay between chat messages (the longest on the ladder)",
+        "Cannot use the network's emoji glyphs in chat"
+      ],
+      "rank_requirement": null,
+      "icon_hint": "a plain gray outlined star or shield badge, Minecraft-item-icon style",
+      "notes": null,
+      "icon": "assets/icons/ranks/player.png"
+    }
+  ],
+  "related_systems": [
+    "diamondtrophy-gameplay",
+    "quest-board",
+    "hub-guis"
+  ],
+  "open_questions": [
+    "How players will actually obtain VIP/MVIP/Elite/Champion once a store exists is unconfirmed - /store currently only shows an action-bar 'coming soon' message with no purchase flow, and no price list or store-backend code exists anywhere in this codebase. RANK_PERKS.md is silent on real-money prices too (it only lists a proposed in-game wallet-coin stipend and store discount percentages, none of which appear implemented yet).",
+    "The chat rank badge's click action tries to run a '/ranks' command, but no such command is registered anywhere in the codebase - it currently does nothing when clicked.",
+    "Hub perks like auto-flight in the hub, the extra mid-air double jump, and extra launcher/glider dash charges are real, working features gated by individual permission nodes, but which specific rank tier is granted each permission is set in the live LuckPerms database rather than in this codebase, so the exact rank-by-rank breakdown could not be verified from source.",
+    "docs/RANK_PERKS.md is a large (306-perk) internal planning/roadmap document dated 2026-07-19 for the donor ladder; the large majority of its entries are explicitly marked as not yet built. Its per-rank perk assignments (hub cosmetics, priority queue tiers, wallet-coin stipends, per-game cosmetic lines, etc.) were treated as roadmap intent rather than confirmed live features and were left out of this file rather than asserted as current.",
+    "Whether Diamond Trophy's room-capacity boost and the Quest Board's extra daily slots are tuned to the same rank tiers described in RANK_PERKS.md, or to different thresholds, wasn't re-derived here - see the room-capacity and quest-board entries for the actual current numbers.",
+    "The tab list (player list) plugin's own configuration wasn't available in this checkout, so tab-list-specific behaviour like sort order by rank could not be verified beyond the shared rank color/badge placeholders every surface uses.",
+    "Network chat and voice chat are two more places rank is expected to matter (chat formatting, voice-chat permission gates) but neither was researched as its own data file in this pass."
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "id": "levels-achievements",
+  "title": "Levels & Achievements",
+  "scope": "network",
+  "summary": "Every player has two XP ladders that fill from the same actions: an account-wide Network Level (1-500) and a Diamond Trophy Level (1-50) specific to that minigame. Alongside levelling, the network tracks 50 achievements split across the Hub and Diamond Trophy for things like kills, wins, playtime, parkour and speed-clears, viewable and browsable from the player profile menu.",
+  "related_systems": ["currencies", "hub-guis"],
+  "levels": {
+    "id": "levels",
+    "title": "Levels & XP",
+    "scope": "network",
+    "summary": "Two independent XP ladders share every XP award: the account-wide Network track (levels 1-500) and the Diamond Trophy track (levels 1-50). A player's level is always calculated fresh from their total lifetime XP rather than being stored as its own number, so nobody's level can ever get out of sync with their XP.",
+    "how_it_works": "Levelling up costs a little more XP each time: the very first level-up is cheapest, and the amount needed grows by a fixed step every level after that, so early levels come quickly while the top of the ladder is a long-term goal. The Network track runs from level 1 to 500 (about 671,000 lifetime XP to max it out) and is fed by every server on the network. The Diamond Trophy track runs from level 1 to 50 (about 30,900 lifetime XP) and only gains XP from playing Diamond Trophy. Simply being online and playing drips a small amount of XP automatically every minute (more on the Network track than on the Diamond Trophy track), as long as you aren't sitting AFK; on top of that, specific actions and achievements inside each gamemode award larger chunks of XP directly. The first few XP awards you earn each day are worth 50% more, shown to you as a 'first gains of the day' bonus with a limited number of boosted charges that refill daily; the background playtime drip never uses up one of these charges, only earning XP for actually doing something does. Levelling up shows you a title card and subtitle on screen, plays a sound, and (for most level-ups) posts a line in chat; every 25th level and hitting the very top of a track additionally plays a louder fanfare sound. Both the on-screen title and the chat line can be turned off individually from the settings menu if you don't want the interruption.",
+    "how_to_access": "Run /level (aliases: /levels, /xp, /lvl) to see your level and XP progress bar on every track plus how many daily first-gain bonuses you have left; /level <player> shows someone else's. Your Network Level, XP totals and remaining daily bonus charges are also exposed as text you can drop into a nameplate, scoreboard or menu built for it. The 'Highest Level' and 'Diamond Trophy Level' boards under the Leaderboard tab of /profile rank players by level. Turn the level-up title or chat announcement on/off individually with /settings.",
+    "tracks": [
+      {
+        "id": "network-track",
+        "name": "Network Level",
+        "description": "The account-wide progression ladder. Every server on the network feeds this track, including a small automatic trickle just for being online and playing (AFK time doesn't count).",
+        "level_range": "1-500",
+        "color_hex": "#58E04A",
+        "how_to_get": "Earned from XP awarded on any server for actions and achievements, plus a steady background drip while actively playing anywhere on the network.",
+        "icon_hint": "a glowing green experience bottle with sparkling particles rising off it",
+        "notes": "Roughly 671,000 lifetime XP to reach level 500. The fastest realistic path (steady high-XP Diamond Trophy play) takes on the order of 1,000+ hours; on the passive playtime drip alone it is roughly double that."
+      },
+      {
+        "id": "diamondtrophy-track",
+        "name": "Diamond Trophy Level",
+        "description": "A second ladder that runs alongside the Network Level, shown only on the Diamond Trophy server and fed only by playing Diamond Trophy.",
+        "level_range": "1-50",
+        "color_hex": "#7DD3FC",
+        "how_to_get": "Earned from XP awarded for Diamond Trophy runs (kills, wins, clears) plus a background drip while actively playing Diamond Trophy specifically.",
+        "icon_hint": "a light-blue faceted diamond gem with a small level-up star above it",
+        "notes": "Roughly 30,900 lifetime XP to reach level 50; a fast player clearing full runs at a high rank can max it in around 30 hours of play."
+      }
+    ],
+    "daily_bonus": {
+      "description": "The first few XP-earning actions each day are boosted so early daily play feels extra rewarding.",
+      "multiplier": "+50% XP",
+      "charges_per_day": 3,
+      "notes": "Only awards from actually doing something use up a charge; the passive playtime drip never spends one. Admin-granted XP also never uses a charge."
+    },
+    "open_questions": [
+      "Exact wording/threshold of the milestone fanfare beyond 'every 25th level' was read from the default config; a live server could tune this differently.",
+      "No public command or menu was found that shows total XP needed to hit a specific future level beyond what /level's progress bar shows for the current level."
+    ]
+  },
+  "achievements": {
+    "id": "achievements",
+    "title": "Achievements",
+    "scope": "network",
+    "summary": "50 achievements are currently defined network-wide, split between the Hub (14, covering the PvP arena, parkour and lobby playtime) and Diamond Trophy (36, covering runs played, wins, kills, time spent, coins earned and speed-clears). Achievements are browsed from the player profile menu and are announced with a chat message and sound the moment you earn them.",
+    "how_it_works": "Each achievement tracks one underlying stat (things like games played, wins, kills, deaths, parkour jumps, coins earned, or time played) against a target value; the moment your stat reaches that target the achievement unlocks automatically and stays unlocked forever, no claiming required. There is no separate achievement system for the Network track itself yet -- every achievement currently belongs to either the Hub or Diamond Trophy. Diamond Trophy has a capstone achievement ('Nothing Left to Prove') that unlocks once every other Diamond Trophy achievement has been earned; the Hub category has no equivalent capstone. When you unlock one, you get a gold chat message naming it plus its description, and a short chime sound. Progress toward locked achievements is visible at any time, not just when you cross the finish line.",
+    "how_to_access": "Open /profile (or the profile hotbar icon), click the Achievements button on the main page, then pick a category tile -- Hub or Diamond Trophy are live; Elevator Chaos, Mace Crush and Survival show as 'coming soon' placeholders since those gamemodes don't have achievements defined yet. The list shows your unlocked achievements first, then locked ones sorted by how close you are to finishing them, with a search box to filter by name/description and paging for the full list.",
+    "guis": [
+      {
+        "id": "profile-achievements-page",
+        "title": "Achievements (Profile menu)",
+        "description": "A paged grid inside the player profile GUI listing every achievement for one selected gamemode, unlocked ones first.",
+        "how_to_open": "/profile -> Achievements button -> choose Hub or Diamond Trophy.",
+        "slots": [
+          { "slot": "content grid (12 slots)", "item": "Achievement icon (its configured item, e.g. a sword, gem, clock or trophy-like block)", "action": "Unlocked achievements show name, description and an 'Unlocked' checkmark with a shiny glint; locked ones show a progress bar and 'current / target' count." },
+          { "slot": "scroll up / scroll down column", "item": "Arrow-style buttons", "action": "Page through the achievement list when there are more than fit on one page." },
+          { "slot": "search button", "item": "Search icon", "action": "Filter the visible list by typing a name/description match." },
+          { "slot": "last content slot", "item": "Category tile (current gamemode's icon)", "action": "Shows unlocked-count / total and current page, and lets you switch to a different gamemode's achievement list." },
+          { "slot": "back button", "item": "Arrow/back icon", "action": "Returns to the main profile page." }
+        ],
+        "notes": "Shares its overall frame (player head, rank, status) with the Stats and Leaderboard sub-pages of the same profile menu."
+      }
+    ],
+    "entries": [
+      {
+        "id": "diamondtrophy-first-game",
+        "name": "Adventurer",
+        "description": "Complete your first Diamond Trophy run.",
+        "category": "diamondtrophy",
+        "how_to_get": "Finish one Diamond Trophy run to completion.",
+        "icon_hint": "a plain golden sword, freshly drawn",
+        "notes": "Tracks the 'runs played' stat, target 1."
+      },
+      {
+        "id": "diamondtrophy-veteran",
+        "name": "Veteran",
+        "description": "Complete 10 Diamond Trophy runs.",
+        "category": "diamondtrophy",
+        "how_to_get": "Finish 10 Diamond Trophy runs total.",
+        "icon_hint": "a battle-worn diamond sword with small nicks along the blade"
+      },
+      {
+        "id": "diamondtrophy-first-win",
+        "name": "Diamond Champion",
+        "description": "Win your first Diamond Trophy game.",
+        "category": "diamondtrophy",
+        "how_to_get": "Win a full Diamond Trophy run.",
+        "icon_hint": "a single sparkling raw diamond sitting on a small pedestal"
+      },
+      {
+        "id": "diamondtrophy-5wins",
+        "name": "Unstoppable",
+        "description": "Win Diamond Trophy 5 times.",
+        "category": "diamondtrophy",
+        "how_to_get": "Win 5 Diamond Trophy runs total.",
+        "icon_hint": "a glowing nether star radiating soft purple light"
+      },
+      {
+        "id": "diamondtrophy-kills100",
+        "name": "Champion Hunter",
+        "description": "Slay 100 enemies in Diamond Trophy.",
+        "category": "diamondtrophy",
+        "how_to_get": "Defeat 100 enemies total while playing Diamond Trophy.",
+        "icon_hint": "a golden sword crossed in front of a small pile of enemy trophies"
+      },
+      {
+        "id": "diamondtrophy-games250",
+        "name": "Does This Person Sleep?",
+        "description": "Play 250 Diamond Trophy runs.",
+        "category": "diamondtrophy",
+        "how_to_get": "Play 250 Diamond Trophy runs total (win or lose).",
+        "icon_hint": "a pair of scuffed netherite boots with visible wear"
+      },
+      {
+        "id": "diamondtrophy-100wins",
+        "name": "Hundred Trophies",
+        "description": "Win Diamond Trophy 100 times.",
+        "category": "diamondtrophy",
+        "how_to_get": "Win 100 Diamond Trophy runs total.",
+        "icon_hint": "a radiant beacon beam shining upward from a small dais"
+      },
+      {
+        "id": "diamondtrophy-kills5000",
+        "name": "The Goblin Extinction",
+        "description": "Slay 5,000 enemies in Diamond Trophy.",
+        "category": "diamondtrophy",
+        "how_to_get": "Defeat 5,000 enemies total while playing Diamond Trophy.",
+        "icon_hint": "a menacing wither skeleton skull, slightly glowing"
+      },
+      {
+        "id": "diamondtrophy-time100h",
+        "name": "Hundred Hour Hero",
+        "description": "Spend 100 hours in Diamond Trophy.",
+        "category": "diamondtrophy",
+        "how_to_get": "Accumulate 100 total hours of playtime on the Diamond Trophy server.",
+        "icon_hint": "a golden totem figure clutched upright, faintly glowing"
+      },
+      {
+        "id": "diamondtrophy-coins50000",
+        "name": "Retired On Dungeon Money",
+        "description": "Earn 50,000 network coins in Diamond Trophy.",
+        "category": "diamondtrophy",
+        "how_to_get": "Earn a cumulative 50,000 network coins from playing Diamond Trophy (lifetime earnings, not current balance).",
+        "icon_hint": "a solid block of emerald stacked with a few loose gold nuggets on top"
+      },
+      {
+        "id": "diamondtrophy-speed5",
+        "name": "Blink And It's Over",
+        "description": "Clear a full run in under 5 minutes.",
+        "category": "diamondtrophy",
+        "how_to_get": "Complete a full Diamond Trophy run with a total clear time under 5 minutes.",
+        "icon_hint": "a glowing nether star trailing a short speed-line streak behind it"
+      },
+      {
+        "id": "diamondtrophy-completionist",
+        "name": "Nothing Left To Prove",
+        "description": "Unlock every other Diamond Trophy achievement.",
+        "category": "diamondtrophy",
+        "how_to_get": "Unlock all other Diamond Trophy achievements (35 as of this writing); this one completes automatically once the last of them does.",
+        "icon_hint": "a dark, faintly pulsing dragon egg resting on an ornate stand",
+        "notes": "The capstone achievement for the Diamond Trophy set. Its target count is recalculated automatically whenever new Diamond Trophy achievements are added, so it always means 'all of the others'."
+      },
+      {
+        "id": "hub-first-kill",
+        "name": "Oops, Sorry!",
+        "description": "Get your first kill in the hub PvP arena.",
+        "category": "hub",
+        "how_to_get": "Get one kill in the Hub's PvP arena.",
+        "icon_hint": "a plain wooden sword, freshly whittled"
+      },
+      {
+        "id": "hub-killstreak15",
+        "name": "Somebody Stop Them",
+        "description": "Reach a 15 kill streak without dying.",
+        "category": "hub",
+        "how_to_get": "Get 15 kills in the Hub PvP arena in a row without dying in between.",
+        "icon_hint": "a small burst of orange fire particles around a spark"
+      },
+      {
+        "id": "hub-deaths100",
+        "name": "Practice Makes Perfect",
+        "description": "Die 100 times in the hub PvP arena. It's a journey.",
+        "category": "hub",
+        "how_to_get": "Die 100 total times in the Hub's PvP arena.",
+        "icon_hint": "a single plain bone lying sideways"
+      },
+      {
+        "id": "hub-parkour250",
+        "name": "The Floor Is Optional",
+        "description": "Reach 250 jumps in a single parkour run.",
+        "category": "hub",
+        "how_to_get": "Land 250 jumps in one continuous run through the Hub's parkour course.",
+        "icon_hint": "a single white feather caught mid-fall"
+      },
+      {
+        "id": "hub-jumps10000",
+        "name": "Knees Of Steel",
+        "description": "Land 10,000 parkour jumps in total.",
+        "category": "hub",
+        "how_to_get": "Land a cumulative 10,000 parkour jumps across all your runs on the Hub's parkour course.",
+        "icon_hint": "a golden-amber block of honey with a faint bouncy sheen"
+      },
+      {
+        "id": "hub-time100h",
+        "name": "You Live Here Now",
+        "description": "Spend 100 hours in the hub. Mail is being forwarded.",
+        "category": "hub",
+        "how_to_get": "Accumulate 100 total hours of playtime in the Hub.",
+        "icon_hint": "a simple oak door, slightly ajar, with a welcome-mat feel"
+      }
+    ],
+    "notes": "50 achievements are defined in total (36 Diamond Trophy, 14 Hub); the 18 listed above are a representative sample spanning every category (first-time, milestone counts, playtime, coins earned, speedrun, kill-streak, and the Diamond Trophy capstone) rather than the full list.",
+    "open_questions": [
+      "Whether a dedicated network-track achievement category is planned (only Hub and Diamond Trophy have achievements defined as of this writing) was not found documented anywhere.",
+      "No player-facing command (e.g. /achievements) was found outside the /profile GUI -- achievements appear to be menu-only."
+    ]
+  }
+}

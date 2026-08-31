@@ -1,0 +1,167 @@
+{
+  "id": "diamondtrophy-guis",
+  "title": "FistWatch Menus",
+  "scope": "diamondtrophy",
+  "summary": "The FistWatch item is Diamond Trophy's single menu system: a home screen branches into joining or making a room, your friends, your pending invites, and your owned weapon skins. A shared bar of buttons (Profile, Games, Home, Friends, Invites, Exit, Dorm Room) appears on every screen.",
+  "how_to_access": "Right-click the FistWatch item, automatically given in your last hotbar slot, from anywhere on the Diamond Trophy server.",
+  "guis": [
+    {
+      "id": "fistwatch-home",
+      "title": "FistWatch -- Home",
+      "description": "The watch's main screen: four regions (Rooms, Make a Room, Bag, Diamond Trophy) plus the shared navigation bar.",
+      "how_to_open": "Right-click the FistWatch item.",
+      "slots": [
+        {
+          "slot": "Rooms (upper-left block)",
+          "item": "Rooms",
+          "action": "Opens the Golden Trophy room-join screen (public/private). If the separate community rooms browser feature is enabled on the server, this instead opens that browser."
+        },
+        {
+          "slot": "Make a Room (upper-middle block)",
+          "item": "Make a Room",
+          "action": "Opens your custom-room management page, if the community rooms feature is enabled; otherwise the button explains it isn't available yet."
+        },
+        {
+          "slot": "Bag (upper-right block)",
+          "item": "Bag",
+          "action": "Opens your owned weapon skins for equipping (see FistWatch -- Bag below)."
+        },
+        {
+          "slot": "Diamond Trophy (right-side block)",
+          "item": "Diamond Trophy",
+          "action": "Always opens the Golden Trophy join screen -- Join Public Room / Join Private Room -- regardless of the rooms feature."
+        },
+        {
+          "slot": "nav bar: Profile",
+          "item": "Profile",
+          "action": "Opens your own rank/level/stats card."
+        },
+        {
+          "slot": "nav bar: Games",
+          "item": "Games",
+          "action": "Community rooms and minigames hub."
+        },
+        {
+          "slot": "nav bar: Home",
+          "item": "Home",
+          "action": "Returns to this main screen."
+        },
+        {
+          "slot": "nav bar: Friends",
+          "item": "Friends",
+          "action": "Opens your friends list (see FistWatch -- Friends below)."
+        },
+        {
+          "slot": "nav bar: Invites",
+          "item": "Invites",
+          "action": "Opens your pending party invites (see FistWatch -- Invites below)."
+        },
+        {
+          "slot": "Exit tiles",
+          "item": "Exit",
+          "action": "Closes the watch menu."
+        },
+        {
+          "slot": "Dorm Room tiles",
+          "item": "Dorm Room",
+          "action": "Teleports you straight to your private dorm room."
+        }
+      ],
+      "notes": "The same navigation bar (Profile, Games, Home, Friends, Invites) plus Exit and Dorm Room shortcuts is drawn on every FistWatch screen below, so you can always jump between them or bail out to your dorm.",
+      "icon": "assets/icons/diamondtrophy-guis/fistwatch-home.png"
+    },
+    {
+      "id": "golden-trophy-join",
+      "title": "Quest for the Golden Trophy -- Join a Room",
+      "description": "The join screen for a Golden Trophy run: pick a public room to be matched into (or start one), or make a private room for just your invited players.",
+      "how_to_open": "From the FistWatch home screen, click the Rooms or Diamond Trophy region.",
+      "slots": [
+        {
+          "slot": "Join Public Room",
+          "item": "Join Public Room",
+          "action": "Places you (and anyone in your party) into an existing public room with space, or starts a fresh one if none is available."
+        },
+        {
+          "slot": "Join Private Room",
+          "item": "Join Private Room",
+          "action": "Creates a private room that only you and the players you invite can enter."
+        }
+      ],
+      "notes": "You can freely switch between rooms by re-opening this screen and picking again, right up until your room's run actually starts.",
+      "icon": "assets/icons/diamondtrophy-guis/golden-trophy-join.png"
+    },
+    {
+      "id": "fistwatch-friends",
+      "title": "FistWatch -- Friends",
+      "description": "A grid of player-head icons for your friends list, so you can see who's around and jump to their profile.",
+      "how_to_open": "Click Friends on the FistWatch nav bar.",
+      "slots": [
+        {
+          "slot": "grid tiles",
+          "item": "Friend's head",
+          "action": "Click to open that friend's profile card."
+        },
+        {
+          "slot": "previous-page arrow",
+          "item": "Previous Page",
+          "action": "Shown only when you're past the first page of friends."
+        },
+        {
+          "slot": "next-page arrow (reuses the Profile nav slot)",
+          "item": "Next Page",
+          "action": "Shown only when you have more than one page of friends."
+        }
+      ],
+      "notes": null,
+      "icon": "assets/icons/diamondtrophy-guis/fistwatch-friends.png"
+    },
+    {
+      "id": "fistwatch-invites",
+      "title": "FistWatch -- Invites",
+      "description": "Shows your pending party invite, if you have one, or a placeholder if you don't.",
+      "how_to_open": "Click Invites on the FistWatch nav bar.",
+      "slots": [
+        {
+          "slot": "invite head slot",
+          "item": "Inviting player's head",
+          "action": "Click to respond to the pending party invite."
+        },
+        {
+          "slot": "empty-state slot",
+          "item": "\"No Pending Invites\"",
+          "action": "Shown when you have no active invite; not clickable."
+        }
+      ],
+      "notes": null,
+      "icon": "assets/icons/diamondtrophy-guis/fistwatch-invites.png"
+    },
+    {
+      "id": "fistwatch-bag-skins",
+      "title": "FistWatch -- Bag (Weapon Skins)",
+      "description": "Lists every weapon skin you own, grouped by weapon type (sword, then bow, then crossbow), so you can equip the look you want for your next run.",
+      "how_to_open": "Click Bag on the FistWatch home screen.",
+      "slots": [
+        {
+          "slot": "grid tiles",
+          "item": "Owned skin icon",
+          "action": "Left-click equips that skin (replacing any other skin of the same weapon type you had equipped); right-click unequips it."
+        },
+        {
+          "slot": "previous/next-page arrows",
+          "item": "Page navigation",
+          "action": "Shown only when you own enough skins to fill more than one page."
+        }
+      ],
+      "notes": "Only one skin per weapon type (sword / bow / crossbow) can be equipped at once. Skins are cosmetic only -- see the items file for what's on sale and where to buy it.",
+      "icon": "assets/icons/diamondtrophy-guis/fistwatch-bag-skins.png"
+    }
+  ],
+  "related_systems": [
+    "diamondtrophy-gameplay",
+    "diamondtrophy-items",
+    "friends-party"
+  ],
+  "open_questions": [
+    "The community rooms browser reachable from the Rooms/Games tiles is a separate, more complex GUI (tabs, room cards, search) that belongs to the cross-server Rooms feature; it is gated off by default on this server, so its full layout was left out of this file as not currently player-facing here."
+  ]
+}

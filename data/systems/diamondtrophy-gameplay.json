@@ -1,0 +1,105 @@
+{
+  "id": "diamondtrophy-gameplay",
+  "title": "Diamond Trophy: Quest for the Golden Trophy",
+  "scope": "diamondtrophy",
+  "summary": "Diamond Trophy is its own dedicated minigame server that recreates the Rec Room co-op dungeon crawl \"Quest for the Golden Trophy.\" A party of 1 to 20 players gears up in an armory and fights through 9 linear acts of goblin-army waves and light platforming before facing the Goblin King. Runs are scored on gold earned and given a letter rating, which pays out currency and XP; a social dorm area between runs has a training dummy and a bouncing basketball toy.",
+  "how_it_works": "Getting a group together: every player has a private dorm room (up to 4 people) reached with /dormroom, where you can invite friends, mess around with a training dummy and a bouncing basketball, and then launch a run together. You can also skip the dorm and use the FistWatch menu's room tiles to join a public matchmaking room (grouped up with strangers) or make a private one (invite-only) through the pre-game lobby system -- you can freely switch between waiting rooms until the run actually starts.\n\nRoom size scales with rank: a room's player limit is set by the highest-ranked member currently inside it -- base (no rank) is 4, VIP raises it to 6, MVIP to 10, Elite to 15, and Champion or staff to 20. Two ranked players don't stack the bonus; only the single highest one counts. If the player propping up a big room's limit leaves, nobody already inside is removed, but the room stops admitting new players until headcount drops back under 4. If someone in your room is griefing or AFK, /votekick <player> starts a room-wide vote (cast yours with /votekick yes or /votekick no); it needs a majority with a small minimum number of votes to pass.\n\nGearing up: Diamond Trophy has no fixed class or loadout menu. Instead, once your room is inside the armory, you grab weapons for free from wall-mounted weapon racks -- a sword, bow, crossbow or shield each. A rack only gives out one weapon until the next run restocks it. Swords can dual-wield an offhand copy for a lighter side-attack, and a shield can be carried alongside any weapon, but a sword and a bow can't be held at the same time (a crossbow can be paired with a sword). Bows and crossbows never run dry mid-run.\n\nThe 9 acts: opening the armory door once everyone has gathered begins Act 1, and the run moves through a fixed sequence of themed areas -- The Gates, The Courtyard, The Ramp (home to a giant pushable boulder you can roll into enemies), The Bridge, The Split Path, The Library, The Maze, The Lava Room (falling in the lava here rescues you back onto solid ground instead of killing you), and finally The Boss Arena, where the goblin army's leader, the Goblin King, fights in stages as his health drops. Every act mixes enemy waves -- some spawn the moment you walk into an area, others trigger automatically -- with the room needing to gather at the exit door together before it unlocks and the next act begins.\n\nCombat flavor: the enemies are a Rec-Room-style goblin army -- Goblins, Imps, armored Goblin Knights and Barrel Knights, plus tougher \"Elite\" versions of the first two. Arrows freeze most enemies in place for a couple of seconds. Knights, Barrel Knights and the Goblin King himself are only vulnerable from behind -- hit one from the front and it just clangs off. Every enemy dies in a single hit, so the challenge is positioning and timing rather than a damage race, and breaking the pot furniture scattered through the acts drops a little bonus gold. Getting knocked down isn't a run-ender -- any teammate can revive you with a right-click. Hitting a teammate by accident costs you gold instead of them, so watch your swings in a crowd.\n\nBigger rooms, tougher boss: the Goblin King's health rises with every player over the 4-player base, topping out at roughly three times his normal health in a full 20-player room, so a large room still has a real final fight instead of a stomp.\n\nScoring and payout: breaking pots and downing enemies builds your personal gold total for the run. At the end, your team's average gold per player is checked against S/A/B/C thresholds for a final quest rating shown on the results screen alongside the team's total gold. Clearing each act and finishing the run both pay three things at once -- Diamond Trophy score coins (a local currency, roughly 1 coin per 1,000 gold earned, spendable only on Diamond Trophy weapon skins), ReimaginedCraft network coins, and progression XP feeding both Diamond Trophy's own level track and the account-wide network level -- with a bigger bonus on all three the higher your rating. See the currencies and levels-achievements systems for how those payouts work network-wide.\n\nBetween runs: score coins earned here can only be spent on Diamond Trophy weapon skins -- cosmetic reskins of the sword, bow, crossbow and shield, sold from a physical wall of framed weapons in the armory. Right-clicking a framed skin shows its price and a buy prompt in chat; skins you own can then be equipped from the FistWatch's Bag screen. See the items file for the specific skins on sale. The dorm's basketball is purely a for-fun physics toy in the same social space -- see the items file for how it works.",
+  "how_to_access": "Travel to the Diamond Trophy server via the Hub's server selector or an NPC (this plugin does not handle proxy routing itself). Once there: the FistWatch item, automatically placed in the last hotbar slot, is the main menu for everything outside combat -- right-click it to open. /gt or /goldentrophy covers joining, leaving, starting and following a run. /dormroom or /room returns you to your private dorm. /party invite|accept|decline|list|kick|leader (or the /invite shortcut) manage your group. /votekick <player>, then /votekick yes|no, lets a room vote out a disruptive player.",
+  "entries": [
+    {
+      "id": "act-1-the-gates",
+      "name": "Act 1: The Gates",
+      "description": "The opening act, fought just outside the armory. Mostly Goblins in small numbers -- an introduction to the wave and weak-point mechanics before the run ramps up.",
+      "category": "act",
+      "how_to_get": "Begins automatically once your whole room gathers at the armory door and it unlocks.",
+      "how_to_use": "Clear its enemy waves, then gather at the exit door with your team to move on to Act 2.",
+      "rank_requirement": null,
+      "icon_hint": "a pair of tall stone dungeon gates cracked open, with a small goblin silhouette peeking through"
+    },
+    {
+      "id": "act-2-the-courtyard",
+      "name": "Act 2: The Courtyard",
+      "description": "An open courtyard area introducing Imps, who attack at range with fireballs instead of melee.",
+      "category": "act",
+      "how_to_get": "Reached automatically after clearing Act 1.",
+      "how_to_use": "Clear its enemy waves, then gather at the exit door to advance.",
+      "rank_requirement": null,
+      "icon_hint": "a ruined stone courtyard with a small fireball arcing through the air"
+    },
+    {
+      "id": "act-3-the-ramp",
+      "name": "Act 3: The Ramp",
+      "description": "A sloped area built around a giant pushable boulder (a nod to the source game) that players can shove or punch downhill into enemies, squashing them for a kill.",
+      "category": "act",
+      "how_to_get": "Reached automatically after clearing Act 2.",
+      "how_to_use": "Clear its enemy waves -- use the rolling boulder to crush groups of enemies -- then gather at the exit door to advance.",
+      "rank_requirement": null,
+      "icon_hint": "a large grey stone boulder rolling down a wooden ramp"
+    },
+    {
+      "id": "act-4-the-bridge",
+      "name": "Act 4: The Bridge",
+      "description": "A long bridge crossing, fought against escalating Goblin numbers.",
+      "category": "act",
+      "how_to_get": "Reached automatically after clearing Act 3.",
+      "how_to_use": "Clear its enemy waves, then gather at the exit door to advance.",
+      "rank_requirement": null,
+      "icon_hint": "a rickety wooden rope bridge spanning a chasm"
+    },
+    {
+      "id": "act-5-the-split-path",
+      "name": "Act 5: The Split Path",
+      "description": "A branching area where the party's path forks, mixing Goblins with the platforming of choosing (or splitting up across) a route.",
+      "category": "act",
+      "how_to_get": "Reached automatically after clearing Act 4.",
+      "how_to_use": "Clear its enemy waves, then gather at the exit door to advance.",
+      "rank_requirement": null,
+      "icon_hint": "a stone path forking in two directions in a dungeon corridor"
+    },
+    {
+      "id": "act-6-the-library",
+      "name": "Act 6: The Library",
+      "description": "A tall, vertical library area where Elite Imps make their first appearance -- tougher, arrow-immune ranged attackers.",
+      "category": "act",
+      "how_to_get": "Reached automatically after clearing Act 5.",
+      "how_to_use": "Clear its enemy waves, then gather at the exit door to advance.",
+      "rank_requirement": null,
+      "icon_hint": "tall bookshelves in a dim dungeon library with a glowing fireball reflected on the spines"
+    },
+    {
+      "id": "act-7-the-maze",
+      "name": "Act 7: The Maze",
+      "description": "The longest act -- a winding maze layout with the most waves of any act, mixing every enemy type seen so far.",
+      "category": "act",
+      "how_to_get": "Reached automatically after clearing Act 6.",
+      "how_to_use": "Clear its enemy waves, then gather at the exit door to advance.",
+      "rank_requirement": null,
+      "icon_hint": "an overhead-style hedge or stone maze with dead ends and a single lit path"
+    },
+    {
+      "id": "act-8-the-lava-room",
+      "name": "Act 8: The Lava Room",
+      "description": "A lava-filled arena. Falling into the lava here doesn't kill you -- you're automatically rescued back onto the last solid ground you stood on (repeated falls escalate to being sent back to the act's start instead).",
+      "category": "act",
+      "how_to_get": "Reached automatically after clearing Act 7.",
+      "how_to_use": "Clear its enemy waves, watch your footing around the lava, then gather at the exit door to advance to the boss.",
+      "rank_requirement": null,
+      "icon_hint": "a rocky arena crossed by narrow stone paths over glowing orange lava"
+    },
+    {
+      "id": "act-9-the-boss-arena-goblin-king",
+      "name": "Act 9: The Boss Arena -- the Goblin King",
+      "description": "The final act and boss fight against the Goblin King, leader of the goblin army. He fights in stages, mixing telegraphed melee swings with ranged fireball volleys as more of his goblin forces join the fight when his health drops past certain points. Like the Knights, he can only be hurt by hitting him from behind. His health scales up the more players are in the room, capping around three times normal in a full 20-player room.",
+      "category": "boss",
+      "how_to_get": "Reached automatically after clearing Act 8.",
+      "how_to_use": "Bring him down using back-hits during his vulnerable windows after each telegraphed attack; defeating him ends the run and shows your team's results.",
+      "rank_requirement": null,
+      "icon_hint": "a large armored goblin king wielding a crude sword and shield, flames flickering behind him"
+    }
+  ],
+  "related_systems": ["currencies", "levels-achievements", "diamondtrophy-items", "diamondtrophy-guis", "friends-party", "ranks"],
+  "open_questions": [
+    "The FistWatch home screen's \"Rooms\" tile can open a separate cross-server community rooms browser (built on the NetworkCore Rooms system), but that feature is switched off by default on this server, so today it opens the same Golden Trophy join screen as the \"Diamond Trophy\" tile. Worth re-checking if/when that browser goes live.",
+    "Exact per-act wave counts, enemy counts, and the Goblin King's base health were intentionally left out as internal balancing detail rather than player-facing lore."
+  ]
+}

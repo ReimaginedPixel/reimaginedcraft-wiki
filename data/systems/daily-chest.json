@@ -1,0 +1,242 @@
+{
+  "id": "daily-chest",
+  "title": "Daily Chest",
+  "scope": "network",
+  "summary": "A once-per-day reward chest shared across the whole network: claim it on the Hub through a weekly calendar screen, or from any server with the /chest command if you're ranked MVIP or higher. Claiming builds a consecutive-day streak that boosts every reward, and pays out network coins, Diamond Trophy coins, and a chance at bag items like pocket bags, keys, crates, and rare crafting materials.",
+  "how_it_works": "You get one claimable chest per real-world day, resetting at local midnight. Progress is tracked on a Monday-first weekly calendar, and the claim itself is shared network-wide: opening it on the Hub or through /chest on another server claims the exact same chest, so switching servers can never net you two rewards in one day. Claiming on back-to-back days builds a streak counter; missing even one day resets the streak back to 1 on your next claim (the displayed streak drops to 0 as soon as a day is fully missed). Your best-ever streak is tracked separately and never decreases. Each chest rolls six rewards: three slots of network coins and two slots of Diamond Trophy coins, with every roll's amount increased by a streak bonus of +5% per consecutive day (after the first), capped at +100% around day 21. There's also a high chance that one of the six slots is swapped out for a bag item instead of coins - most often a small pocket bag, occasionally a key, crate, crafting material, or (very rarely) an exclusive charm. On top of that, hitting a 7-day streak guarantees a Common Crate and hitting a 30-day streak guarantees a Rare Crate, each replacing one of that day's coin slots rather than adding an extra reward. Diamond Trophy coins can't be paid directly into that server's local wallet from the Hub, so they're banked to your account and automatically credited the next time you're on Diamond Trophy (or shortly after, via a periodic sweep, if you're already there when you claim). If the cross-server currency system is ever unreachable, the Trophy Coin slots simply pay out as network coins instead, so what you see on the reward screen is always what you actually receive.",
+  "how_to_access": "On the Hub: run /dailychest (aliases /daily, /dailyrewards), or right-click the Daily Chest furniture placed in the hub. From any server, MVIP rank and above can also run /chest - on the Hub this just opens the same calendar, and on other servers it opens a standalone chest screen. Either way it is the same one-per-day chest network-wide.",
+  "guis": [
+    {
+      "id": "chest-calendar",
+      "title": "Weekly Chest Calendar",
+      "description": "An animated calendar screen showing the current week's seven chests plus your chest stats and the countdown to your next chest.",
+      "how_to_open": "/dailychest (or /daily, /dailyrewards) on the Hub, right-clicking the placed Daily Chest furniture, or /chest from any server if you're MVIP+.",
+      "slots": [
+        {
+          "slot": "top-right stats frame",
+          "item": "Your Chest Stats",
+          "action": "Shows chests opened, current streak, and best streak; click it to jump to your profile's Leaderboards page (Hub category)."
+        },
+        {
+          "slot": "3x3 week plaque, Monday to Sunday",
+          "item": "This week's chests",
+          "action": "Each day shows as ready to open, already claimed, missed, or still locked. Only today's chest, if unclaimed, is clickable, and clicking it opens the closed-chest screen."
+        },
+        {
+          "slot": "arrows below the week plaque",
+          "item": "Up / Down week arrows",
+          "action": "Scroll to an older week or back toward the current week. You can look back up to 8 weeks."
+        },
+        {
+          "slot": "bottom-right schedule frame",
+          "item": "Chest Schedule",
+          "action": "Shows the countdown to your next chest (local midnight), the start date of the viewed week, and which week's range you're looking at."
+        }
+      ],
+      "icon": "assets/icons/daily-chest/chest-calendar.png"
+    },
+    {
+      "id": "closed-chest",
+      "title": "Today's Chest",
+      "description": "A closed-chest screen for today's still-unclaimed chest.",
+      "how_to_open": "Click today's chest tile on the weekly calendar.",
+      "slots": [
+        {
+          "slot": "chest artwork",
+          "item": "Closed chest",
+          "action": "Click anywhere on the chest (or the gold key icon) to open it."
+        },
+        {
+          "slot": "back arrow",
+          "item": "Back to calendar",
+          "action": "Returns to the weekly calendar without opening the chest."
+        }
+      ],
+      "notes": "Nothing is claimed until you actually click to open the chest from this screen.",
+      "icon": "assets/icons/daily-chest/closed-chest.png"
+    },
+    {
+      "id": "opening-animation",
+      "title": "Chest Opening Animation",
+      "description": "A short multi-frame opening animation (about a second and a half) with a matching sound effect, playing automatically after you open the chest.",
+      "how_to_open": "Plays automatically after clicking to open today's chest.",
+      "notes": "Your rewards are already granted before this animation starts, so closing the screen early during the animation never costs you anything. Clicks don't do anything while it's playing.",
+      "icon": "assets/icons/daily-chest/opening-animation.png"
+    },
+    {
+      "id": "rewards-reveal",
+      "title": "Rewards Revealed",
+      "description": "Shows the six rolled rewards laid out in a grid inside the open chest, plays a reward sound, and posts a chat summary of what you received.",
+      "how_to_open": "Plays automatically once the opening animation finishes.",
+      "slots": [
+        {
+          "slot": "3x2 grid inside the chest",
+          "item": "The six rolled rewards",
+          "action": "Each slot displays one reward (a coin pile with its amount, or a bag item) that's already been added to your coins/bag - clicking does nothing."
+        },
+        {
+          "slot": "back arrow",
+          "item": "Back to calendar",
+          "action": "Returns to the weekly calendar."
+        }
+      ],
+      "icon": "assets/icons/daily-chest/rewards-reveal.png"
+    }
+  ],
+  "entries": [
+    {
+      "id": "daily-chest-furniture",
+      "name": "Daily Chest",
+      "description": "The physical chest placed in the Hub that opens the weekly calendar when right-clicked. It idly rises and settles, occasionally shakes side to side, and has a soft pulsing glow outline.",
+      "category": "furniture",
+      "how_to_get": "It's a fixture placed by the server in the Hub - not an item players collect.",
+      "how_to_use": "Right-click it to open the Daily Chest calendar, same as running /dailychest.",
+      "rank_requirement": null,
+      "icon_hint": "A closed wooden treasure chest with ornate gold trim and a faint pulsing golden outline glow around its silhouette, pixel-art icon.",
+      "notes": "Purely a shortcut into the same calendar the /dailychest command opens.",
+      "icon": "assets/icons/daily-chest/daily-chest-furniture.png"
+    },
+    {
+      "id": "network-coins",
+      "name": "Network Coins",
+      "description": "The network-wide currency, usable on every ReimaginedCraft server.",
+      "category": "currency",
+      "how_to_get": "Three of the daily chest's six reward slots roll network coins (25-55 each before the streak bonus); also earned through many other activities network-wide.",
+      "how_to_use": "Spend it in shops and menus across the network.",
+      "rank_requirement": null,
+      "icon_hint": "A small stacked pile of shiny round gold coins with a subtle sparkle, isometric pixel-art item icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/network-coins.png"
+    },
+    {
+      "id": "trophy-coins",
+      "name": "Trophy Coins",
+      "description": "Diamond Trophy's own coin currency, spent on that server.",
+      "category": "currency",
+      "how_to_get": "Two of the daily chest's six reward slots roll Trophy Coins (10-25 each before the streak bonus). Since the Hub can't credit Diamond Trophy's wallet directly, the coins are held for you and paid out automatically the next time you join Diamond Trophy (or shortly after, if you're already there when you claim).",
+      "how_to_use": "Spend it on Diamond Trophy's own in-game shops and menus.",
+      "rank_requirement": null,
+      "icon_hint": "A small pile of coins with a cool blue tint and a tiny trophy/diamond emblem stamped on the top coin, isometric pixel-art item icon.",
+      "notes": "If the cross-server currency link is ever down, these slots pay out as extra network coins instead, so a shown reward is always received.",
+      "icon": "assets/icons/daily-chest/trophy-coins.png"
+    },
+    {
+      "id": "small-pocket-bag",
+      "name": "Small Pocket Bag",
+      "description": "A little bundle that reveals a random small reward when opened.",
+      "category": "bag-item",
+      "how_to_get": "The most common non-coin roll from the daily chest's bag-item chance.",
+      "how_to_use": "Open it from your bag to reveal its contents.",
+      "rank_requirement": null,
+      "icon_hint": "A small cinched brown drawstring cloth pouch, simple pixel-art icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/small-pocket-bag.png"
+    },
+    {
+      "id": "large-pocket-bag",
+      "name": "Large Pocket Bag",
+      "description": "A heavier bundle than the small pocket bag, with better contents when opened.",
+      "category": "bag-item",
+      "how_to_get": "A less common roll from the daily chest's bag-item chance.",
+      "how_to_use": "Open it from your bag to reveal its contents.",
+      "rank_requirement": null,
+      "icon_hint": "A fuller, rounder drawstring pouch with a light blue tint, pixel-art icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/large-pocket-bag.png"
+    },
+    {
+      "id": "common-key",
+      "name": "Common Key",
+      "description": "Opens one Common Crate.",
+      "category": "bag-item",
+      "how_to_get": "A possible roll from the daily chest's bag-item chance.",
+      "how_to_use": "Use it on a Common Crate to open that crate.",
+      "rank_requirement": null,
+      "icon_hint": "A small ornate key with a green-tinted handle, pixel-art icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/common-key.png"
+    },
+    {
+      "id": "rare-key",
+      "name": "Rare Key",
+      "description": "Opens one Rare Crate.",
+      "category": "bag-item",
+      "how_to_get": "A rare roll from the daily chest's bag-item chance.",
+      "how_to_use": "Use it on a Rare Crate to open that crate.",
+      "rank_requirement": null,
+      "icon_hint": "A small ornate key with a purple-tinted handle and a faint sparkle, pixel-art icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/rare-key.png"
+    },
+    {
+      "id": "common-crate",
+      "name": "Common Crate",
+      "description": "A lockbox that needs a Common Key to open. Also guaranteed once every 7-day claim streak.",
+      "category": "bag-item",
+      "how_to_get": "A possible roll from the daily chest's bag-item chance, and guaranteed on every 7th consecutive day of claiming.",
+      "how_to_use": "Open it with a Common Key from your bag.",
+      "rank_requirement": null,
+      "icon_hint": "A green-trimmed wooden treasure chest, closed, pixel-art icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/common-crate.png"
+    },
+    {
+      "id": "rare-crate",
+      "name": "Rare Crate",
+      "description": "A lockbox that needs a Rare Key to open. Also guaranteed once every 30-day claim streak.",
+      "category": "bag-item",
+      "how_to_get": "A very rare roll from the daily chest's bag-item chance, and guaranteed on every 30th consecutive day of claiming.",
+      "how_to_use": "Open it with a Rare Key from your bag.",
+      "rank_requirement": null,
+      "icon_hint": "A purple-trimmed ornate chest resembling an ender chest, closed, with a faint magical glow, pixel-art icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/rare-crate.png"
+    },
+    {
+      "id": "base-material",
+      "name": "Base Material",
+      "description": "A common crafting material used across many recipes.",
+      "category": "material",
+      "how_to_get": "A possible roll from the daily chest's bag-item chance (arrives in a small stack).",
+      "how_to_use": "Used as an ingredient in various crafting recipes.",
+      "rank_requirement": null,
+      "icon_hint": "A small grey lump or clay-like ball, plain and utilitarian, pixel-art icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/base-material.png"
+    },
+    {
+      "id": "cosmetic-shard",
+      "name": "Cosmetic Shard",
+      "description": "A crafting material used to craft cosmetics.",
+      "category": "material",
+      "how_to_get": "An uncommon roll from the daily chest's bag-item chance (arrives in a small stack).",
+      "how_to_use": "Used as an ingredient when crafting cosmetics.",
+      "rank_requirement": null,
+      "icon_hint": "A small glowing light-blue crystal shard, faceted like an amethyst fragment, pixel-art icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/cosmetic-shard.png"
+    },
+    {
+      "id": "daily-charm",
+      "name": "Daily Charm",
+      "description": "A lucky charm that can only come from a daily chest - the rarest possible bag-item roll.",
+      "category": "collectible",
+      "how_to_get": "An extremely rare roll from the daily chest's bag-item chance.",
+      "how_to_use": "A keepsake collectible from your bag.",
+      "rank_requirement": null,
+      "icon_hint": "A small glowing purple charm or amulet shard on a cord, with a soft sparkle, pixel-art icon.",
+      "notes": null,
+      "icon": "assets/icons/daily-chest/daily-charm.png"
+    }
+  ],
+  "related_systems": [
+    "bag",
+    "currencies",
+    "quest-board",
+    "crates-and-keys"
+  ],
+  "open_questions": [
+    "Whether the placeholder chest-state and reward-pile item icons noted in the source docs have since been replaced with final art was not verified visually.",
+    "Exact current chat-summary wording shown when a chest is opened may include a couple of additional in-game symbols beyond the plain-text description given here."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "wiki": "reimaginedcraft-wiki",
+  "description": "Player-facing data for the ReimaginedCraft Minecraft network: currencies, items, GUIs and systems, currently covering the Hub and Diamond Trophy servers.",
+  "scope_note": "This is a first pass covering Hub + Diamond Trophy only. Other servers (Limbo, Elevator Chaos, the unreleased custom Rooms feature) are out of scope for now.",
+  "schema_version": 1,
+  "files": [
+    { "id": "network-overview", "path": "meta/servers.json", "scope": "network", "kind": "meta" },
+    { "id": "currencies", "path": "currencies.json", "scope": "network", "kind": "currencies" },
+    { "id": "ranks", "path": "ranks.json", "scope": "network", "kind": "system" },
+    { "id": "friends-party", "path": "systems/friends-party.json", "scope": "network", "kind": "system" },
+    { "id": "levels-achievements", "path": "systems/levels-achievements.json", "scope": "network", "kind": "system" },
+    { "id": "tags", "path": "systems/tags.json", "scope": "network", "kind": "system" },
+    { "id": "bag", "path": "systems/bag.json", "scope": "network", "kind": "system" },
+    { "id": "hub-bag-items", "path": "items/hub-bag-items.json", "scope": "network", "kind": "items" },
+    { "id": "crates-and-keys", "path": "items/crates-and-keys.json", "scope": "network", "kind": "items" },
+    { "id": "materials-and-rarity", "path": "systems/materials.json", "scope": "network", "kind": "system" },
+    { "id": "hub-materials", "path": "items/hub-materials.json", "scope": "network", "kind": "items" },
+    { "id": "cosmetics-altar", "path": "systems/cosmetics-altar.json", "scope": "network", "kind": "system" },
+    { "id": "hub-cosmetics", "path": "items/hub-cosmetics.json", "scope": "network", "kind": "items" },
+    { "id": "quest-board", "path": "systems/quest-board.json", "scope": "hub", "kind": "system" },
+    { "id": "daily-chest", "path": "systems/daily-chest.json", "scope": "network", "kind": "system" },
+    { "id": "hub-guis", "path": "guis/hub-guis.json", "scope": "hub", "kind": "guis" },
+    { "id": "diamondtrophy-gameplay", "path": "systems/diamondtrophy-gameplay.json", "scope": "diamondtrophy", "kind": "system" },
+    { "id": "diamondtrophy-items", "path": "items/diamondtrophy-items.json", "scope": "diamondtrophy", "kind": "items" },
+    { "id": "diamondtrophy-guis", "path": "guis/diamondtrophy-guis.json", "scope": "diamondtrophy", "kind": "guis" }
+  ],
+  "icon_convention": "An entry or gui with a confirmed real in-game texture carries an \"icon\" field, a path relative to the repo root (e.g. \"assets/icons/currencies/network-coins.png\"). Everything else only has \"icon_hint\", a short text description of what the icon should look like for future art. No icon was invented or AI-generated - every \"icon\" field is a real texture from the live resource packs.",
+  "open_coverage_notes": [
+    "Achievements and Quest Board entries are representative samples, not the full pool (50 achievements and dozens of quests exist; see each file's own notes for counts).",
+    "The in-game store (/store) and the real-money purchase flow for VIP/MVIP/Elite/Champion are not built yet - see ranks.json open_questions.",
+    "Off-hand cosmetics (Bouquet, Lantern, Plush) may not currently be equippable in-game - see cosmetics-altar.json open_questions."
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "id": "hub-guis",
+  "title": "Hub GUIs",
+  "scope": "hub",
+  "summary": "An index of every player-facing inventory menu on the Hub server that isn't already documented as its own topic. The Hub's front door is the Player Profile menu (identity, friends, stats, achievements, tags, leaderboards and Discord linking all share one frame) and the Server / Minigame Selector (the GUI that sends players to game servers through the proxy). Bag, the Quest Board, the Daily Chest calendar and the Cosmetics wardrobe are full systems in their own right and are only referenced here.",
+  "how_it_works": "Every Hub menu is a plain chest-style inventory GUI opened with a command, a hotbar item, or (for the quest board) right-clicking a placed piece of furniture. The Player Profile is the biggest one: its main page is a hub of navigation buttons, and clicking most of them opens a shared sub-page frame (the same player-card rail down the left side, a content grid in the middle, and scroll/search controls) for Friends, Stats, Achievements, Tags and Leaderboards. Stats, Achievements and Leaderboards each sit behind a game-category picker first (pick Hub, Diamond Trophy, etc., then see that category's content); Diamond Trophy and Hub are the only categories currently live; Elevator Chaos, Mace Crush and Survival show as 'coming soon'. Two buttons on the main profile page hand off to other plugins rather than opening a HubCore-built screen: Cosmetics runs /cosmetics (the wardrobe belongs to CosmeticsCore) and Settings runs /settings (the settings panel belongs to NetworkCore) — there is no separate settings GUI in HubCore itself. A /store command exists but currently just shows a 'coming soon' message; there is no store menu yet.",
+  "how_to_access": "Command list: /profile (aliases /me, /prof) for the profile menu; /servers (aliases /selector, /play, /games, /minigames) for the server selector; /store (aliases /shop, /buy) currently shows a 'coming soon' notice only. Hotbar items also open menus: the compass in slot 4 opens the server selector, and a dedicated profile item opens the profile menu.",
+  "guis": [
+    {
+      "id": "player-profile",
+      "title": "Player Profile",
+      "description": "The player's identity card and hub of sub-menus: friends, cross-game stats, achievements, chat tags, network leaderboards, cosmetics and Discord linking all branch from here.",
+      "how_to_open": "/profile, /me, /prof, or the profile hotbar item",
+      "slots": [
+        {
+          "slot": "head (main page)",
+          "item": "Player head",
+          "action": "Shows your name and rank; display only"
+        },
+        {
+          "slot": "status toggle",
+          "item": "Colored status icon",
+          "action": "Click to cycle your visibility: Online (visible to all friends) to Away to Offline (appears offline to everyone) to Favorites Only (visible only to starred friends), then back to Online"
+        },
+        {
+          "slot": "rank badge",
+          "item": "Rank plate",
+          "action": "Shows your network rank; display only"
+        },
+        {
+          "slot": "Discord",
+          "item": "Discord icon",
+          "action": "Shows link status once loaded; click opens the Discord sub-page"
+        },
+        {
+          "slot": "Friends",
+          "item": "People icon",
+          "action": "Opens the Friends sub-page"
+        },
+        {
+          "slot": "Backpack",
+          "item": "Backpack icon",
+          "action": "Opens the Bag menu (see the dedicated bag data file)"
+        },
+        {
+          "slot": "Stats",
+          "item": "Stats icon",
+          "action": "Opens the Stats sub-page"
+        },
+        {
+          "slot": "Achievements",
+          "item": "Trophy icon",
+          "action": "Opens the Achievements sub-page"
+        },
+        {
+          "slot": "Tags",
+          "item": "Tags icon",
+          "action": "Opens the Tags sub-page"
+        },
+        {
+          "slot": "Leaderboards",
+          "item": "Leaderboard icon",
+          "action": "Opens the Leaderboards sub-page"
+        },
+        {
+          "slot": "Cosmetics",
+          "item": "Cosmetics icon",
+          "action": "Closes the menu and runs /cosmetics (CosmeticsCore's wardrobe; see the dedicated cosmetics-altar data file)"
+        },
+        {
+          "slot": "Settings",
+          "item": "Settings icon",
+          "action": "Closes the menu and runs /settings (NetworkCore's settings panel; HubCore has no settings GUI of its own)"
+        },
+        {
+          "slot": "Close",
+          "item": "Barrier/X icon",
+          "action": "Closes the menu"
+        }
+      ],
+      "pages": [
+        {
+          "id": "friends",
+          "title": "Friends (People)",
+          "description": "Your friends list and incoming friend requests.",
+          "how_to_open": "Click Friends on the main profile page",
+          "notes": "Friends are sorted starred first, then online/away, then offline, then alphabetically. An 'Add Friend' tile opens a chat prompt to type a player's name. Shift-left-click a friend to star/unstar them (starred friends can always see you even in Favorites Only status); shift-right-click to remove them. A Requests button (shows the pending count) switches the page to incoming requests, where left-click accepts and right-click denies a request. The search button filters the friends list by name.",
+          "icon": "assets/icons/hub-guis/page-friends.png"
+        },
+        {
+          "id": "stats",
+          "title": "Stats",
+          "description": "Your (or another player's) cross-game statistics, one game at a time.",
+          "how_to_open": "Click Stats on the main profile page",
+          "notes": "First shows a game picker (Hub, Diamond Trophy, plus Elevator Chaos/Mace Crush/Survival marked coming soon). Hub stats shown: Playtime, PvP Kills, Record Killstreak, Blocks Jumped, Coins Earned, and Total Coins (across every gamemode). Other gamemodes show: Kills, Wins, Games Played, Coins Earned, Playtime, and Total Coins. Searching a player's name shows that player's stats for the selected game instead of your own.",
+          "icon": "assets/icons/hub-guis/page-stats.png"
+        },
+        {
+          "id": "achievements",
+          "title": "Achievements",
+          "description": "Trophies you've unlocked or are working toward, one game at a time.",
+          "how_to_open": "Click Achievements on the main profile page",
+          "notes": "Same game-category picker as Stats. Unlocked achievements are listed first, then locked ones sorted by how close you are to completing them; the list is paged (scroll up/down) when it doesn't fit one screen. Search filters by achievement name or description within the selected game.",
+          "icon": "assets/icons/hub-guis/page-achievements.png"
+        },
+        {
+          "id": "tags",
+          "title": "Tags",
+          "description": "Chat tags (small colored titles shown next to your name) that you've earned, with the ability to equip one at a time.",
+          "how_to_open": "Click Tags on the main profile page",
+          "notes": "By default only tags you already own are listed; searching also surfaces tags you don't own yet (shown greyed out) so you can preview them. Click an owned tag to equip it as your active tag, or click your currently equipped tag to unequip it. Each tag renders as a small color-tinted plate matching that tag's own color.",
+          "icon": "assets/icons/hub-guis/page-tags.png"
+        },
+        {
+          "id": "leaderboards",
+          "title": "Leaderboards",
+          "description": "Network-wide and per-game top-10 rankings.",
+          "how_to_open": "Click Leaderboards on the main profile page",
+          "notes": "First shows a category picker: a 'Network' tile (account-wide boards like total coins and level) plus one tile per game with its own boards. Picking a category lists that category's boards; picking a board shows its top rankings with medal coloring for 1st/2nd/3rd place, and your own current rank is pinned at the bottom even if you're outside the top rankings shown.",
+          "icon": "assets/icons/hub-guis/page-leaderboards.png"
+        },
+        {
+          "id": "discord",
+          "title": "Discord",
+          "description": "Discord account linking and supporter (server booster) status.",
+          "how_to_open": "Click Discord on the main profile page or any sub-page rail",
+          "notes": "If your account isn't linked, clicking runs /discord to start linking. Once linked it shows your Discord username, when you linked, your Discord message count and Discord level, plus a Disconnect button. A Supporter Status card shows whether you're currently boosting the ReimaginedCraft Discord server; while boosting, a 'Redeem Booster Tag' button grants the Booster chat tag once (equip it afterward from the Tags page). A 'Cosmetic Reward' tile is shown as coming soon for a future supporter-exclusive cosmetic.",
+          "icon": "assets/icons/hub-guis/page-discord.png"
+        }
+      ],
+      "icon": "assets/icons/hub-guis/player-profile.png"
+    },
+    {
+      "id": "server-selector",
+      "title": "Server / Minigame Selector",
+      "description": "The GUI that sends players from the Hub to a game server through the proxy.",
+      "how_to_open": "/servers, /selector, /play, /games, /minigames, or the compass hotbar item",
+      "slots": [
+        {
+          "slot": "large tile (Survival)",
+          "item": "Grass block icon",
+          "action": "Coming soon — clicking plays a denied sound, no server behind it yet"
+        },
+        {
+          "slot": "large tile (Elevator Chaos)",
+          "item": "TNT icon",
+          "action": "Coming soon"
+        },
+        {
+          "slot": "large tile (Mace Crush)",
+          "item": "Mace icon",
+          "action": "Coming soon"
+        },
+        {
+          "slot": "large tile (Diamond Trophy)",
+          "item": "Diamond icon",
+          "action": "Connects you to the Diamond Trophy server through the proxy"
+        }
+      ],
+      "notes": "A 6-row menu; each game gets a large multi-slot button (icon plus a surrounding blank-textured panel so the whole tile is clickable). Two small up/down arrow decorations hint that more game pages are planned. Diamond Trophy is currently the only playable destination; the other three listed games are placeholders with descriptive lore text but no working connection yet.",
+      "icon": "assets/icons/hub-guis/server-selector.png"
+    },
+    {
+      "id": "store",
+      "title": "Store",
+      "description": "Placeholder commands for a future in-game store; no menu exists yet.",
+      "how_to_open": "/store, /shop, /buy",
+      "notes": "Running any of these commands currently just shows a 'The store is coming soon!' action-bar message and plays a denied sound — there is no store GUI implemented yet.",
+      "icon": "assets/icons/hub-guis/store.png"
+    },
+    {
+      "id": "bag",
+      "title": "Bag (Backpack)",
+      "description": "Everything you've collected across the network: items, cosmetics, consumables, materials, crates and pocket bags, opened from the Backpack button on the profile menu or /bag.",
+      "how_to_open": "/bag, /backpack, /inv, or the Backpack button on the profile menu",
+      "notes": "see the dedicated bag data file",
+      "icon": "assets/icons/hub-guis/bag.png"
+    },
+    {
+      "id": "quest-board",
+      "title": "Quest Board",
+      "description": "Daily/weekly quests and monthly community goals on a notice-board style menu.",
+      "how_to_open": "/quests, or right-click the placed quest board furniture",
+      "notes": "see the dedicated quest-board data file"
+    },
+    {
+      "id": "daily-chest",
+      "title": "Daily Chest",
+      "description": "A weekly calendar of daily login reward chests with streaks and an opening animation.",
+      "how_to_open": "/dailychest, /daily, /dailyrewards",
+      "notes": "see the dedicated daily-chest data file",
+      "icon": "assets/icons/hub-guis/daily-chest.png"
+    },
+    {
+      "id": "cosmetics-wardrobe",
+      "title": "Cosmetics Wardrobe",
+      "description": "Equip hats, body cosmetics, balloons and off-hand cosmetics; crafted at the in-world crafting altar.",
+      "how_to_open": "/cosmetics (also reachable via the Cosmetics button on the profile menu)",
+      "notes": "see the dedicated cosmetics-altar data file",
+      "icon": "assets/icons/hub-guis/cosmetics-wardrobe.png"
+    }
+  ],
+  "related_systems": [
+    "bag",
+    "quest-board",
+    "daily-chest",
+    "cosmetics-altar",
+    "currencies",
+    "levels-achievements"
+  ],
+  "open_questions": [
+    "Whether Friends, Tags, Achievements, Leaderboards and Discord-linking mechanics get their own dedicated data files elsewhere in this wiki, or stay documented only as profile sub-pages here, was not specified for this research pass.",
+    "Elevator Chaos, Mace Crush and Survival are shown in both the profile's game picker and the server selector as 'coming soon' with no live server behind them yet — dates were not found and should not be guessed.",
+    "The exact wording/thresholds for achievement unlock requirements per game were not enumerated here (achievement definitions come from a shared NetworkCore config); see the achievements/stats topic if one exists."
+  ]
+}

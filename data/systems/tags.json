@@ -1,0 +1,315 @@
+{
+  "id": "tags",
+  "title": "Profile Tags",
+  "scope": "network",
+  "summary": "Tags are small colored name plaquettes players can earn and show off alongside their rank. They are purely cosmetic and separate from rank: a tag says something about what you did or contributed, not your rank/permission level. There are 19 tags total, split between a curated set of 16 always-available tags and 3 extra tags layered on top for Diamond Trophy milestones. A player can own several tags at once but only ever displays one at a time.",
+  "how_it_works": "Every tag is defined network-wide (in NetworkCore) with a display name, a short description of how it's earned, a theme color, and a colored plaquette glyph. Owning a tag and equipping a tag are different things: a player can earn/hold many tags, but only one can be the 'active' tag at a time. The active tag is shown two places in-game: on the floating nameplate above the player's head (the bottom of its three lines, below the rank+level line) and in the player's tab-list/nick styling. Equipping a different owned tag simply swaps which one is shown; it does not remove ownership of the others. Most tags are permanent once earned and can never be lost. One tag (Booster) is 'dynamic': it is tied to actively boosting the ReimaginedCraft Discord server, and the design intent (per the tag's own definition) is that it stops being available once the boost lapses, unlike every other tag which is kept forever once granted.",
+  "how_to_access": "Open your profile with /profile (or the compass-style profile item on the hub hotbar), then open the Tags page from the main profile screen. By default the Tags page only lists tags you already own; use the Search button to browse the full catalog, including tags you haven't earned yet (shown greyed out with a 'Not yet earned' note). Click any tag you own to equip it as your active tag, or click your currently-equipped tag again to unequip it (showing no tag at all). The Booster tag specifically is claimed from the profile's Discord page rather than the Tags page: link your Discord account, boost the ReimaginedCraft Discord server, then use the 'Redeem Tag' button that appears on the Discord page while you are boosting — this grants the tag and equips it immediately.",
+  "guis": [
+    {
+      "id": "profile-tags-page",
+      "title": "Tags",
+      "description": "Sub-page of the player Profile menu listing every tag the player owns (or, while searching, every tag that exists) as a small colored name-tag icon.",
+      "how_to_open": "Open /profile, then click the Tags button on the main profile page.",
+      "slots": [
+        {
+          "slot": "content grid (12 slots)",
+          "item": "Owned tag plaquette, dyed to the tag's color",
+          "action": "Click to equip as your active tag; click again while equipped to unequip"
+        },
+        {
+          "slot": "content grid (search results only)",
+          "item": "Greyed-out tag plaquette marked 'Not yet earned'",
+          "action": "Preview only — not clickable"
+        },
+        {
+          "slot": "search button",
+          "item": "Search icon",
+          "action": "Opens a chat prompt to search all tags by name/description, including ones you don't own yet"
+        },
+        {
+          "slot": "scroll up / scroll down",
+          "item": "Arrow icons",
+          "action": "Page through results when more than 12 tags match"
+        },
+        {
+          "slot": "back button",
+          "item": "Arrow icon",
+          "action": "Returns to the main profile page"
+        }
+      ],
+      "notes": "The equipped tag is marked with a gold star and 'Equipped' in its tooltip; owned-but-unequipped tags show a green checkmark and 'You have this tag'."
+    },
+    {
+      "id": "profile-discord-page",
+      "title": "Discord",
+      "description": "Sub-page of the player Profile menu showing your linked Discord account, boost/supporter status, and the Booster tag redeem button.",
+      "how_to_open": "Open /profile, then click the Discord button on the main profile page.",
+      "slots": [
+        {
+          "slot": "info card",
+          "item": "Discord account summary",
+          "action": "Shows your linked Discord username, link date, messages sent and Discord level; click to link if not yet connected"
+        },
+        {
+          "slot": "supporter status",
+          "item": "Discord icon, colored by status",
+          "action": "Shows whether you are currently boosting the ReimaginedCraft Discord and for how long"
+        },
+        {
+          "slot": "redeem tag",
+          "item": "Name tag icon",
+          "action": "Claims and equips the Booster tag while you are actively boosting; shows 'already redeemed' once claimed, or a locked hint if you aren't boosting"
+        },
+        {
+          "slot": "unlink button",
+          "item": "Unlink icon",
+          "action": "Disconnects your linked Discord account"
+        }
+      ],
+      "notes": "Redeeming here is the only way to obtain the Booster tag; it is not listed as unowned-but-earnable anywhere else."
+    }
+  ],
+  "entries": [
+    {
+      "id": "dev",
+      "name": "Developer",
+      "description": "Writes real ReimaginedCraft code.",
+      "category": "team",
+      "how_to_get": "Awarded by ReimaginedCraft staff to people who contribute code to the network.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small teal name-tag plaquette with a simple code-bracket symbol on it",
+      "notes": null,
+      "icon": "assets/icons/tags/dev.png"
+    },
+    {
+      "id": "builder",
+      "name": "Builder",
+      "description": "Built the map.",
+      "category": "team",
+      "how_to_get": "Awarded by ReimaginedCraft staff to players who helped build the server's maps/world.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small lime-green name-tag plaquette with a tiny hammer or brick icon",
+      "notes": null,
+      "icon": "assets/icons/tags/builder.png"
+    },
+    {
+      "id": "betatest",
+      "name": "Beta Tester",
+      "description": "Played during the ReimaginedCraft beta.",
+      "category": "beta",
+      "how_to_get": "Granted automatically the moment you join the network for the first time while the beta window is still open (before the beta cutoff date). No command or menu action needed — it's applied on join.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small purple name-tag plaquette with a small hourglass symbol",
+      "notes": "Joining before the cutoff also drops a separate 'Beta Ticket' item into your backpack at the same time; that item is part of the bag system, not this tag.",
+      "icon": "assets/icons/tags/betatest.png"
+    },
+    {
+      "id": "pixel",
+      "name": "Pixel Artist",
+      "description": "Contributed textures, icons or Blockbench models to the resource pack.",
+      "category": "team",
+      "how_to_get": "Awarded by ReimaginedCraft staff to players who contributed art/textures/models used on the server.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small pink name-tag plaquette with a tiny paintbrush or pixel-grid icon",
+      "notes": null,
+      "icon": "assets/icons/tags/pixel.png"
+    },
+    {
+      "id": "sound",
+      "name": "Sound Designer",
+      "description": "Made music or SFX that play on the server.",
+      "category": "team",
+      "how_to_get": "Awarded by ReimaginedCraft staff to players who contributed music or sound effects used on the server.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small sky-blue name-tag plaquette with a small music-note icon",
+      "notes": null,
+      "icon": "assets/icons/tags/sound.png"
+    },
+    {
+      "id": "trophy",
+      "name": "Trophy",
+      "description": "Completed Diamond Trophy.",
+      "category": "diamondtrophy",
+      "how_to_get": "Awarded by ReimaginedCraft staff for completing a Diamond Trophy run.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small cyan name-tag plaquette with a tiny trophy cup icon",
+      "notes": null,
+      "icon": "assets/icons/tags/trophy.png"
+    },
+    {
+      "id": "no_hit",
+      "name": "No Hit",
+      "description": "Reached the trophy without taking a single hit.",
+      "category": "diamondtrophy",
+      "how_to_get": "Awarded by ReimaginedCraft staff for finishing a Diamond Trophy run without taking any damage.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small rose-pink name-tag plaquette with a small shield-and-slash icon",
+      "notes": null,
+      "icon": "assets/icons/tags/no_hit.png"
+    },
+    {
+      "id": "dt_3h_playtime",
+      "name": "Diamond Devotee",
+      "description": "Played Diamond Trophy for 3 hours.",
+      "category": "diamondtrophy-achievement",
+      "how_to_get": "Granted automatically once your accumulated playtime in Diamond Trophy reaches 3 hours.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small emerald-green name-tag plaquette with a small clock or heart icon",
+      "notes": null,
+      "icon": "assets/icons/tags/dt_3h_playtime.png"
+    },
+    {
+      "id": "dt_10_wins",
+      "name": "Trophy Hunter",
+      "description": "Win Diamond Trophy 10 times.",
+      "category": "diamondtrophy-achievement",
+      "how_to_get": "Granted automatically after your 10th Diamond Trophy win.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small amber name-tag plaquette with a trophy-and-star icon",
+      "notes": null,
+      "icon": "assets/icons/tags/dt_10_wins.png"
+    },
+    {
+      "id": "dt_100_games",
+      "name": "Diamond Veteran",
+      "description": "Play 100 Diamond Trophy games.",
+      "category": "diamondtrophy-achievement",
+      "how_to_get": "Granted automatically after playing 100 Diamond Trophy games (win or lose).",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small pink name-tag plaquette with a small diamond icon",
+      "notes": "Distinct from the network-wide 'Veteran' tag below, which is based on total playtime across the whole network, not games played in Diamond Trophy specifically.",
+      "icon": "assets/icons/tags/dt_100_games.png"
+    },
+    {
+      "id": "bug_hunt",
+      "name": "Bug Hunter",
+      "description": "Reported a bug that was confirmed and fixed.",
+      "category": "community",
+      "how_to_get": "Awarded by ReimaginedCraft staff after you report a bug that gets confirmed and fixed.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small green name-tag plaquette with a small magnifying-glass icon",
+      "notes": null,
+      "icon": "assets/icons/tags/bug_hunt.png"
+    },
+    {
+      "id": "idea",
+      "name": "Idea",
+      "description": "Your idea made it onto the server in a playable form.",
+      "category": "community",
+      "how_to_get": "Awarded by ReimaginedCraft staff when a suggestion you made gets implemented on the server.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small blue name-tag plaquette with a small lightbulb icon",
+      "notes": null,
+      "icon": "assets/icons/tags/idea.png"
+    },
+    {
+      "id": "fanart",
+      "name": "Fan Artist",
+      "description": "Posted RC fan art that landed in the showcase channel.",
+      "category": "community",
+      "how_to_get": "Awarded by ReimaginedCraft staff when your fan art is featured in the community showcase channel.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small pink name-tag plaquette with a tiny paint-palette icon",
+      "notes": null,
+      "icon": "assets/icons/tags/fanart.png"
+    },
+    {
+      "id": "clip",
+      "name": "Clipper",
+      "description": "Your RC clip hit 10,000 views.",
+      "category": "community",
+      "how_to_get": "Awarded by ReimaginedCraft staff when a clip/video you made about the server reaches 10,000 views.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small rose name-tag plaquette with a small play-button/film icon",
+      "notes": null,
+      "icon": "assets/icons/tags/clip.png"
+    },
+    {
+      "id": "booster",
+      "name": "Booster",
+      "description": "Boosting the ReimaginedCraft Discord.",
+      "category": "supporter",
+      "how_to_get": "Link your Discord account to your ReimaginedCraft profile and boost the ReimaginedCraft Discord server, then claim it via the 'Redeem Tag' button on the profile's Discord page.",
+      "how_to_use": "Redeeming it also equips it immediately; you can later switch to a different owned tag from the Tags page and switch back at any time while still boosting.",
+      "rank_requirement": null,
+      "icon_hint": "a small violet name-tag plaquette with a small rocket or sparkle icon",
+      "notes": "The only tag designed to be temporary: it is meant to go away once you stop boosting the Discord, unlike every other tag on this list which is kept forever once earned.",
+      "icon": "assets/icons/tags/booster.png"
+    },
+    {
+      "id": "translate",
+      "name": "Translator",
+      "description": "Translated the server's texts into another language.",
+      "category": "community",
+      "how_to_get": "Awarded by ReimaginedCraft staff for contributing a translation of the server's text into another language.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small teal name-tag plaquette with a small speech-bubble/globe icon",
+      "notes": null,
+      "icon": "assets/icons/tags/translate.png"
+    },
+    {
+      "id": "veteran",
+      "name": "Veteran",
+      "description": "Passed 100 hours on the server.",
+      "category": "milestone",
+      "how_to_get": "Granted automatically the next time you join after your total playtime across the whole network passes 100 hours.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small orange name-tag plaquette with a small chevron or medal icon",
+      "notes": null,
+      "icon": "assets/icons/tags/veteran.png"
+    },
+    {
+      "id": "friendly",
+      "name": "Friendly",
+      "description": "Received 25 thank-yous from other players.",
+      "category": "community",
+      "how_to_get": "Awarded by ReimaginedCraft staff to players recognized as friendly/helpful by the community.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small green name-tag plaquette with a small heart or handshake icon",
+      "notes": null,
+      "icon": "assets/icons/tags/friendly.png"
+    },
+    {
+      "id": "noob",
+      "name": "Noob",
+      "description": "Died in the first 10 seconds of your first Diamond Trophy run.",
+      "category": "rare",
+      "how_to_get": "Awarded by ReimaginedCraft staff for dying within the first 10 seconds of your very first Diamond Trophy run — a rare, funny badge of honor.",
+      "how_to_use": "Equip from the Tags page once granted.",
+      "rank_requirement": null,
+      "icon_hint": "a small pale-green name-tag plaquette with a small wobbly skull or dizzy-face icon",
+      "notes": null,
+      "icon": "assets/icons/tags/noob.png"
+    }
+  ],
+  "related_systems": [
+    "ranks",
+    "levels-achievements",
+    "hub-guis",
+    "bag",
+    "diamondtrophy-gameplay"
+  ],
+  "open_questions": [
+    "Whether the Booster tag is actually auto-revoked the moment a boost lapses (and by what mechanism/timing) could not be confirmed in the Paper-side codebase — the tag is flagged 'dynamic' and documented as being enforced 'via the Discord bridge', and the revoke path does exist and correctly un-equips the tag when called, but the code that would call it on boost expiry appears to live outside this repo (the Discord bot side).",
+    "Community-contribution tags (Bug Hunter, Idea, Fan Artist, Clipper, Translator, Friendly) have no automatic in-game tracking found in the code — they read as staff-awarded recognition tags rather than something with a visible in-game counter or command a player can check progress against.",
+    "The exact definition of 'completing' Diamond Trophy for the Trophy tag (e.g. finishing vs. winning) is not spelled out beyond the one-line description, and no automatic grant path for the Trophy or No Hit tags was found — both currently appear to be staff-awarded."
+  ]
+}

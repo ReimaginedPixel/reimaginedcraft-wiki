@@ -1,0 +1,69 @@
+{
+  "id": "crates-and-keys",
+  "title": "Crates & Keys",
+  "scope": "network",
+  "summary": "Two lockbox tiers - Common Crate and Rare Crate - are the network's main 'chase' containers, each needing its matching key (Common Key / Rare Key) before it can be opened. Both tiers are referenced across many other systems (the Bag's general item pool, the Daily Chest, and Quest Board rewards) rather than having a single drop source, so this file collects them in one place as the canonical source for their names, descriptions and rarity odds.",
+  "how_it_works": "Crates and keys are ordinary Bag items: crates and keys you own sit in the Bag's Consumables category (crates sub-tab) until used. A crate can be picked up, traded around in conversation, or just held indefinitely - it does nothing on its own until you also own at least one matching key. Opening a crate from its Bag detail screen consumes exactly one matching key and rolls its reward table immediately (before the opening animation even plays), so closing the window early or disconnecting never loses the reward. Common Crates pay guaranteed coins plus cosmetic-crafting materials and a chance at a cosmetic or bonus item; Rare Crates pay a larger coin sum, rarer materials, and a guaranteed 'chase' bonus roll that can include a cosmetic. Keys have no use on their own beyond opening their matching crate tier - a key with no crate, or a crate with no key, just sits in the Bag until you have both.",
+  "how_to_access": "View what you're holding from the Bag (/bag, /backpack, /inv) under Consumables. Open a crate by clicking it in the Bag once you own a matching key - the detail screen's primary action consumes one key and opens it, and an 'Open All' option appears if you own several.",
+  "entries": [
+    {
+      "id": "common-crate",
+      "name": "Common Crate",
+      "description": "The network's everyday lockbox tier. Needs a Common Key to open.",
+      "category": "crate",
+      "how_to_get": "Earned across the network through everyday play - a possible Daily Chest roll, a Quest Board reward for Hard-tier weekly quests, and a general drop from normal Bag activity. Also guaranteed once every 7-day Daily Chest claim streak.",
+      "how_to_use": "Open it from the Bag (consumes one Common Key) for guaranteed coins, cosmetic-crafting materials, and a chance at a cosmetic or bonus item. Trying to open one with no key just shows it locked.",
+      "rank_requirement": null,
+      "icon_hint": "a plain wooden treasure chest with green metal trim, pixel-art icon",
+      "notes": null,
+      "icon": "assets/icons/crates-and-keys/common-crate.png"
+    },
+    {
+      "id": "rare-crate",
+      "name": "Rare Crate",
+      "description": "The network's premium lockbox tier. Needs a Rare Key to open.",
+      "category": "crate",
+      "how_to_get": "A rarer reward for bigger milestones - an uncommon Daily Chest roll, the reward for Elite-tier weekly quests on the Quest Board (alongside 2 Common Keys and a good chance at a Rare Key), and the source of Blueprint drops for the best cosmetics. Also guaranteed once every 30-day Daily Chest claim streak.",
+      "how_to_use": "Open it from the Bag (consumes one Rare Key) for a large coin payout, rarer crafting materials, and a guaranteed bonus 'chase' roll that can include a cosmetic. Trying to open one with no key just shows it locked.",
+      "rank_requirement": null,
+      "icon_hint": "an ornate purple-and-black trimmed chest with a faint magical glow, pixel-art icon",
+      "notes": "The main source of the rare Blueprint items that gate a handful of top-tier cosmetic recipes (Golden Crown, Jetpack, Angel Wings, Plush) at the crafting altar, and of the Headphones hat, which isn't craftable at all.",
+      "icon": "assets/icons/crates-and-keys/rare-crate.png"
+    },
+    {
+      "id": "common-key",
+      "name": "Common Key",
+      "description": "Opens one Common Crate. Has no other use.",
+      "category": "key",
+      "how_to_get": "A possible roll from the Daily Chest, and awarded alongside Common Crates from Quest Board rewards.",
+      "how_to_use": "Consumed automatically when you open a Common Crate from the Bag.",
+      "rank_requirement": null,
+      "icon_hint": "a small ornate key with a green-tinted handle, pixel-art icon",
+      "notes": null,
+      "icon": "assets/icons/crates-and-keys/common-key.png"
+    },
+    {
+      "id": "rare-key",
+      "name": "Rare Key",
+      "description": "Opens one Rare Crate. Has no other use.",
+      "category": "key",
+      "how_to_get": "A rare roll from the Daily Chest, and a good chance of one from Elite-tier Quest Board weekly rewards.",
+      "how_to_use": "Consumed automatically when you open a Rare Crate from the Bag.",
+      "rank_requirement": null,
+      "icon_hint": "a small ornate key with a purple-tinted handle and a faint sparkle, pixel-art icon",
+      "notes": null,
+      "icon": "assets/icons/crates-and-keys/rare-key.png"
+    }
+  ],
+  "related_systems": [
+    "bag",
+    "hub-bag-items",
+    "daily-chest",
+    "quest-board",
+    "cosmetics-altar",
+    "materials-and-rarity"
+  ],
+  "open_questions": [
+    "Exact drop-rate percentages for each reward tier inside a crate's loot table are shown to players on the crate's own tooltip in-game, but were not re-derived here as a static list since they are configuration detail rather than fixed lore."
+  ]
+}

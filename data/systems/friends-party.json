@@ -1,0 +1,238 @@
+{
+  "id": "friends-party",
+  "title": "Friends & Parties",
+  "scope": "network",
+  "summary": "Two related social systems: a network-wide Friends list (add/accept/remove, online notifications, a GUI) that follows you to every server, and a Party system built around the Diamond Trophy Dorm Room (invite up to 3 others, then queue into a Golden Trophy run together). Friends work everywhere on the network; Parties currently only exist on the Diamond Trophy server.",
+  "how_it_works": "FRIENDS (network-wide, works on every backend): Friendships and pending requests are stored centrally, so a request sent on one server is visible immediately on every other server. Sending a request to someone who already has a pending request to you auto-accepts instead of creating a duplicate. Each player can toggle whether they accept incoming requests at all. Friends can be starred (favourited) to pin them to the top of the friends list and to filter which friends get notified about you. Every player also has a cross-server visibility status that cycles Online -> Away -> Offline -> Favourites Only -> back to Online: Online and Away tell all your friends when you come online, go offline, or switch servers; Favourites Only only tells the friends you've starred; Offline hides your comings and goings from everyone. These notifications appear as toast-style chat messages only to friends who are currently online somewhere on the network. There is no cap on how many friends you can have.\n\nPARTY / DORM ROOM (Diamond Trophy server only): A party is built around a private instanced hub called your Dorm Room. Any player can claim one (it's created automatically the first time you need it) and invite up to 3 other players into it, for a maximum party size of 4. The player who owns the Dorm Room is the party leader, but leadership can be handed to another member at any time. Inviting someone who is already in your own party's Dorm Room, or inviting someone while you're already matched into the same Golden Trophy game as them, is blocked. An invite expires automatically after 60 seconds if not answered. If you accept an invite while you already have other people in your own Dorm Room, accepting would disband your current party (everyone else gets moved into their own fresh Dorm Rooms), so you're asked to confirm first. The Dorm Room itself is a small private world with a training dummy you can practice combat on and its own looping music track; players are frozen briefly in a loading area while it's being created so they can't wander before the world finishes loading. Switching rooms (dorm <-> pre-lobby <-> another room) is rate-limited to roughly once every 15 seconds to stop rapid room-hopping. When the party leader moves somewhere else (back to the Dorm Room, into a public/private Golden Trophy room, etc.) the rest of the party is never dragged along automatically -- instead they get a clickable chat message telling them where the leader went, with a [Follow] link that teleports them there on click. Leaving your own Dorm Room as the leader disbands the whole party (other members are moved to their own new Dorm Rooms); leaving as a regular member just removes you and gives you a fresh Dorm Room of your own. The leader can also kick a specific member outright, which sends them back to the main lobby.\n\nPLAYING A RUN TOGETHER: Starting a Golden Trophy run from your Dorm Room (leader only) takes every current party member into the same game instance together -- the whole party plays the same run as a team, not separate solo runs. While queuing (before the run starts), inviting a player who is standing with you in a not-yet-started public or private Golden Trophy room invites them straight into that waiting room instead of into your Dorm Room, so a party can also form after they've already started queuing.\n\nOn the Diamond Trophy server, the wrist-worn Watch item (opened by right-clicking it, or by pressing your hotbar's watch slot) also has its own quick-access Friends screen (a read-only view of your network friends list, sorted with online friends first, where clicking a friend's head opens their profile) and an Invites screen (shows your single most recent pending invite -- a Dorm Room party invite or a Golden Trophy pre-lobby invite -- as a clickable head to accept it).",
+  "how_to_access": "Friends: /friend (opens the Friends menu), /friend add <player>, /friend accept <player>, /friend deny <player>, /friend remove <player>, /friend list, /friend requests, /friend toggle. Aliases: /f, /friends. Party: /party (aliases /p), or the shortcut /invite <player> for /party invite <player>. Subcommands: /party invite <player>, /party accept [confirm], /party decline, /party leave, /party list, /party kick <player>, /party leader <player>. Your party's Dorm Room is reached with /dormroom (alias /room). On Diamond Trophy, the Watch item's Friends and Invites tabs give a quick in-game view of both systems without leaving the smartwatch UI.",
+  "guis": [
+    {
+      "id": "friends-menu",
+      "title": "Friends Menu",
+      "description": "The main network Friends list -- a 54-slot inventory GUI showing every friend as a player head, sorted with favourites first, then online friends, then alphabetically. Works on every server since the friend data is network-wide.",
+      "how_to_open": "/friend, /friend list, or the Friends tab in the Diamond Trophy Watch (view-only there)",
+      "slots": [
+        { "slot": "0-44", "item": "Friend's player head (name coloured by their rank)", "action": "Shift+Left-click to favourite/unfavourite; Shift+Right-click twice within 5 seconds to remove the friend (first click arms a confirm prompt)" },
+        { "slot": "45", "item": "Your visibility status icon (colour shows Online/Away/Offline/Favourites Only)", "action": "Click to cycle your status: Online -> Away -> Offline -> Favourites Only -> Online" },
+        { "slot": "48", "item": "Previous Page arrow", "action": "Go to the previous page (only shown when not on page 1)" },
+        { "slot": "49", "item": "Requests book", "action": "Switch to the Friend Requests view" },
+        { "slot": "50", "item": "Next Page arrow", "action": "Go to the next page (only shown when more pages exist)" },
+        { "slot": "53", "item": "Close (barrier)", "action": "Close the menu" }
+      ],
+      "notes": "An empty friends list shows a 'No friends yet' hint. Offline friends show a small 'last seen' time under their name. On servers running ItemsAdder the background is a custom painted texture; without it the menu falls back to plain vanilla icons and a plain-text title."
+    },
+    {
+      "id": "friend-requests-menu",
+      "title": "Friend Requests",
+      "description": "The incoming-requests view, reached from inside the Friends Menu (or directly via /friend requests) -- shows everyone who has sent you a friend request.",
+      "how_to_open": "/friend requests, or click the Requests book inside the Friends Menu",
+      "slots": [
+        { "slot": "0-44", "item": "Requester's player head", "action": "Left-click to accept the request; Right-click to deny it" },
+        { "slot": "45", "item": "Your visibility status icon", "action": "Click to cycle your visibility status" },
+        { "slot": "49", "item": "Back (door icon)", "action": "Return to the Friends view" },
+        { "slot": "53", "item": "Close (barrier)", "action": "Close the menu" }
+      ],
+      "notes": "Shows 'No pending requests' when the list is empty."
+    },
+    {
+      "id": "watch-friends-screen",
+      "title": "Watch: Friends",
+      "description": "A read-only friends list shown inside the Diamond Trophy Watch item, for quickly checking who's online without leaving the game screen.",
+      "how_to_open": "Right-click the Watch item, then click the Friends tab on the nav bar",
+      "slots": [
+        { "slot": "grid", "item": "Friend player heads", "action": "Click a friend's head to open their profile card" },
+        { "slot": "nav bar", "item": "Profile / Games / Home / Friends / Invites tabs", "action": "Switch between Watch screens" }
+      ],
+      "notes": "Friends are sorted online-first. This is a viewer for the same network-wide friend list as the Friends Menu, not a separate list."
+    },
+    {
+      "id": "watch-invites-screen",
+      "title": "Watch: Invites",
+      "description": "Shows your single most recent pending invite -- either a Dorm Room party invite or a Golden Trophy pre-lobby room invite -- inside the Watch item.",
+      "how_to_open": "Right-click the Watch item, then click the Invites tab on the nav bar",
+      "slots": [
+        { "slot": "head slot", "item": "Inviter's player head (or a 'No Pending Invites' placeholder)", "action": "Click to accept the invite" }
+      ],
+      "notes": "Only shows one invite at a time."
+    }
+  ],
+  "entries": [
+    {
+      "id": "friend-add",
+      "name": "Add Friend",
+      "description": "Send another player a friend request. If they've already sent you one, this instantly makes you friends instead of creating a duplicate request.",
+      "category": "friend-command",
+      "how_to_get": null,
+      "how_to_use": "/friend add <player>",
+      "rank_requirement": null,
+      "icon_hint": "a green player-head icon with a small plus symbol in the corner"
+    },
+    {
+      "id": "friend-accept",
+      "name": "Accept Friend Request",
+      "description": "Accept a pending incoming friend request by name, or via the Friend Requests menu.",
+      "category": "friend-command",
+      "how_to_use": "/friend accept <player>, or left-click their head in the Requests menu",
+      "rank_requirement": null,
+      "notes": "A toast also appears with clickable Accept/Deny buttons when someone sends you a request while you're online."
+    },
+    {
+      "id": "friend-deny",
+      "name": "Deny Friend Request",
+      "description": "Decline a pending incoming friend request.",
+      "category": "friend-command",
+      "how_to_use": "/friend deny <player>, or right-click their head in the Requests menu",
+      "rank_requirement": null
+    },
+    {
+      "id": "friend-remove",
+      "name": "Remove Friend",
+      "description": "End an existing friendship. This is a one-way command -- either friend can remove the other.",
+      "category": "friend-command",
+      "how_to_use": "/friend remove <player>, or Shift+Right-click a friend's head twice within 5 seconds in the Friends Menu (the first click just arms a confirmation)",
+      "rank_requirement": null
+    },
+    {
+      "id": "friend-list",
+      "name": "Friends List",
+      "description": "View everyone you're friends with, sorted favourites first, then online friends, then alphabetically.",
+      "category": "friend-mechanic",
+      "how_to_use": "/friend or /friend list opens the Friends Menu GUI",
+      "rank_requirement": null,
+      "icon_hint": "an open book showing small rows of player heads"
+    },
+    {
+      "id": "friend-requests-list",
+      "name": "Pending Requests",
+      "description": "View everyone who has sent you a friend request that you haven't answered yet.",
+      "category": "friend-mechanic",
+      "how_to_use": "/friend requests",
+      "rank_requirement": null
+    },
+    {
+      "id": "friend-toggle",
+      "name": "Toggle Accepting Requests",
+      "description": "Turn incoming friend requests on or off. While off, other players can't send you a request at all.",
+      "category": "friend-command",
+      "how_to_use": "/friend toggle",
+      "rank_requirement": null
+    },
+    {
+      "id": "friend-favorite",
+      "name": "Favourite a Friend",
+      "description": "Star a friend to pin them to the top of your friends list. Starred friends are also the only ones notified when your visibility status is set to Favourites Only.",
+      "category": "friend-mechanic",
+      "how_to_use": "Shift+Left-click a friend's head in the Friends Menu",
+      "rank_requirement": null,
+      "icon_hint": "a small gold five-pointed star"
+    },
+    {
+      "id": "friend-visibility-status",
+      "name": "Visibility Status",
+      "description": "A cross-server status that controls who gets notified when you come online, go offline, or switch servers: Online (everyone), Away (everyone, marked as away), Offline (nobody sees your activity), or Favourites Only (only starred friends are notified).",
+      "category": "friend-mechanic",
+      "how_to_use": "Click the status icon in the bottom-left of the Friends Menu to cycle through the four statuses",
+      "rank_requirement": null,
+      "icon_hint": "a coloured dye/person icon whose colour changes per status (green, orange, gray, purple)"
+    },
+    {
+      "id": "friend-online-notifications",
+      "name": "Online/Offline Notifications",
+      "description": "A chat toast telling you when a friend comes online, goes offline, or switches to a different server on the network -- subject to that friend's visibility status.",
+      "category": "friend-mechanic",
+      "how_to_use": "Automatic; no command needed. Shown to online friends only.",
+      "rank_requirement": null
+    },
+    {
+      "id": "party-invite",
+      "name": "Invite to Party",
+      "description": "Invite another online player into your Dorm Room / party. If you're already waiting in an un-started public or private Golden Trophy room, this invites them into that room instead of your Dorm Room.",
+      "category": "party-command",
+      "how_to_use": "/party invite <player>, or the shortcut /invite <player>",
+      "rank_requirement": null,
+      "icon_hint": "a small paper envelope with two tiny player silhouettes on it",
+      "notes": "Invites expire after 60 seconds. You can't invite someone who's already in your party or already matched into the same game as you."
+    },
+    {
+      "id": "party-accept",
+      "name": "Accept Party Invite",
+      "description": "Accept a pending party/Dorm Room invite. If you already have your own party of more than one, accepting asks you to confirm first, since it disbands your current party.",
+      "category": "party-command",
+      "how_to_use": "/party accept, then /party accept confirm if warned about disbanding your own party",
+      "rank_requirement": null
+    },
+    {
+      "id": "party-decline",
+      "name": "Decline Party Invite",
+      "description": "Turn down a pending party invite.",
+      "category": "party-command",
+      "how_to_use": "/party decline",
+      "rank_requirement": null
+    },
+    {
+      "id": "party-leave",
+      "name": "Leave Party",
+      "description": "Leave your current party. If you're the leader, this disbands the whole party and every other member gets their own fresh Dorm Room; if you're a regular member, you just leave and get your own new Dorm Room.",
+      "category": "party-command",
+      "how_to_use": "/party leave",
+      "rank_requirement": null
+    },
+    {
+      "id": "party-kick",
+      "name": "Kick from Party",
+      "description": "Remove a specific member from your party (leader only). The kicked player is sent back to the main lobby.",
+      "category": "party-command",
+      "how_to_use": "/party kick <player>",
+      "rank_requirement": null
+    },
+    {
+      "id": "party-leader",
+      "name": "Transfer Party Leadership",
+      "description": "Hand party leadership to a different member. The new leader can then invite/kick members and start the run.",
+      "category": "party-command",
+      "how_to_use": "/party leader <player>",
+      "rank_requirement": null,
+      "icon_hint": "a small gold crown icon"
+    },
+    {
+      "id": "party-list",
+      "name": "List Party Members",
+      "description": "Print your current party's member list in chat, marking the leader with a star.",
+      "category": "party-command",
+      "how_to_use": "/party list",
+      "rank_requirement": null
+    },
+    {
+      "id": "party-follow",
+      "name": "Follow Your Party Leader",
+      "description": "When your party leader moves to a different room (their Dorm Room, a public/private Golden Trophy room), you get a clickable chat message with a [Follow] link that teleports you to wherever they currently are. You are never dragged along automatically.",
+      "category": "party-mechanic",
+      "how_to_use": "Click the [Follow] link in chat, or run /gt follow",
+      "rank_requirement": null
+    },
+    {
+      "id": "dorm-room",
+      "name": "Dorm Room",
+      "description": "Your party's private staging hub on the Diamond Trophy server -- a small instanced world (up to 4 players) with a practice training dummy and its own looping music, where your party gathers before launching a Golden Trophy run.",
+      "category": "party-mechanic",
+      "how_to_get": "Created automatically the first time you need one",
+      "how_to_use": "/dormroom (alias /room) teleports you to your party's Dorm Room",
+      "rank_requirement": null,
+      "icon_hint": "a cosy small room icon with a bed and a training dummy silhouette"
+    },
+    {
+      "id": "party-play-together",
+      "name": "Starting a Run Together",
+      "description": "When the party leader starts a Golden Trophy run from the Dorm Room, every current party member is placed into the same game instance and plays the run together as a team, rather than each starting a separate solo run.",
+      "category": "party-mechanic",
+      "how_to_use": "Party leader runs /gt start from the Dorm Room",
+      "rank_requirement": null
+    }
+  ],
+  "related_systems": ["diamondtrophy-gameplay", "ranks"],
+  "open_questions": [
+    "There is no visible maximum on the size of a player's friends list in the code reviewed -- treated here as unlimited, but not explicitly confirmed by any config value.",
+    "The Party system (/party, Dorm Rooms) currently only exists on the Diamond Trophy server (it's part of DiamondThropyCore, not the network-wide NetworkCore plugin). No equivalent party command was found for Elevator Chaos or the custom Rooms system as of this research -- those may use their own separate invite/room-joining flows instead.",
+    "Exact wording of a few chat toasts (e.g. the clickable friend-request accept/deny buttons) may differ slightly from the Friends Menu GUI text since they're built in two different places in the code; both were verified but not cross-checked against a live server."
+  ]
+}

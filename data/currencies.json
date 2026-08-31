@@ -1,0 +1,89 @@
+{
+  "id": "currencies",
+  "title": "Currencies",
+  "scope": "network",
+  "summary": "ReimaginedCraft runs two persistent currencies plus one in-run currency across the Hub and Diamond Trophy: Network Coins (a shared wallet that follows you everywhere), Diamond Trophy's own local currency known in-run as score coins and to chest rewards as Trophy Coins, and Gold, which exists only inside a single Diamond Trophy run. A couple of rarer crafting materials, Cosmetic Shard and Stardust, are sometimes described as prestige currency for cosmetics, though today only Stardust is actually spent by a live crafting-altar recipe.",
+  "how_it_works": "Every player has one spendable Network Coins wallet that is the same balance on the Hub and on Diamond Trophy (and any other server sharing the network). Alongside it, a separate lifetime 'earned coins' number is tracked purely for leaderboards - it only ever grows and is never spent, so it is not the same thing as your wallet balance.\n\nThe Hub is the wallet's everyday source: a shared daily coin allowance (capped per player and resetting at local midnight) pays out through active play (time spent not AFK), your first several parkour jumps of the day, ongoing parkour milestones every so many blocks, and PvP arena kills. Diamond Trophy adds to the same wallet on top of that: every act your team clears pays Network Coins, and finishing a run pays a bonus scaled by your team's quest rating (C/B/A/S). The Hub's daily reward chest and NetworkCore's cross-server chest also hand out Network Coins directly, and opening crates can too.\n\nDiamond Trophy separately runs currencies that stay local to that server. Gold is an in-run score that resets to zero every game, earned by smashing dungeon pot furniture and defeating enemies (tougher enemies and the Goblin King boss pay more), and lost to a friendly-fire penalty if you hit a teammate. When a run ends, each player's Gold converts into Diamond Trophy's persistent local currency - referred to as 'score coins' in-game and as 'Trophy Coins' when it arrives from a reward chest - at a rate of roughly one coin per 1,000 gold, plus flat bonuses for every act cleared and a larger bonus for clearing all nine. Score coins buy cosmetic weapon skins at the Diamond Trophy skin wall and are a completely separate balance from the Network Coins wallet; they never show up in your network-wide balance.\n\nThe main direct sink for Network Coins is the crafting altar, where cosmetic recipes cost a mix of gathering materials (see the materials-and-rarity system) and, for the more elaborate cosmetics, a Network Coin price on top of the materials. A 'Coin Boost' item from your bag can temporarily multiply how many Network Coins the Hub's activities pay out - it does not affect Diamond Trophy's Gold or score coins.",
+  "how_to_access": "/coins shows your Network Coins wallet balance and your lifetime earned-coins total (add a player name to check someone else's balance). /gt coins on Diamond Trophy shows your local score-coin balance. /altar opens the crafting altar's recipe screen from any server and is where Network Coins and crafting materials are actually spent. On Diamond Trophy, the cosmetic skin wall in the lobby (or /gt skinbuy <skin>) is where score coins are spent on weapon skins. The Hub's daily reward chest and the network-wide /chest are common places to see Network Coins and Trophy Coins handed out.",
+  "entries": [
+    {
+      "id": "network-coins",
+      "name": "Network Coins",
+      "description": "The main spendable currency of the ReimaginedCraft network. One wallet balance follows you between the Hub and Diamond Trophy, so coins earned on either server can be spent on either server.",
+      "category": "currency",
+      "scope": "network",
+      "how_to_get": "In the Hub: staying actively playing pays a steady trickle, your first several parkour jumps each day pay a one-time bonus, ongoing parkour milestones pay out every so many blocks, and winning fights in the PvP arena pays per kill. All of these draw from one shared daily coin allowance that resets at local midnight, so there is a daily ceiling on how many Network Coins Hub activities alone can pay out. On Diamond Trophy: every act your team clears pays Network Coins, and finishing a run pays an additional bonus scaled by your team's quest rating (C/B/A/S) - Diamond Trophy has no daily cap of its own. The Hub's daily reward chest and the network-wide chest also hand out Network Coins directly, and opening crates can include a coin payout too.",
+      "how_to_use": "Check your balance with /coins (or /coins <player> for someone else, and via the balance shown on your HUD/tablist). Network Coins are spent at the crafting altar (/altar), where some cosmetic recipes cost coins on top of crafting materials. A 'Coin Boost' item from your bag temporarily multiplies how many coins Hub activities pay out; it has no effect on Diamond Trophy's Gold or score coins.",
+      "rank_requirement": null,
+      "icon_hint": "a shiny gold coin with a small network/link glyph stamped on its face and a tiny sparkle highlight",
+      "notes": "/coins also shows a separate 'lifetime earned' number below your spendable balance - a running leaderboard total that only ever increases and is never spent, so it can read higher than your actual wallet once you have bought anything.",
+      "icon": "assets/icons/currencies/network-coins.png"
+    },
+    {
+      "id": "diamondtrophy-gold",
+      "name": "Gold",
+      "description": "The in-the-moment currency of a Quest for the Golden Trophy run on Diamond Trophy. It exists only for the duration of a single run and resets to zero every time a new game starts.",
+      "category": "currency",
+      "scope": "diamondtrophy",
+      "how_to_get": "Smashing the pot furniture scattered through the dungeon (small pots and big pots pay different amounts), and defeating enemies - goblins and imps pay the least, knights and elite variants pay more, and the Goblin King boss pays the most of all. Hitting a teammate costs your team gold instead, as a friendly-fire penalty.",
+      "how_to_use": "Gold is not spent directly by the player. Your team's total gold decides your quest rating (C/B/A/S) at the end of the run, which in turn decides how many bonus Network Coins, score coins and XP everyone receives. At the very end of the run, each player's own accumulated gold is converted into Diamond Trophy score coins.",
+      "rank_requirement": null,
+      "icon_hint": "a small dungeon-loot pile of gold nuggets or coins with a bright yellow sparkle",
+      "notes": "Gold gains show as a rising gold '+amount' popup right where you earned it (a smashed pot, a kill), and the current team total and a per-player leaderboard are visible during the run. It never carries over between runs."
+    },
+    {
+      "id": "diamondtrophy-score-coins",
+      "name": "Trophy Coins (Score Coins)",
+      "description": "Diamond Trophy's own persistent currency, separate from the Network Coins wallet. Called 'score coins' inside Diamond Trophy itself, and shown as 'Trophy Coins' when it arrives as a reward from a chest.",
+      "category": "currency",
+      "scope": "diamondtrophy",
+      "how_to_get": "Automatically converted from the gold your character earned when a run ends (roughly one score coin per 1,000 gold), plus flat bonuses for every act your team clears and a larger bonus for clearing all nine acts. You can also receive Trophy Coins from the Hub's daily reward chest or the network-wide chest - those arrive as a pending delivery that lands in your Diamond Trophy balance the next time you are on Diamond Trophy, either on join or within about a minute if you are already there.",
+      "how_to_use": "Check your balance with /gt coins. Spend them at the cosmetic skin wall in the Diamond Trophy lobby (or with /gt skinbuy <skin>) to buy and equip cosmetic skins for your sword, bow and crossbow.",
+      "rank_requirement": null,
+      "icon_hint": "a trophy-shaped coin in a warm bronze/orange tone, echoing the network coin's style but in a different colour",
+      "notes": "This balance is local to Diamond Trophy only. It is a different number from your Network Coins wallet, does not appear in your network-wide balance display, and cannot be spent at the Hub's crafting altar.",
+      "icon": "assets/icons/currencies/diamondtrophy-score-coins.png"
+    },
+    {
+      "id": "cosmetic-shard",
+      "name": "Cosmetic Shard",
+      "description": "A rare crafting material described in its own tooltip as being for crafting cosmetics, kept in the bag's Materials tab alongside (but separate from) the twelve regular gathering materials. As of the current build, no live crafting-altar recipe actually spends one yet.",
+      "category": "material",
+      "scope": "network",
+      "how_to_get": "Dropped from crates, pocket bags, and the daily chest.",
+      "how_to_use": "Currently just held in your bag's Materials tab - no altar recipe spends it today. Internal plans describe a future 'shard shop' that would let players spend it directly on cosmetics, but that has not shipped.",
+      "rank_requirement": null,
+      "icon_hint": "a small faceted light-blue crystal shard, Minecraft item-icon style",
+      "notes": "See the materials-and-rarity system file for the fuller picture - this is one of two 'crafting' sub-tab materials distinct from the twelve gathering materials.",
+      "icon": "assets/icons/currencies/cosmetic-shard.png"
+    },
+    {
+      "id": "stardust",
+      "name": "Stardust",
+      "description": "A rare crafting material used as a higher-tier ingredient in some of the best cosmetic recipes at the crafting altar. Unlike the Cosmetic Shard, this one is a genuine live recipe cost today.",
+      "category": "material",
+      "scope": "network",
+      "how_to_get": "Dropped from crates, pocket bags, and other rare-material sources network-wide.",
+      "how_to_use": "Consumed as a recipe ingredient when crafting Legendary/Mythic-tier cosmetics at the crafting altar (/altar) - for example, the Golden Crown hat and the Angel Wings back cosmetic both call for it.",
+      "rank_requirement": null,
+      "icon_hint": "a few tiny glowing star-shaped specks of dust, Minecraft item-icon style",
+      "notes": "One of the two 'crafting' sub-tab materials in the bag, separate from the twelve regular gathering materials (see materials-and-rarity and hub-materials).",
+      "icon": "assets/icons/currencies/stardust.png"
+    }
+  ],
+  "related_systems": [
+    "cosmetics-altar",
+    "materials-and-rarity",
+    "hub-cosmetics",
+    "bag",
+    "daily-chest",
+    "quest-board",
+    "levels-achievements",
+    "crates-and-keys"
+  ],
+  "open_questions": [
+    "Whether the physical crafting-altar furniture is placed on the Hub, on Diamond Trophy, or both - /altar opens its recipe screen from any server, but a specific placed-furniture location was not confirmed.",
+    "Whether the Hub's older Vault-backed coin ledger is shown to players anywhere in the current UI, now that the Network Coins wallet is the number displayed on the HUD and tablist.",
+    "The rc_currencies resource pack ships a currency glyph named 'trophy_coin' distinct from the one actually used for Trophy Coins ('trophy_score'), but no current code resolves or displays 'trophy_coin' - unclear whether it is a planned separate currency or an unused leftover."
+  ]
+}

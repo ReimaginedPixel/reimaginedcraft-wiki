@@ -1,0 +1,195 @@
+{
+  "id": "quest-board",
+  "title": "Quest Board",
+  "scope": "network",
+  "summary": "The Quest Board is the network's daily/weekly/community objective system: a corkboard notice-board in the Hub (with a VIP-and-above /quests command shortcut) that hands out short tasks for network coins, network XP, and bag items. Quests cover both relaxed Hub activities and Diamond Trophy gameplay, and progress is tracked network-wide so a task can be advanced on whichever server it happens on.",
+  "how_it_works": "Every quest belongs to one of three categories, each with its own reset clock: Daily (resets at local midnight), Weekly (resets Monday at local midnight), and Community (resets on the 1st of the month). Separately from category, every quest also has a difficulty tier — Easy, Medium, Hard, or Elite — which only affects how good the reward is; an easy chat-based daily and a hard boss-clear daily can both sit on the board on the same day. Higher tiers pay out better bag items: Easy quests have a chance at a Small Pocket Bag, Medium quests always give one, Hard (weekly) quests give a Common Crate plus a Common Key with a chance at a Rare Key, and Elite (the toughest weeklies) give a Rare Crate, two Common Keys, and a much better chance at a Rare Key. Any percentage chance on a reward is shown on the quest's tooltip before you start it, so there's never a surprise about the odds. Completing a quest does not pay out automatically: it posts a chat message (hover it to see the quest's description and final progress) and plays a completion chime, and the reward has to be claimed by clicking that quest's tile on the physical board — the board shows a dotted list of what you'll get with a 'Click to claim!' prompt. Once claimed, a slot turns into an empty placeholder that counts down to the next period's reset. If a completed quest's reward is never claimed, it is lost when the period rotates. Community goals work differently: they're a single shared network-wide progress bar, and every player who contributed at least one point can claim their own copy of the reward once the bar fills, with the completion announced network-wide. The board also shows 'Your contribution: N' on community goals so you can see your personal share of the total. How many of the day's daily quests actually track your progress depends on your rank: everyone sees the same set of daily quest tiles in the same positions, but only some of those slots are unlocked for you. Base rank tracks 6 of the day's picks, VIP tracks 9, MVIP tracks 10, Elite tracks 11, and Champion (and staff) track all of the daily picks shown. Slots you haven't unlocked yet still display which quest is there, just marked Locked with a note naming the rank that opens it, in that rank's color. The board also color-codes each tile's frame: a neutral frame for dailies anyone can do, that rank's own color for a rank-locked daily slot, blue for weeklies, and purple for community goals.",
+  "how_to_access": "Right-click the Quest Board furniture piece in the Hub — free to interact with for every player, no rank required. Ranked players can skip the walk with the /quests command (aliases /quest, /questboard), which is a VIP-and-above perk; staff can also use it regardless of rank. Both open the same menu. Note that the completion chat message and sound fire wherever you actually finished the quest (including on Diamond Trophy), but the Quest Board menu itself only exists on the Hub, so you need to be on the Hub to claim a reward.",
+  "guis": [
+    {
+      "id": "quest-board-menu",
+      "title": "Quest Board",
+      "description": "A 9x6 chest-style menu themed as a corkboard of pinned quest notices, listing the day's daily quests, the week's active weeklies, and the month's active community goals.",
+      "how_to_open": "Right-click the Quest Board furniture in the Hub, or run /quests (VIP+ or staff).",
+      "slots": [
+        {
+          "slot": "row 2-3, columns 2-3 and 5-6 (6 tiles)",
+          "item": "Daily quest — open to everyone",
+          "action": "Shows one of the day's daily quests that every rank can track and complete; click it once finished to claim the reward."
+        },
+        {
+          "slot": "3 tiles alongside the base daily set",
+          "item": "Daily quest — VIP+ slot",
+          "action": "An extra daily quest slot that only starts tracking progress at VIP rank and above; shown but locked for lower ranks."
+        },
+        {
+          "slot": "1 tile",
+          "item": "Daily quest — MVIP+ slot",
+          "action": "An extra daily quest slot unlocked at MVIP rank and above."
+        },
+        {
+          "slot": "1 tile",
+          "item": "Daily quest — Elite+ slot",
+          "action": "An extra daily quest slot unlocked at Elite rank and above."
+        },
+        {
+          "slot": "2 tiles",
+          "item": "Daily quest — Champion slot",
+          "action": "The last daily quest slots, unlocked at Champion rank (staff get these automatically too)."
+        },
+        {
+          "slot": "3 tiles, top row",
+          "item": "Weekly quest",
+          "action": "Shows one of the 3 weekly quests active this week; bigger objective, bigger reward, resets Monday at local midnight."
+        },
+        {
+          "slot": "3 tiles, middle row",
+          "item": "Community goal",
+          "action": "Shows one of the 3 community goals active this month; a single bar shared by the whole network. Click to claim your reward once you've contributed and the bar is full."
+        },
+        {
+          "slot": "2 tiles (top-right and bottom-right corners)",
+          "item": "Close button (blank)",
+          "action": "Closes the Quest Board menu."
+        }
+      ],
+      "notes": "Each quest tile uses the reward's own item as its icon, with a lore panel showing the quest description, a difficulty tag (e.g. 'Easy - Daily'), a shaded progress bar (e.g. 4 of 8 filled in), the reward list, and either a reset countdown, a 'Click to claim!' prompt, an already-claimed checkmark, or (once claimed) a regeneration countdown on the now-empty slot.",
+      "icon": "assets/icons/quest-board/quest-board-menu.png"
+    }
+  ],
+  "entries": [
+    {
+      "id": "quest-board-furniture",
+      "name": "Quest Board",
+      "description": "The physical corkboard notice-board placed in the Hub that opens the Quest Board menu.",
+      "category": "furniture",
+      "how_to_get": "Not an obtainable item — it's a fixed piece of Hub decoration.",
+      "how_to_use": "Right-click it from the front to open the Quest Board menu. Free for every player to use, regardless of rank.",
+      "rank_requirement": null,
+      "icon_hint": "a wooden corkboard notice-board mounted on a post, covered in pinned paper quest slips",
+      "notes": "The board can be opened by anyone; only the /quests command shortcut is rank-gated.",
+      "icon": "assets/icons/quest-board/quest-board-furniture.png"
+    },
+    {
+      "id": "quest-light-it-up",
+      "name": "Light It Up",
+      "description": "A Hub daily quest: fire the firework launcher 3 times.",
+      "category": "daily-quest-hub",
+      "how_to_get": "Appears on the board when it's rolled into that day's set of daily quests.",
+      "how_to_use": "Use the Hub's firework launcher 3 times, then return to the board and claim the reward from its tile.",
+      "rank_requirement": null,
+      "icon_hint": "a colorful firework rocket mid-launch with sparks trailing behind it",
+      "notes": "Easy-tier daily; pays network coins and XP plus a chance at a Small Pocket Bag."
+    },
+    {
+      "id": "quest-say-hi",
+      "name": "Say Hi",
+      "description": "A Hub daily quest: send a chat message while at least 2 players are online.",
+      "category": "daily-quest-hub",
+      "how_to_get": "Appears on the board when it's rolled into that day's set of daily quests.",
+      "how_to_use": "Type a message in chat while 2 or more players are online, then claim it at the board.",
+      "rank_requirement": null,
+      "icon_hint": "an open book and quill with a small speech-bubble sparkle above it",
+      "notes": "Easy-tier daily."
+    },
+    {
+      "id": "quest-daily-ritual",
+      "name": "Daily Ritual",
+      "description": "A Hub daily quest: open your daily chest.",
+      "category": "daily-quest-hub",
+      "how_to_get": "Appears on the board when it's rolled into that day's set of daily quests.",
+      "how_to_use": "Open your Daily Chest (see the Daily Chest system) to complete it automatically, then claim the reward at the board.",
+      "rank_requirement": null,
+      "icon_hint": "a simple wooden chest lid slightly ajar with a warm light glowing from inside",
+      "notes": "Easy-tier daily; ties into the separate Daily Chest system."
+    },
+    {
+      "id": "quest-friendly-face",
+      "name": "Friendly Face",
+      "description": "A Hub daily quest: send a friend request to another player.",
+      "category": "daily-quest-hub",
+      "how_to_get": "Appears on the board when it's rolled into that day's set of daily quests.",
+      "how_to_use": "Send any player a friend request, then claim the reward at the board.",
+      "rank_requirement": null,
+      "icon_hint": "a single pink poppy flower held out like an offering",
+      "notes": "Easy-tier daily."
+    },
+    {
+      "id": "quest-goblin-slayer",
+      "name": "Goblin Slayer",
+      "description": "A Diamond Trophy daily quest: kill 5 goblins during a run.",
+      "category": "daily-quest-diamondtrophy",
+      "how_to_get": "Appears on the board when it's rolled into that day's set of daily quests.",
+      "how_to_use": "Kill 5 goblins while playing Diamond Trophy, then return to the Hub board to claim.",
+      "rank_requirement": null,
+      "icon_hint": "a plain iron sword with a small motion-slash mark next to the blade",
+      "notes": "Medium-tier daily; guarantees a Small Pocket Bag on top of coins and XP."
+    },
+    {
+      "id": "quest-one-act-down",
+      "name": "One Act Down",
+      "description": "A Diamond Trophy daily quest: clear any act.",
+      "category": "daily-quest-diamondtrophy",
+      "how_to_get": "Appears on the board when it's rolled into that day's set of daily quests.",
+      "how_to_use": "Finish any act in a Diamond Trophy run, then claim the reward at the Hub board.",
+      "rank_requirement": null,
+      "icon_hint": "a closed oak door with a warm light glowing at its edges, suggesting the next room",
+      "notes": "Medium-tier daily."
+    },
+    {
+      "id": "quest-claim-the-trophy",
+      "name": "Claim the Trophy",
+      "description": "A weekly quest: win a full game of Diamond Trophy.",
+      "category": "weekly-quest",
+      "how_to_get": "Appears on the board when it's rolled into that week's set of 3 active weeklies.",
+      "how_to_use": "Win a Diamond Trophy match, then claim the reward at the Hub board before the week resets Monday.",
+      "rank_requirement": null,
+      "icon_hint": "a solid gold block with a subtle golden shine/sparkle overlay",
+      "notes": "Elite-tier weekly; one of the best weekly rewards (Rare Crate, 2 Common Keys, high chance at a Rare Key)."
+    },
+    {
+      "id": "quest-quest-addict",
+      "name": "Quest Addict",
+      "description": "A weekly quest: complete 10 daily quests within the week.",
+      "category": "weekly-quest",
+      "how_to_get": "Appears on the board when it's rolled into that week's set of 3 active weeklies.",
+      "how_to_use": "Complete and claim 10 daily quests over the course of the week to finish this one too.",
+      "rank_requirement": null,
+      "icon_hint": "a closed brown leather-bound book with a bookmark ribbon hanging out",
+      "notes": "Hard-tier weekly."
+    },
+    {
+      "id": "quest-community-vault",
+      "name": "Community Vault",
+      "description": "A monthly community goal: the whole network earns 10,000 network coins together.",
+      "category": "community-goal",
+      "how_to_get": "Appears on the board when it's rolled into that month's set of 3 active community goals.",
+      "how_to_use": "Earn network coins from any normal activity — every player's earnings add to one shared network-wide bar. Anyone who contributed at least 1 coin toward it can claim their own reward once the bar fills, before the month resets.",
+      "rank_requirement": null,
+      "icon_hint": "a glossy solid emerald block with a faint green glow",
+      "notes": "Medium-tier community goal; completion is announced network-wide."
+    },
+    {
+      "id": "quest-better-together",
+      "name": "Better Together",
+      "description": "A monthly community goal: the network sends 100 friend requests together.",
+      "category": "community-goal",
+      "how_to_get": "Appears on the board when it's rolled into that month's set of 3 active community goals.",
+      "how_to_use": "Send friend requests as normal — every request counts toward the shared network-wide total. Claim your reward at the board once the bar fills and before the month resets.",
+      "rank_requirement": null,
+      "icon_hint": "a single pink poppy flower held out like an offering",
+      "notes": "Medium-tier community goal."
+    }
+  ],
+  "related_systems": [
+    "bag",
+    "daily-chest",
+    "currencies",
+    "ranks",
+    "crates-and-keys"
+  ],
+  "open_questions": [
+    "Exact numeric progress needed for quests not listed as example entries (the full 29-quest daily pool, 12-quest weekly pool, and 7-goal community pool) is documented in the source spec but not fully enumerated here to keep this file focused on representative examples.",
+    "Whether the Quest Board furniture is currently placed and live in the Hub, or still pending placement, was not independently re-verified beyond the design doc."
+  ]
+}

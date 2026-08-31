@@ -1,0 +1,71 @@
+{
+  "id": "bag",
+  "title": "Bag (Backpack)",
+  "scope": "network",
+  "summary": "The Bag is every player's network-wide inventory of collectible items - trophies from each gamemode, temporary coin boosts, and openable pocket bags and crates. It is backed by NetworkCore, so an item won on one server (say, a trophy from Diamond Trophy) shows up in the same bag when the player is standing in the Hub. Cosmetics and crafting used to live in the Bag but have since moved to their own systems.",
+  "how_it_works": "The Bag is a five-screen menu shared across every screen: a head card (top-left) shows collection progress, an Equipped/Altar card shows what is currently being crafted, a Boosts card shows any running coin multiplier and its remaining time, and a Keys & Materials card opens the crafting altar's materials overview. From the Home screen a player picks a category (Game Items, Consumables, Materials, Other), then a sub-tab inside it (for example Game Items splits into one tab per gamemode: hub, diamondtrophy, elevatorchaos, macecrust, survival), then a paged grid of that sub-tab's items. Items the player doesn't own yet are shown greyed out with a hint for how to get them, so browsing the Bag doubles as a collection log even for things not yet earned. Clicking an owned item opens a detail screen with its description, rarity, how-to-get text, and up to two action buttons: a primary action (Open for a pocket bag/crate, Activate for a boost) and, for containers owned in bulk, an 'Open All' that opens several at once (asking for confirmation first above a threshold, so a mis-click can't burn a stack of keys). Opening a container is fully resolved before the reveal animation starts - drops are granted immediately, so closing the window early or disconnecting never costs a reward, and a chat message always lists what was received. Duplicate non-stackable items are automatically converted into bonus coins instead of being lost. A coin boost, once activated, multiplies coin earnings from hub activities for a set duration; activating a second copy of the same boost extends the remaining time rather than stacking the multiplier, so a '2x coins' boost always means exactly double, never quadruple.",
+  "how_to_access": "Open the Bag with /bag (aliases /backpack, /inv), or from the profile menu's Backpack button.",
+  "guis": [
+    {
+      "id": "bag-home",
+      "title": "Your Bag",
+      "description": "Landing screen of the Bag: the five item categories as tiles, each showing an owned/total count and a progress bar.",
+      "how_to_open": "/bag, /backpack, or /inv",
+      "slots": [
+        { "slot": "top-left card", "item": "Player head", "action": "Shows overall items collected and collection percentage" },
+        { "slot": "Equipped/Altar card", "item": "Crafting altar summary", "action": "Click to open the crafting altar (what's crafting, what's ready)" },
+        { "slot": "Boosts card", "item": "Active coin boosts", "action": "Click to jump into the Consumables category" },
+        { "slot": "Keys & Materials card", "item": "Material counts", "action": "Click to open the altar's full materials grid" },
+        { "slot": "content grid", "item": "Game Items / Consumables / Materials / Other", "action": "Click a category tile to browse its sub-tabs" },
+        { "slot": "Back", "item": "Back button", "action": "Closes the Bag (Home is the top level)" }
+      ]
+    },
+    {
+      "id": "bag-category",
+      "title": "Category screen",
+      "description": "Shows a chosen category's sub-tabs (for example Game Items splits by gamemode), each with its own owned/total count.",
+      "how_to_open": "Click a category tile from Home",
+      "slots": [
+        { "slot": "content grid", "item": "Sub-tabs (e.g. hub, diamondtrophy, elevatorchaos, macecrust, survival for Game Items; boosts, pocket bags, crates for Consumables)", "action": "Click to see that sub-tab's items" },
+        { "slot": "Back", "item": "Back button", "action": "Returns to Home" }
+      ]
+    },
+    {
+      "id": "bag-items",
+      "title": "Items screen",
+      "description": "A paged grid of every item in the chosen sub-tab. Unowned items show greyed out with how to get them, so this screen works as a collection log.",
+      "how_to_open": "Click a sub-tab from the Category screen",
+      "slots": [
+        { "slot": "content grid", "item": "Individual items", "action": "Click an owned item to open its Detail screen" },
+        { "slot": "toggle", "item": "Everything / Owned filter", "action": "Switches the grid between showing everything and showing only what you own" },
+        { "slot": "page arrows", "item": "Previous/next page", "action": "Appear only when the sub-tab has more than one page of items" },
+        { "slot": "Back", "item": "Back button", "action": "Returns to the Category screen" }
+      ]
+    },
+    {
+      "id": "bag-detail",
+      "title": "Item detail screen",
+      "description": "One item blown up with its full description and available actions.",
+      "how_to_open": "Click an item in the Items screen",
+      "slots": [
+        { "slot": "item card", "item": "The item itself", "action": "Shows rarity, description, how many you own, and how to get more" },
+        { "slot": "primary action", "item": "Open / Activate", "action": "Opens a pocket bag or crate, or activates a coin boost" },
+        { "slot": "secondary action", "item": "Open All x N", "action": "For containers you own more than one of: opens several at once in a single summary" },
+        { "slot": "loot preview", "item": "Drop table", "action": "For crates and pocket bags: shows what can drop and roughly how likely each drop is" },
+        { "slot": "Back", "item": "Back button", "action": "Returns to the Items screen" }
+      ]
+    },
+    {
+      "id": "bag-reward",
+      "title": "Reward reveal screen",
+      "description": "Plays after opening a pocket bag or crate. Drops appear one at a time with a rising click sound; a very good drop also plays a special chime. Containers with dedicated art (pocket bags, Common Crate, Rare Crate) instead play a short opening animation before showing the same reveal grid.",
+      "how_to_open": "Automatic, after clicking Open/Open All on a container",
+      "notes": "Everything is granted before this screen even opens, so closing it early or disconnecting loses nothing - the chat message with your rewards is sent regardless."
+    }
+  ],
+  "related_systems": ["daily-chest", "quest-board", "materials-and-rarity", "hub-cosmetics", "cosmetics-altar", "currencies", "hub-bag-items", "crates-and-keys"],
+  "open_questions": [
+    "A large set of additional bag items (52 picked from a draft catalogue - mostly cosmetics, which are out of scope here, plus two new crate tiers) is specced but explicitly not implemented yet, so it is left out of this data set entirely.",
+    "Diamond Trophy, Elevator Chaos, Mace Crush and Survival game items are defined in the Bag but, other than being visible as uncollected in the collection log, are not yet actually being granted to players by those gamemodes - only the Hub's three game items (Parkour Medal, Arena Dog Tag, Daily Charm) are confirmed obtainable today."
+  ]
+}
