@@ -63,7 +63,7 @@
       "notes": "Everything is granted before this screen even opens, so closing it early or disconnecting loses nothing - the chat message with your rewards is sent regardless."
     }
   ],
-  "related_systems": ["daily-chest", "quest-board", "materials-and-rarity", "hub-cosmetics", "cosmetics-altar", "currencies", "hub-bag-items", "crates-and-keys"],
+  "related_systems": ["daily-chest", "quest-board", "materials-and-rarity", "hub-cosmetics", "cosmetics-altar", "currencies", "hub-bag-items", "crates-and-keys", "hub-blueprints"],
   "open_questions": [
     "A large set of additional bag items (52 picked from a draft catalogue - mostly cosmetics, which are out of scope here, plus two new crate tiers) is specced but explicitly not implemented yet, so it is left out of this data set entirely.",
     "Diamond Trophy, Elevator Chaos, Mace Crush and Survival game items are defined in the Bag but, other than being visible as uncollected in the collection log, are not yet actually being granted to players by those gamemodes - only the Hub's three game items (Parkour Medal, Arena Dog Tag, Daily Charm) are confirmed obtainable today."

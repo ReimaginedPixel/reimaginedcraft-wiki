@@ -1,0 +1,67 @@
+{
+  "id": "hub-blueprints",
+  "title": "Blueprints",
+  "scope": "network",
+  "summary": "Four rare Bag items that permanently unlock a top-tier cosmetic recipe at the Crafting Altar. A Blueprint is never consumed - finding one just means the recipe stops showing as a locked silhouette in the altar menu and becomes craftable for its normal material/coin cost, the same as any other recipe. They are their own category in NetworkCore's item registry (category materials, group blueprints) - not gathering materials, and not cosmetics themselves - which is why they get their own file here rather than living in hub-materials.json or hub-cosmetics.json.",
+  "how_to_access": "View owned Blueprints in the Bag under Materials, or from the Crafting Altar menu itself (a recipe you don't have the Blueprint for is shown locked). Once owned, the matching recipe unlocks permanently - it never needs to be found again, even after crafting the cosmetic.",
+  "entries": [
+    {
+      "id": "blueprint-golden-crown",
+      "name": "Blueprint: Golden Crown",
+      "description": "Unlocks the Golden Crown recipe at the altar.",
+      "category": "materials/blueprints",
+      "how_to_get": "A possible outcome of the guaranteed \"chase\" roll when opening a Rare Crate.",
+      "how_to_use": "Own it, then craft the Golden Crown at the altar (900 Base Material, 150 Leather, 70 Forged Steel, 11 Rainbow Powder, 10 Stardust, 6,000 coins; Legendary, roughly a 12-hour craft). The Blueprint itself is never consumed.",
+      "rank_requirement": null,
+      "icon_hint": "a rolled-up parchment scroll tied with a golden ribbon, a small crown sketch visible on the visible edge",
+      "rarity": "Legendary",
+      "notes": "Non-stackable - owning one is a permanent unlock, not a quantity. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_crown.png"
+    },
+    {
+      "id": "blueprint-jetpack",
+      "name": "Blueprint: Jetpack",
+      "description": "Unlocks the Jetpack recipe at the altar.",
+      "category": "materials/blueprints",
+      "how_to_get": "A possible outcome of the guaranteed \"chase\" roll when opening a Rare Crate.",
+      "how_to_use": "Own it, then craft the Jetpack at the altar (500 Base Material, 100 Warm Powder, 30 Forged Steel, 4 Rainbow Powder, 2,000 coins; Epic, roughly a 4-hour craft). The Blueprint itself is never consumed.",
+      "rank_requirement": null,
+      "icon_hint": "a rolled-up parchment scroll tied with a ribbon, a small jetpack sketch visible on the visible edge",
+      "rarity": "Epic",
+      "notes": "Non-stackable - owning one is a permanent unlock, not a quantity. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_jetpack.png"
+    },
+    {
+      "id": "blueprint-angel-wings",
+      "name": "Blueprint: Angel Wings",
+      "description": "Unlocks the Angel Wings recipe at the altar.",
+      "category": "materials/blueprints",
+      "how_to_get": "A possible outcome of the guaranteed \"chase\" roll when opening a Rare Crate - the rarest of the three active Blueprint outcomes in that pool, making this the hardest Blueprint to find.",
+      "how_to_use": "Own it, then craft Angel Wings at the altar (1,500 Base Material, 200 Cold Powder, 100 Glow Powder, 14 Luck Essence, 16 Stardust, 12,000 coins - the single most expensive cosmetic recipe on the network; Mythic, roughly a 24-hour craft). The Blueprint itself is never consumed.",
+      "rank_requirement": null,
+      "icon_hint": "a rolled-up parchment scroll tied with a white-and-pink ribbon, a small feather/wing sketch visible on the visible edge",
+      "rarity": "Mythic",
+      "notes": "Non-stackable - owning one is a permanent unlock, not a quantity. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_angel_wings.png"
+    },
+    {
+      "id": "blueprint-plush",
+      "name": "Blueprint: Plush",
+      "description": "Unlocks the Plush off-hand recipe at the altar.",
+      "category": "materials/blueprints",
+      "how_to_get": "NOT CURRENTLY OBTAINABLE IN-GAME. Its item definition lists \"Rare Crates\" as the source, and it used to be a possible outcome of the Rare Crate's guaranteed \"chase\" roll, but that table entry has since been commented out of the live configuration (the same day, and for the same reason, that the Bouquet off-hand cosmetic was pulled from the Common Crate's chase table) pending a fix to how off-hand cosmetics get equipped. As of this audit no active drop table, quest, chest or altar recipe grants this item.",
+      "how_to_use": "Own it, then craft the Plush off-hand at the altar (500 Base Material, 100 Leather, 30 Glow Powder, 4 Luck Essence, 2,000 coins; Epic). The Blueprint itself is never consumed - but since it currently cannot be obtained, the Plush recipe is unreachable for any player who did not already own one before it was pulled.",
+      "rank_requirement": null,
+      "icon_hint": "a rolled-up parchment scroll tied with a ribbon, a small plush-toy sketch visible on the visible edge",
+      "rarity": "Epic",
+      "notes": "Non-stackable. Real texture exists (rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_plush.png) even though the item is not currently reachable in-game - it is fully defined, just not granted by anything live."
+    }
+  ],
+  "related_systems": [
+    "cosmetics-altar",
+    "hub-cosmetics",
+    "crates-and-keys",
+    "bag",
+    "materials-and-rarity"
+  ],
+  "open_questions": [
+    "Whether Blueprint: Plush will be restored to the Rare Crate table (or handed out another way) once the off-hand equip path exists is not decided anywhere in the current configuration - see hub-cosmetics.json's Plush and Bouquet entries and cosmetics-altar.json's open_questions for the underlying off-hand issue."
+  ]
+}

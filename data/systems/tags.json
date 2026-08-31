@@ -4,7 +4,7 @@
   "scope": "network",
   "summary": "Tags are small colored name plaquettes players can earn and show off alongside their rank. They are purely cosmetic and separate from rank: a tag says something about what you did or contributed, not your rank/permission level. There are 19 tags total, split between a curated set of 16 always-available tags and 3 extra tags layered on top for Diamond Trophy milestones. A player can own several tags at once but only ever displays one at a time.",
   "how_it_works": "Every tag is defined network-wide (in NetworkCore) with a display name, a short description of how it's earned, a theme color, and a colored plaquette glyph. Owning a tag and equipping a tag are different things: a player can earn/hold many tags, but only one can be the 'active' tag at a time. The active tag is shown two places in-game: on the floating nameplate above the player's head (the bottom of its three lines, below the rank+level line) and in the player's tab-list/nick styling. Equipping a different owned tag simply swaps which one is shown; it does not remove ownership of the others. Most tags are permanent once earned and can never be lost. One tag (Booster) is 'dynamic': it is tied to actively boosting the ReimaginedCraft Discord server, and the design intent (per the tag's own definition) is that it stops being available once the boost lapses, unlike every other tag which is kept forever once granted.",
-  "how_to_access": "Open your profile with /profile (or the compass-style profile item on the hub hotbar), then open the Tags page from the main profile screen. By default the Tags page only lists tags you already own; use the Search button to browse the full catalog, including tags you haven't earned yet (shown greyed out with a 'Not yet earned' note). Click any tag you own to equip it as your active tag, or click your currently-equipped tag again to unequip it (showing no tag at all). The Booster tag specifically is claimed from the profile's Discord page rather than the Tags page: link your Discord account, boost the ReimaginedCraft Discord server, then use the 'Redeem Tag' button that appears on the Discord page while you are boosting — this grants the tag and equips it immediately.",
+  "how_to_access": "Open your profile with /profile (or the compass-style profile item on the hub hotbar), then open the Tags page from the main profile screen. By default the Tags page only lists tags you already own; use the Search button to browse the full catalog, including tags you haven't earned yet (shown greyed out with a 'Not yet earned' note). Click any tag you own to equip it as your active tag, or click your currently-equipped tag again to unequip it (showing no tag at all). The Booster tag specifically is claimed from the profile's Discord page rather than the Tags page: link your Discord account, boost the ReimaginedCraft Discord server, then use the 'Redeem Tag' button that appears on the Discord page while you are boosting - this grants the tag and equips it immediately.",
   "guis": [
     {
       "id": "profile-tags-page",
@@ -20,7 +20,7 @@
         {
           "slot": "content grid (search results only)",
           "item": "Greyed-out tag plaquette marked 'Not yet earned'",
-          "action": "Preview only — not clickable"
+          "action": "Preview only - not clickable"
         },
         {
           "slot": "search button",
@@ -100,7 +100,7 @@
       "name": "Beta Tester",
       "description": "Played during the ReimaginedCraft beta.",
       "category": "beta",
-      "how_to_get": "Granted automatically the moment you join the network for the first time while the beta window is still open (before the beta cutoff date). No command or menu action needed — it's applied on join.",
+      "how_to_get": "Granted automatically the moment you join the network for the first time while the beta window is still open (before the beta cutoff date). No command or menu action needed - it's applied on join.",
       "how_to_use": "Equip from the Tags page once granted.",
       "rank_requirement": null,
       "icon_hint": "a small purple name-tag plaquette with a small hourglass symbol",
@@ -292,7 +292,7 @@
       "name": "Noob",
       "description": "Died in the first 10 seconds of your first Diamond Trophy run.",
       "category": "rare",
-      "how_to_get": "Awarded by ReimaginedCraft staff for dying within the first 10 seconds of your very first Diamond Trophy run — a rare, funny badge of honor.",
+      "how_to_get": "Awarded by ReimaginedCraft staff for dying within the first 10 seconds of your very first Diamond Trophy run - a rare, funny badge of honor.",
       "how_to_use": "Equip from the Tags page once granted.",
       "rank_requirement": null,
       "icon_hint": "a small pale-green name-tag plaquette with a small wobbly skull or dizzy-face icon",
@@ -308,8 +308,8 @@
     "diamondtrophy-gameplay"
   ],
   "open_questions": [
-    "Whether the Booster tag is actually auto-revoked the moment a boost lapses (and by what mechanism/timing) could not be confirmed in the Paper-side codebase — the tag is flagged 'dynamic' and documented as being enforced 'via the Discord bridge', and the revoke path does exist and correctly un-equips the tag when called, but the code that would call it on boost expiry appears to live outside this repo (the Discord bot side).",
-    "Community-contribution tags (Bug Hunter, Idea, Fan Artist, Clipper, Translator, Friendly) have no automatic in-game tracking found in the code — they read as staff-awarded recognition tags rather than something with a visible in-game counter or command a player can check progress against.",
-    "The exact definition of 'completing' Diamond Trophy for the Trophy tag (e.g. finishing vs. winning) is not spelled out beyond the one-line description, and no automatic grant path for the Trophy or No Hit tags was found — both currently appear to be staff-awarded."
+    "Whether the Booster tag is actually auto-revoked the moment a boost lapses (and by what mechanism/timing) could not be confirmed in the Paper-side codebase - the tag is flagged 'dynamic' and documented as being enforced 'via the Discord bridge', and the revoke path does exist and correctly un-equips the tag when called, but the code that would call it on boost expiry appears to live outside this repo (the Discord bot side).",
+    "Community-contribution tags (Bug Hunter, Idea, Fan Artist, Clipper, Translator, Friendly) have no automatic in-game tracking found in the code - they read as staff-awarded recognition tags rather than something with a visible in-game counter or command a player can check progress against.",
+    "The exact definition of 'completing' Diamond Trophy for the Trophy tag (e.g. finishing vs. winning) is not spelled out beyond the one-line description, and no automatic grant path for the Trophy or No Hit tags was found - both currently appear to be staff-awarded."
   ]
 }

@@ -2,8 +2,8 @@
   "id": "diamondtrophy-items",
   "title": "Diamond Trophy Items & Props",
   "scope": "diamondtrophy",
-  "summary": "Diamond Trophy has no fixed class/kit system -- players grab weapons for free from armory racks each run, and spend the run's own score-coin currency on purely cosmetic weapon skins. This file also covers the FistWatch menu item and the dorm's basketball toy.",
-  "how_it_works": "There is no loadout-select screen: a player's weapon is whatever they physically take from a weapon rack in the armory (and any acts that place extra racks), and it resets to nothing at the start of the next run. Cosmetic weapon skins bought with score coins are purely visual reskins of the same weapon types and carry no gameplay difference.",
+  "summary": "Diamond Trophy has no fixed class/kit system -- players grab weapons for free from armory racks each run, and spend the run's own score-coin currency on purely cosmetic weapon skins (exactly 9 exist: 3 sword, 2 bow, 1 crossbow, 3 shield). This file also covers the FistWatch menu item, the dorm's basketball toy and training dummy, and the every-5th-run milestone reward.",
+  "how_it_works": "There is no loadout-select screen: a player's weapon is whatever they physically take from a weapon rack in the armory (and any acts that place extra racks), and it resets to nothing at the start of the next run. Cosmetic weapon skins bought with score coins are purely visual reskins of the same weapon types and carry no gameplay difference, though an equipped skin does follow you onto the next matching weapon you grab from a rack. Diamond Trophy's DT-exclusive gathering materials (Goblin Skin, Cannon Ash, Orange Plastic) and its three defined-but-not-yet-granted Bag trophies (Trophy Replica, Act Emblem, Watch Gear) are documented in the hub-materials and hub-bag-items files rather than duplicated here.",
   "entries": [
     {
       "id": "fist-watch",
@@ -22,7 +22,7 @@
       "name": "Armory Weapon Racks",
       "description": "Wall-mounted weapon racks (invisible item frames holding a visible weapon) found in the armory and scattered through the acts. They are the closest thing Diamond Trophy has to a loadout system: no menu, just walk up and take one.",
       "category": "other",
-      "how_to_get": "Left- or right-click a loaded rack to take its weapon -- a sword, bow, crossbow or shield. Each individual rack gives out one weapon and stays empty until the next run restocks it.",
+      "how_to_get": "Left- or right-click a loaded rack to take its weapon -- a sword, bow, crossbow or shield. A rack glows green when you look at it from within about 2 blocks. Each individual rack gives out one weapon and stays empty until the next run restocks it. If you already own and have equipped a weapon skin for that weapon type, the rack hands you the skinned version instead of the plain default.",
       "how_to_use": "Carry the weapon into the acts. A sword can dual-wield an offhand copy of itself for a lighter side-attack (right-click an enemy with it), and a shield can be carried alongside any weapon. A sword and a bow cannot be held at the same time, but a crossbow can be paired with a sword. Bows and crossbows never run out of arrows during a run.",
       "rank_requirement": null,
       "icon_hint": "a wooden weapon rack mounted on a stone armory wall, holding a sword, a bow and a small round shield",
@@ -34,7 +34,7 @@
       "description": "A cosmetic sword skin with a glowing orange-to-red lava finish. Purely visual -- no gameplay difference from a plain sword.",
       "category": "cosmetic",
       "how_to_get": "Buy for 250 score coins from the weapon skin wall in the armory (right-click the framed skin, then confirm the purchase in chat).",
-      "how_to_use": "Equip from the FistWatch's Bag screen; only one sword skin can be equipped at a time.",
+      "how_to_use": "Equip either straight from the purchase prompt in chat, or later from the FistWatch's Bag/Skins screen; only one sword skin can be equipped at a time. The next sword you take from an armory rack comes pre-skinned once equipped.",
       "rank_requirement": null,
       "icon_hint": "a sword with a glowing lava-orange to deep-red blade, faint ember particles",
       "icon": "assets/icons/diamondtrophy-items/lava-sword.png"
@@ -45,7 +45,7 @@
       "description": "A cosmetic sword skin with a cool cyan-to-blue gradient finish.",
       "category": "cosmetic",
       "how_to_get": "Buy for 100 score coins from the weapon skin wall in the armory.",
-      "how_to_use": "Equip from the FistWatch's Bag screen; only one sword skin can be equipped at a time.",
+      "how_to_use": "Equip either straight from the purchase prompt in chat, or later from the FistWatch's Bag/Skins screen; only one sword skin can be equipped at a time. The next sword you take from an armory rack comes pre-skinned once equipped.",
       "rank_requirement": null,
       "icon_hint": "a sword blade in a bright cyan-to-blue gradient, sleek and glossy",
       "icon": "assets/icons/diamondtrophy-items/umbrella-sword.png"
@@ -56,7 +56,7 @@
       "description": "A cosmetic sword skin in a deep red-to-orange gradient -- the cheapest sword skin on the wall.",
       "category": "cosmetic",
       "how_to_get": "Buy for 20 score coins from the weapon skin wall in the armory.",
-      "how_to_use": "Equip from the FistWatch's Bag screen; only one sword skin can be equipped at a time.",
+      "how_to_use": "Equip either straight from the purchase prompt in chat, or later from the FistWatch's Bag/Skins screen; only one sword skin can be equipped at a time. The next sword you take from an armory rack comes pre-skinned once equipped.",
       "rank_requirement": null,
       "icon_hint": "a sword with a dark maroon-to-red gradient blade",
       "icon": "assets/icons/diamondtrophy-items/red-sword.png"
@@ -67,7 +67,7 @@
       "description": "A cosmetic bow skin styled in warm orange-to-yellow tones.",
       "category": "cosmetic",
       "how_to_get": "Buy for 150 score coins from the weapon skin wall in the armory.",
-      "how_to_use": "Equip from the FistWatch's Bag screen; only one bow skin can be equipped at a time.",
+      "how_to_use": "Equip either straight from the purchase prompt in chat, or later from the FistWatch's Bag/Skins screen; only one bow skin can be equipped at a time. The next bow you take from an armory rack comes pre-skinned once equipped.",
       "rank_requirement": null,
       "icon_hint": "a wooden bow with orange-to-yellow banded limbs, hazard-stripe style",
       "icon": "assets/icons/diamondtrophy-items/construction-bow.png"
@@ -78,7 +78,7 @@
       "description": "A cosmetic bow skin in an earthy green gradient finish.",
       "category": "cosmetic",
       "how_to_get": "Buy for 200 score coins from the weapon skin wall in the armory.",
-      "how_to_use": "Equip from the FistWatch's Bag screen; only one bow skin can be equipped at a time.",
+      "how_to_use": "Equip either straight from the purchase prompt in chat, or later from the FistWatch's Bag/Skins screen; only one bow skin can be equipped at a time. The next bow you take from an armory rack comes pre-skinned once equipped.",
       "rank_requirement": null,
       "icon_hint": "a wooden bow with a mossy green-to-light-green gradient and leaf-like grain",
       "icon": "assets/icons/diamondtrophy-items/natural-bow.png"
@@ -89,7 +89,7 @@
       "description": "A cosmetic crossbow skin styled in warm orange-to-yellow tones, matching the Construction Bow.",
       "category": "cosmetic",
       "how_to_get": "Buy for 150 score coins from the weapon skin wall in the armory.",
-      "how_to_use": "Equip from the FistWatch's Bag screen; only one crossbow skin can be equipped at a time.",
+      "how_to_use": "Equip either straight from the purchase prompt in chat, or later from the FistWatch's Bag/Skins screen; only one crossbow skin can be equipped at a time. The next crossbow you take from an armory rack comes pre-skinned once equipped.",
       "rank_requirement": null,
       "icon_hint": "a crossbow with orange-to-yellow banded limbs, hazard-stripe style",
       "icon": "assets/icons/diamondtrophy-items/construction-crossbow.png"
@@ -100,9 +100,10 @@
       "description": "A cosmetic shield skin in a matte grey-to-black gradient -- one of the cheapest skins on the wall.",
       "category": "cosmetic",
       "how_to_get": "Buy for 5 score coins from the weapon skin wall in the armory.",
-      "how_to_use": "Equip from the FistWatch's Bag screen.",
+      "how_to_use": "Equip either straight from the purchase prompt in chat, or later from the FistWatch's Bag/Skins screen.",
       "rank_requirement": null,
       "icon_hint": "a round wooden shield painted in a dark slate-to-black gradient",
+      "notes": "Minor known display quirk: the Skins screen's green checkmark currently only checks sword/bow/crossbow skins, so an equipped shield skin never shows the checkmark there even though it is genuinely equipped and is what the armory rack hands you.",
       "icon": "assets/icons/diamondtrophy-items/black-shield.png"
     },
     {
@@ -111,9 +112,10 @@
       "description": "A cosmetic shield skin in a violet-to-indigo gradient.",
       "category": "cosmetic",
       "how_to_get": "Buy for 5 score coins from the weapon skin wall in the armory.",
-      "how_to_use": "Equip from the FistWatch's Bag screen.",
+      "how_to_use": "Equip either straight from the purchase prompt in chat, or later from the FistWatch's Bag/Skins screen.",
       "rank_requirement": null,
       "icon_hint": "a round wooden shield painted in a bright violet-to-indigo gradient",
+      "notes": "Minor known display quirk: the Skins screen's green checkmark currently only checks sword/bow/crossbow skins, so an equipped shield skin never shows the checkmark there even though it is genuinely equipped and is what the armory rack hands you.",
       "icon": "assets/icons/diamondtrophy-items/purple-shield.png"
     },
     {
@@ -122,30 +124,57 @@
       "description": "A cosmetic shield skin styled like a starry night sky in purple and pink tones.",
       "category": "cosmetic",
       "how_to_get": "Buy for 5 score coins from the weapon skin wall in the armory.",
-      "how_to_use": "Equip from the FistWatch's Bag screen.",
+      "how_to_use": "Equip either straight from the purchase prompt in chat, or later from the FistWatch's Bag/Skins screen.",
       "rank_requirement": null,
       "icon_hint": "a round wooden shield painted like a starry galaxy in deep purple and pink",
+      "notes": "Minor known display quirk: the Skins screen's green checkmark currently only checks sword/bow/crossbow skins, so an equipped shield skin never shows the checkmark there even though it is genuinely equipped and is what the armory rack hands you.",
       "icon": "assets/icons/diamondtrophy-items/galaxy-shield.png"
     },
     {
       "id": "basketball",
       "name": "Basketball",
-      "description": "A bouncy, throwable toy ball found in the dorm room's social area (and occasionally placed inside a game room, such as one act). It's purely for fun -- realistic bounce-off-the-floor-and-walls physics with no scoring or hoop involved.",
+      "description": "A bouncy, throwable toy ball found in every dorm room's social area. It's purely for fun -- realistic bounce-off-the-floor-and-walls physics with no scoring or hoop involved.",
       "category": "other",
-      "how_to_get": "Right-click (or left-click) a resting ball to pick it up. Each room normally has one \"source\" ball; while it's checked out, a fresh one won't appear at its spot until it's freed up again.",
-      "how_to_use": "Right-click to throw it in the direction you're looking. It bounces off floors and walls, slowing down until it comes to rest (or a thrown ball left alone long enough eventually returns to its spot). You can only carry one basketball at a time, and it can't be taken out of the room it belongs to.",
+      "how_to_get": "Right-click (or left-click) a resting ball to pick it up. Each room normally has exactly one \"source\" ball; while it's checked out, a fresh one won't appear at its spot until it's freed up again.",
+      "how_to_use": "Right-click to throw it in the direction you're looking. It bounces off floors, walls and closed doors with a real bounce sound, slowing down until it comes to rest. A thrown ball left resting untouched for 5 minutes despawns and, if its home rack is empty, reappears there. Up to 8 balls (placed + thrown) can exist in one room at once, and you can only carry one basketball yourself at a time -- it can't be taken out of the room it belongs to.",
       "rank_requirement": null,
       "icon_hint": "a classic orange basketball with black seam lines and small bounce/motion lines beneath it",
-      "notes": "No hoop or point-scoring mechanic exists for this feature at this time -- it currently plays as a physics toy rather than a competitive minigame with a winner.",
+      "notes": "Currently a dorm-only feature -- every live dorm has exactly one basketball spawn, and no act or the armory currently has one placed. The same admin placement tool can add a source ball to the Golden Trophy game template too (an in-code comment calls out Act 8, the lava room, as the intended spot), so this may appear in an act on a future map update. No hoop or point-scoring mechanic exists at this time -- it plays as a physics toy, not a competitive minigame with a winner. A purely decorative basketball hoop furniture piece also exists in the resource pack but has no functional connection to the ball or any scoring.",
       "icon": "assets/icons/diamondtrophy-items/basketball.png"
+    },
+    {
+      "id": "training-dummy",
+      "name": "Training Dummy",
+      "description": "A stationary practice target standing in every dorm room. It's not an item you pick up or carry -- it's a fixture of the dorm, there for testing weapons and combos with your party before a run.",
+      "category": "other",
+      "how_to_get": "Not obtained -- every player's dorm spawns one automatically in a fixed spot. It can't be moved, knocked back, or taken with you.",
+      "how_to_use": "Hit it with melee or shoot it with a bow/crossbow to test your weapons. It takes hits (the hurt animation and sound play) but can never be killed, knocked back, or pushed out of place -- pure target practice with no upkeep.",
+      "rank_requirement": null,
+      "icon_hint": "a humanoid straw/wood practice dummy standing on a small stand, scuff marks from repeated hits",
+      "notes": "Implemented as an invisible, unkillable MythicMobs mob wearing a ModelEngine model, frozen in place (no movement, no knockback). Punching it counts toward a hidden quest trigger, so it can contribute to relevant quests without needing an actual run."
+    },
+    {
+      "id": "run-completion-milestone-reward",
+      "name": "Run Completion Milestone Reward",
+      "description": "A one-off bonus prize for sticking with the game: your 5th, 10th, 15th... completed Diamond Trophy run automatically drops one random item into your Bag on top of the run's normal coin and XP payout.",
+      "category": "other",
+      "how_to_get": "Automatic. A run \"counts\" toward this the moment you clear at least one act and stay in the run a minimum amount of time -- dying in Act 1 and immediately restarting does not count, and neither does clearing Act 1 and instantly leaving. It does NOT require beating the Goblin King, and it is not affected by your run's S/A/B/C Quest Rating -- both of those only change your coin/XP payout, covered in the currencies and gameplay files. Every 5th qualifying run rolls one of: Common Crate, Common Key, Large Pocket Bag, or Rare Key (Common Crate is the most likely roll, Rare Key the least). This is unrelated to and stacks with the normal per-act and per-rating coin/XP rewards.",
+      "how_to_use": "Whatever you receive is an ordinary Bag item -- see the crates-and-keys and hub-bag-items files for what each one does.",
+      "rank_requirement": null,
+      "icon_hint": "no dedicated icon -- represented by whichever Bag item it actually pays out (Common Crate, Common Key, Large Pocket Bag or Rare Key)",
+      "notes": "This is the closest thing Diamond Trophy has to a distinct 'boss reward chest', and it is worth documenting precisely because it is easy to describe wrong: it is a per-account run-count milestone, not a per-boss-kill or Quest-Rating-scaled reward. There is no separate treasure-chest item or GUI for it -- the reward simply lands directly in your Bag."
     }
   ],
   "related_systems": [
     "diamondtrophy-gameplay",
     "diamondtrophy-guis",
-    "currencies"
+    "currencies",
+    "hub-materials",
+    "hub-bag-items",
+    "crates-and-keys"
   ],
   "open_questions": [
-    "Whether a hoop / scoring objective for the basketball is planned but not yet built, versus intentionally just a physics toy, was not documented anywhere found."
+    "Whether a hoop / scoring objective for the basketball is planned but not yet built, versus intentionally just a physics toy, was not documented anywhere found -- a decorative (non-functional) hoop furniture piece exists in the resource pack, which may be a hint of unfinished plans rather than pure set dressing.",
+    "diamondtrophy-gameplay.json previously described the Act 9 boss reward as \"a treasure chest scaled by the run's Quest Rating.\" Re-verified against DiamondThropyCore's source directly: no such item exists. The rating (S/A/B/C) only scales the network-coins bonus (currencies file); the only per-run item payout is the unrelated Run Completion Milestone Reward entry above, which triggers on run count, not on rating or on beating the boss specifically. The gameplay file has been corrected to match."
   ]
 }

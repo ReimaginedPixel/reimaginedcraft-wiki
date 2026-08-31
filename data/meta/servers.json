@@ -11,7 +11,7 @@
       "name": "Hub",
       "description": "The network's lobby and first-join server. It is a social and cosmetic space rather than a minigame: players spawn here between games, chat, browse the store and their profile, equip cosmetics, and play two standalone lobby activities (a parkour course and a PvP arena).",
       "category": "server",
-      "how_to_get": "Automatic — every player is placed on the Hub the first time they connect, and returns here by default after leaving Diamond Trophy or using /hub.",
+      "how_to_get": "Automatic - every player is placed on the Hub the first time they connect, and returns here by default after leaving Diamond Trophy or using /hub.",
       "how_to_use": "Use /hub or /spawn to return here from anywhere. From the Hub, open the server selector to travel to Diamond Trophy, open your profile with /profile (aliases /me, /prof) to see friends/stats/achievements/tags/leaderboards, open the store with /store (aliases /shop, /buy), or try the parkour course with /parkour start.",
       "rank_requirement": null,
       "icon_hint": "a small floating grass-and-stone lobby island with a signpost and a hot-air-balloon-style banner, cheerful pastel colors",
@@ -26,18 +26,18 @@
       "how_to_use": "Use /gt (or /goldentrophy) to join a game, leave one, ready up, or follow/accept/decline an invite from a partied friend. Use /dormroom or /room to return to your party's private dorm room while waiting. Team up first with /party invite, accept, decline, list, kick and leader (or the shorthand /invite <player>), which also lets you pull a friend over from another server into your party.",
       "rank_requirement": null,
       "icon_hint": "a golden trophy cup sitting on a small floating arena platform with faint sparkle particles",
-      "notes": "Everything about the actual game — mob encounters, acts, dorm rooms, and the party system used to team up for a run — lives entirely on this server; the Hub only points players toward it."
+      "notes": "Everything about the actual game - mob encounters, acts, dorm rooms, and the party system used to team up for a run - lives entirely on this server; the Hub only points players toward it."
     },
     {
       "id": "limbo",
       "name": "Limbo",
       "description": "A minimal fallback holding area, not a place to play. It only appears if the Hub is temporarily down or restarting.",
       "category": "server",
-      "how_to_get": "Never entered on purpose — a player is placed here automatically only if the Hub cannot be reached at the moment they connect or are sent back.",
+      "how_to_get": "Never entered on purpose - a player is placed here automatically only if the Hub cannot be reached at the moment they connect or are sent back.",
       "how_to_use": "There is nothing to do here; it exists purely so a player stays connected instead of being kicked. Once the Hub is available again, rejoining normally returns a player to it.",
       "rank_requirement": null,
       "icon_hint": "a plain grey void platform with a single flickering lantern, sparse and empty",
-      "notes": "No shops, cosmetics, or commands function here — it is intentionally bare."
+      "notes": "No shops, cosmetics, or commands function here - it is intentionally bare."
     }
   ],
   "systems_breakdown": [
@@ -69,7 +69,7 @@
     {
       "system": "bag",
       "scope": "network",
-      "note": "Everything a player collects — items, cosmetics, materials, crate rewards — lives in one bag that is identical no matter which server they open it from."
+      "note": "Everything a player collects - items, cosmetics, materials, crate rewards - lives in one bag that is identical no matter which server they open it from."
     },
     {
       "system": "daily-chest",
@@ -99,7 +99,7 @@
   ],
   "related_systems": ["ranks", "friends-party", "tags", "levels-achievements", "bag", "daily-chest", "currencies", "quest-board", "hub-cosmetics", "cosmetics-altar", "materials-and-rarity", "hub-guis", "diamondtrophy-gameplay"],
   "open_questions": [
-    "Whether any part of the quest board, cosmetics, or materials systems can be interacted with directly on Diamond Trophy (versus only stored/synced there) was not independently re-verified for this file — see each system's own data file for the authoritative breakdown.",
+    "Whether any part of the quest board, cosmetics, or materials systems can be interacted with directly on Diamond Trophy (versus only stored/synced there) was not independently re-verified for this file - see each system's own data file for the authoritative breakdown.",
     "The exact ids other systems use in their own data files are assumed to match the slugs listed in related_systems/systems_breakdown here; confirm against those files if the ids differ."
   ]
 }

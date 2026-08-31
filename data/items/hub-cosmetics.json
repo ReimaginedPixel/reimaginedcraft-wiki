@@ -2,7 +2,7 @@
   "id": "hub-cosmetics",
   "title": "Cosmetics Catalogue",
   "scope": "network",
-  "summary": "Every named cosmetic confirmed in the network's current configuration: hats, back/body cosmetics, a balloon, and off-hand items, made at the crafting altar (see the Cosmetics & Crafting Altar system). Despite the filename, these are network-wide items — anything crafted on one server can be worn on any of them. A few are exclusive to Diamond Trophy's own materials, and one (Headphones) is not craftable at all and only comes from a Rare Crate.",
+  "summary": "Every named cosmetic confirmed in the network's current configuration: hats, back/body cosmetics, a balloon, and off-hand items, made at the crafting altar (see the Cosmetics & Crafting Altar system). Despite the filename, these are network-wide items - anything crafted on one server can be worn on any of them. A few are exclusive to Diamond Trophy's own materials, and one (Headphones) is not craftable at all and only comes from a Rare Crate.",
   "how_to_access": "Craft most of these at the crafting altar (right-click the furniture, or /altar for MVIP+). Equip owned ones from the profile menu's Cosmetics button (/cosmetics) or the in-world wardrobe.",
   "entries": [
     {
@@ -24,7 +24,7 @@
       "description": "A pair of over-ear headphones worn as a hat.",
       "category": "hat",
       "rarity": null,
-      "how_to_get": "Not craftable at the altar at all — the only confirmed way to get this is a rare pull from a Rare Crate's chase rewards.",
+      "how_to_get": "Not craftable at the altar at all - the only confirmed way to get this is a rare pull from a Rare Crate's chase rewards.",
       "how_to_use": "Equip from the Cosmetics menu once owned; worn in the helmet slot.",
       "rank_requirement": null,
       "icon_hint": "purple over-ear headphones worn like a hat, no visible cable",
@@ -37,7 +37,7 @@
       "description": "A tall, formal top hat. Flavor text calls it dressing up \"for formal parkour.\"",
       "category": "hat",
       "rarity": "Rare",
-      "how_to_get": "Craft at the altar. Needs a solid amount of common gathering material, some leather, and a little glass shard material.",
+      "how_to_get": "Craft at the altar (needs a solid amount of common gathering material, some leather, and a little glass shard material), OR get it directly, already finished, as one of the guaranteed \"chase\" roll outcomes when opening a Rare Crate - no crafting needed if you get it that way.",
       "how_to_use": "Equip from the Cosmetics menu once owned; worn in the helmet slot.",
       "rank_requirement": null,
       "icon_hint": "a sky-blue silk top hat with a thin band",
@@ -50,11 +50,11 @@
       "description": "A carved pumpkin worn as a hat, joked about as \"seasonal, in the sense that you decide the season.\"",
       "category": "hat",
       "rarity": "Uncommon",
-      "how_to_get": "Craft at the altar. Needs a modest amount of common gathering material and a little of the \"warm\" crafting powder.",
+      "how_to_get": "Craft at the altar (needs a modest amount of common gathering material and a little of the \"warm\" crafting powder), OR get it directly, already finished, as one of the possible outcomes of a Common Crate's bonus \"chase\" roll (that bonus roll only fires some of the time, and this is one of several things it can land on) - no crafting needed if you get it that way.",
       "how_to_use": "Equip from the Cosmetics menu once owned; worn in the helmet slot.",
       "rank_requirement": null,
       "icon_hint": "a carved jack-o'-lantern pumpkin worn as a hat, orange with a green stem",
-      "notes": "Uncommon rarity.",
+      "notes": "Uncommon rarity. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/pumpkin_hat.png",
       "icon": "assets/icons/hub-cosmetics/pumpkin-hat.png"
     },
     {
@@ -76,11 +76,11 @@
       "description": "A plain orange plastic bucket, worn upside-down as a hat. Described in the altar's own recipe notes as \"nobody asked for this. You found it anyway.\"",
       "category": "hat",
       "rarity": "Legendary",
-      "how_to_get": "Craft at the altar using only Orange Plastic — an extremely rare Diamond Trophy easter-egg material (a small chance from smashing pots, or a rarer boss drop). The recipe itself needs very few of it.",
+      "how_to_get": "Craft at the altar using only Orange Plastic - an extremely rare Diamond Trophy easter-egg material (a small chance from smashing pots, or a rarer boss drop). The recipe itself needs very few of it.",
       "how_to_use": "Equip from the Cosmetics menu once owned; worn in the helmet slot.",
       "rank_requirement": null,
       "icon_hint": "a plain orange plastic bucket worn upside-down as a hat",
-      "notes": "Marked Legendary rarity despite the tiny recipe — the joke is that Orange Plastic itself is the hard part to find. Materials are Diamond Trophy-exclusive; the cosmetic can still be worn anywhere.",
+      "notes": "Marked Legendary rarity despite the tiny recipe - the joke is that Orange Plastic itself is the hard part to find. Materials are Diamond Trophy-exclusive; the cosmetic can still be worn anywhere.",
       "icon": "assets/icons/hub-cosmetics/orange-bucket.png"
     },
     {
@@ -89,7 +89,7 @@
       "description": "A shell worn on the back, joked about as \"portable cover, questionable speed.\"",
       "category": "body",
       "rarity": "Rare",
-      "how_to_get": "Craft at the altar using a solid amount of common gathering material, the \"cold\" crafting powder, and a little forged steel.",
+      "how_to_get": "Craft at the altar (using a solid amount of common gathering material, the \"cold\" crafting powder, and a little forged steel), OR get it directly, already finished, as one of the guaranteed \"chase\" roll outcomes when opening a Rare Crate - no crafting needed if you get it that way.",
       "how_to_use": "Equip from the Cosmetics menu once owned; renders on your back.",
       "rank_requirement": null,
       "icon_hint": "a rounded blue-green turtle shell worn on the back like a helmet/backpack",
@@ -119,7 +119,7 @@
       "how_to_use": "Equip from the Cosmetics menu once owned; renders on your back.",
       "rank_requirement": null,
       "icon_hint": "a full pair of large white-and-pink feathered angel wings",
-      "notes": "Mythic rarity — the top tier.",
+      "notes": "Mythic rarity - the top tier.",
       "icon": "assets/icons/hub-cosmetics/angel-wings.png"
     },
     {
@@ -141,7 +141,7 @@
       "description": "A balloon that floats above and follows you on a leash. Described plainly as \"it follows you. That is the whole feature.\"",
       "category": "balloon",
       "rarity": "Uncommon",
-      "how_to_get": "Craft at the altar using a modest amount of common gathering material and the \"cold\" crafting powder.",
+      "how_to_get": "Craft at the altar (using a modest amount of common gathering material and the \"cold\" crafting powder), OR get it directly, already finished, as one of the possible outcomes of a Common Crate's bonus \"chase\" roll (that bonus roll only fires some of the time) - no crafting needed if you get it that way.",
       "how_to_use": "Equip from the Cosmetics menu once owned; floats above your head on a visible leash and can be recoloured (dye support is on for this one).",
       "rank_requirement": null,
       "icon_hint": "a light-blue balloon on a string, floating just above where a player's head would be",
@@ -155,10 +155,10 @@
       "category": "offhand",
       "rarity": "Uncommon",
       "how_to_get": "Craft at the altar using a modest amount of common gathering material plus a little leather.",
-      "how_to_use": "This is a NetworkCore-only off-hand cosmetic (CosmeticsCore has no off-hand category). It's meant to render automatically in your off hand whenever that hand is empty — but see the open question below about whether that path currently works for a player to select/use.",
+      "how_to_use": "This is a NetworkCore-only off-hand cosmetic (CosmeticsCore has no off-hand category). It's meant to render automatically in your off hand whenever that hand is empty - but see the open question below about whether that path currently works for a player to select/use.",
       "rank_requirement": null,
       "icon_hint": "a small hand-held bouquet of colourful flowers",
-      "notes": "Uncommon rarity. As of this audit, no in-game command or menu was found that lets a player choose which off-hand cosmetic (if any) is actually shown, so whether this currently displays for anyone is unclear — see the system file's open_questions.",
+      "notes": "Uncommon rarity. As of this audit, no in-game command or menu was found that lets a player choose which off-hand cosmetic (if any) is actually shown, so whether this currently displays for anyone is unclear - see the system file's open_questions. It was also briefly a possible Common Crate chase-roll outcome; that entry has since been commented out of the live table (pending the off-hand equip fix), so crafting at the altar is the only current route to owning it.",
       "icon": "assets/icons/hub-cosmetics/bouquet.png"
     },
     {
@@ -168,10 +168,10 @@
       "category": "offhand",
       "rarity": "Rare",
       "how_to_get": "Craft at the altar using a solid amount of common gathering material, the \"warm\" crafting powder, and a little glow-powder material.",
-      "how_to_use": "Same off-hand mechanism as Bouquet — see notes.",
+      "how_to_use": "Same off-hand mechanism as Bouquet - see notes.",
       "rank_requirement": null,
       "icon_hint": "a small lit lantern with a warm glow, held out in one hand",
-      "notes": "Rare rarity. Same unresolved off-hand equip question as Bouquet — see the system file's open_questions.",
+      "notes": "Rare rarity. Same unresolved off-hand equip question as Bouquet - see the system file's open_questions.",
       "icon": "assets/icons/hub-cosmetics/lantern.png"
     },
     {
@@ -180,21 +180,22 @@
       "description": "A worn plush toy, held in the off hand. Described as \"it has seen things.\"",
       "category": "offhand",
       "rarity": "Epic",
-      "how_to_get": "Craft at the altar once you own its Blueprint (drops from a Rare Crate). Needs a large amount of common gathering material, leather, glow-powder material, and a little luck-essence material, plus a chunk of network coins.",
-      "how_to_use": "Same off-hand mechanism as Bouquet and Lantern — see notes.",
+      "how_to_get": "Craft at the altar once you own its Blueprint. Needs a large amount of common gathering material, leather, glow-powder material, and a little luck-essence material, plus a chunk of network coins. NOT CURRENTLY OBTAINABLE IN PRACTICE: the Blueprint's item definition still lists \"Rare Crates\" as its source, but its entry has been commented out of the live Rare Crate chase-roll table (the recipe's own comment explains this was pulled deliberately, the same day Bouquet's crate appearance was pulled, pending the off-hand equip fix) - so as of this audit there is no active drop table anywhere on the network that grants the Blueprint, and the recipe is unreachable until either the Blueprint is restored to a table or a player was given one before it was removed.",
+      "how_to_use": "Same off-hand mechanism as Bouquet and Lantern - see notes.",
       "rank_requirement": null,
       "icon_hint": "a worn, slightly lumpy plush toy, held in one hand",
-      "notes": "Epic rarity. Also currently pulled from crate reward pools for the same reason as Bouquet/Lantern — see the system file's open_questions.",
+      "notes": "Epic rarity. Also currently pulled from crate reward pools for the same reason as Bouquet/Lantern - see the system file's open_questions.",
       "icon": "assets/icons/hub-cosmetics/plush.png"
     }
   ],
   "related_systems": [
     "cosmetics-altar",
     "materials-and-rarity",
-    "hub-guis"
+    "hub-guis",
+    "hub-blueprints"
   ],
   "open_questions": [
-    "Whether off-hand cosmetics (Bouquet, Lantern, Plush) can currently be equipped/displayed by a player at all is unresolved — see cosmetics-altar.json's open_questions for detail.",
+    "Whether off-hand cosmetics (Bouquet, Lantern, Plush) can currently be equipped/displayed by a player at all is unresolved - see cosmetics-altar.json's open_questions for detail.",
     "Headphones has no listed rarity tier in configuration."
   ]
 }

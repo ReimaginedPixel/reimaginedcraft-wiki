@@ -3,7 +3,7 @@
   "title": "Hub GUIs",
   "scope": "hub",
   "summary": "An index of every player-facing inventory menu on the Hub server that isn't already documented as its own topic. The Hub's front door is the Player Profile menu (identity, friends, stats, achievements, tags, leaderboards and Discord linking all share one frame) and the Server / Minigame Selector (the GUI that sends players to game servers through the proxy). Bag, the Quest Board, the Daily Chest calendar and the Cosmetics wardrobe are full systems in their own right and are only referenced here.",
-  "how_it_works": "Every Hub menu is a plain chest-style inventory GUI opened with a command, a hotbar item, or (for the quest board) right-clicking a placed piece of furniture. The Player Profile is the biggest one: its main page is a hub of navigation buttons, and clicking most of them opens a shared sub-page frame (the same player-card rail down the left side, a content grid in the middle, and scroll/search controls) for Friends, Stats, Achievements, Tags and Leaderboards. Stats, Achievements and Leaderboards each sit behind a game-category picker first (pick Hub, Diamond Trophy, etc., then see that category's content); Diamond Trophy and Hub are the only categories currently live; Elevator Chaos, Mace Crush and Survival show as 'coming soon'. Two buttons on the main profile page hand off to other plugins rather than opening a HubCore-built screen: Cosmetics runs /cosmetics (the wardrobe belongs to CosmeticsCore) and Settings runs /settings (the settings panel belongs to NetworkCore) — there is no separate settings GUI in HubCore itself. A /store command exists but currently just shows a 'coming soon' message; there is no store menu yet.",
+  "how_it_works": "Every Hub menu is a plain chest-style inventory GUI opened with a command, a hotbar item, or (for the quest board) right-clicking a placed piece of furniture. The Player Profile is the biggest one: its main page is a hub of navigation buttons, and clicking most of them opens a shared sub-page frame (the same player-card rail down the left side, a content grid in the middle, and scroll/search controls) for Friends, Stats, Achievements, Tags and Leaderboards. Stats, Achievements and Leaderboards each sit behind a game-category picker first (pick Hub, Diamond Trophy, etc., then see that category's content); Diamond Trophy and Hub are the only categories currently live; Elevator Chaos, Mace Crush and Survival show as 'coming soon'. Two buttons on the main profile page hand off to other plugins rather than opening a HubCore-built screen: Cosmetics runs /cosmetics (the wardrobe belongs to CosmeticsCore) and Settings runs /settings (the settings panel belongs to NetworkCore) - there is no separate settings GUI in HubCore itself. A /store command exists but currently just shows a 'coming soon' message; there is no store menu yet.",
   "how_to_access": "Command list: /profile (aliases /me, /prof) for the profile menu; /servers (aliases /selector, /play, /games, /minigames) for the server selector; /store (aliases /shop, /buy) currently shows a 'coming soon' notice only. Hotbar items also open menus: the compass in slot 4 opens the server selector, and a dedicated profile item opens the profile menu.",
   "guis": [
     {
@@ -139,7 +139,7 @@
         {
           "slot": "large tile (Survival)",
           "item": "Grass block icon",
-          "action": "Coming soon — clicking plays a denied sound, no server behind it yet"
+          "action": "Coming soon - clicking plays a denied sound, no server behind it yet"
         },
         {
           "slot": "large tile (Elevator Chaos)",
@@ -165,7 +165,7 @@
       "title": "Store",
       "description": "Placeholder commands for a future in-game store; no menu exists yet.",
       "how_to_open": "/store, /shop, /buy",
-      "notes": "Running any of these commands currently just shows a 'The store is coming soon!' action-bar message and plays a denied sound — there is no store GUI implemented yet.",
+      "notes": "Running any of these commands currently just shows a 'The store is coming soon!' action-bar message and plays a denied sound - there is no store GUI implemented yet.",
       "icon": "assets/icons/hub-guis/store.png"
     },
     {
@@ -210,7 +210,7 @@
   ],
   "open_questions": [
     "Whether Friends, Tags, Achievements, Leaderboards and Discord-linking mechanics get their own dedicated data files elsewhere in this wiki, or stay documented only as profile sub-pages here, was not specified for this research pass.",
-    "Elevator Chaos, Mace Crush and Survival are shown in both the profile's game picker and the server selector as 'coming soon' with no live server behind them yet — dates were not found and should not be guessed.",
+    "Elevator Chaos, Mace Crush and Survival are shown in both the profile's game picker and the server selector as 'coming soon' with no live server behind them yet - dates were not found and should not be guessed.",
     "The exact wording/thresholds for achievement unlock requirements per game were not enumerated here (achievement definitions come from a shared NetworkCore config); see the achievements/stats topic if one exists."
   ]
 }
