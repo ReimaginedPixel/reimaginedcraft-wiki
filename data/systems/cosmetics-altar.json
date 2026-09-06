@@ -3,8 +3,8 @@
   "title": "Cosmetics & Crafting Altar",
   "scope": "network",
   "summary": "The crafting altar turns gathered materials into wearable cosmetics: hats, back/body cosmetics and off-hand items. It works the same way on every server, so a cosmetic crafted on Diamond Trophy can be worn in the Hub and vice versa. Recipes cost materials (and sometimes network coins), take real time to finish, and are queued in six craft slots of which your rank opens two to six. Some of the best recipes are locked until you use a Blueprint of the matching type and rarity.",
-  "how_it_works": "You interact with the altar in one of two ways: right-click the physical crafting altar (a stone-and-wood altar model placed in the world), which is open to every player, or use the /altar command to open the same menu from anywhere, which is an MVIP-and-up convenience rather than a requirement - the furniture itself never requires a rank.\n\nThe altar is one screen. Down the left are your six craft slots, showing what is being made right now with a live countdown, where a finished craft is collected, and which slots your rank has not opened yet. Top-middle is a preview card. The middle is a list of eight things per page, paged with the two arrows and narrowed with the search (a sign you type into), the kind filter (hats, body, off hand, items), and a 'showing' toggle that hides what you already own. Three banners at the bottom switch what the list shows: Things to craft (every recipe), Your materials (every gathering material, greyed out where you have none), and Chests & blueprints (the crates, keys and blueprints you hold).\n\nClicking anything in the list selects it and fills the preview card with its full detail - for a recipe, every ingredient with how many you have versus how many you need, the coin cost, the craft time, and the reason you cannot craft it yet if you cannot. Clicking the card is the only thing that spends anything: it starts the craft, or uses the blueprint. Nothing happens on a single click in the list.\n\nBlueprints are typed and tiered rather than tied to one cosmetic: a 'Legendary Hat Blueprint', an 'Epic Body Blueprint', a 'Mythic Wings Blueprint'. Using one (select it on the chests tab, click its card) consumes it and permanently unlocks a random locked recipe of that type and rarity you do not have yet; the card lists which recipes it could still open. If you already know every recipe it could open, using it pays out a bundle of materials of similar worth instead, so a duplicate is never wasted. Until a locked recipe is opened it shows as a grey '???' tile naming the blueprint that opens it.\n\nStarting a craft consumes the materials (and coins) immediately and begins a countdown; how long a craft takes depends on the cosmetic's rarity unless the recipe overrides it: roughly 5 minutes for Common, 15 minutes for Uncommon, 1 hour for Rare, 4 hours for Epic, 12 hours for Legendary, and 24 hours for Mythic. The countdown keeps running while you are offline or on another server and survives a restart. A finished craft glows in its slot until you click to collect it (right-click an unfinished one to cancel and get everything back); a finished-but-uncollected craft keeps occupying its slot.\n\nHow many crafts you can have running at once depends on your rank: Player 2, VIP 3, MVIP 4, Elite 5, Champion (and staff) 6. All six slots are always drawn; the ones above your rank are locked and say which rank opens them. Getting demoted never cancels a craft in progress.\n\nOnce you own a cosmetic, hats and back/body cosmetics are equipped through the Cosmetics menu - the profile menu's Cosmetics button or /cosmetics - which is a separate wardrobe-style interface, plus an in-world wardrobe room. A hat occupies your actual helmet slot; putting on a real helmet takes the hat off until the helmet comes off again. Several cosmetics are animated (the Golden Crown floats and turns above your head, the Top Hat's feathers sway, the Pumpkin Hat's insides bob, the Headphones pulse and let out a music note now and then, the Angel Wings float and flap, the Jetpack shakes and flares when you jump); those are drawn as animated models on the player and can also be seen by the wearer.\n\nThe off hand is different: it is this network's own slot. /offhand lists the off-hand cosmetics you own and lets you hold one or nothing. It is only ever shown while your off hand is genuinely empty - hold a shield or a totem and it simply is not put back until the hand is empty again. The Lantern's sparks drift and blink and the Bouquet's roses sway. The slot is switched off on Diamond Trophy, where the off hand is a real weapon slot.",
-  "how_to_access": "Right-click the physical crafting altar furniture in the world (open to everyone), or use /altar to open the same menu from anywhere (an MVIP+ convenience). Equip owned hats and body cosmetics from the profile menu's Cosmetics button (runs /cosmetics) or via the in-world wardrobe; pick an off-hand cosmetic with /offhand.",
+  "how_it_works": "You interact with the altar in one of two ways: right-click the physical crafting altar (a stone-and-wood altar model placed in the world), which is open to every player, or use the /altar command to open the same menu from anywhere, which is an MVIP-and-up convenience rather than a requirement - the furniture itself never requires a rank.\n\nThe altar is one screen. Down the left are your six craft slots, showing what is being made right now with a live countdown, where a finished craft is collected, and which slots your rank has not opened yet. Top-middle is a preview card. The middle is a list of eight things per page, paged with the two arrows and narrowed with the search (a sign you type into), the kind filter (hats, body, off hand, items), and a 'showing' toggle that hides what you already own. Three banners at the bottom switch what the list shows: Things to craft (every recipe), Your materials (every gathering material, greyed out where you have none), and Chests & blueprints (the crates, keys and blueprints you hold).\n\nClicking anything in the list selects it and fills the preview card with its full detail - for a recipe, every ingredient with how many you have versus how many you need, the coin cost, the craft time, and the reason you cannot craft it yet if you cannot. Clicking the card is the only thing that spends anything: it starts the craft, or uses the blueprint. Nothing happens on a single click in the list.\n\nBlueprints are typed and tiered rather than tied to one cosmetic: a 'Legendary Hat Blueprint', an 'Epic Body Blueprint', a 'Mythic Wings Blueprint'. Using one (select it on the chests tab, click its card) consumes it and permanently unlocks a random locked recipe of that type and rarity you do not have yet; the card lists which recipes it could still open. If you already know every recipe it could open, using it pays out a bundle of materials of similar worth instead, so a duplicate is never wasted. Until a locked recipe is opened it shows as a grey '???' tile naming the blueprint that opens it.\n\nStarting a craft consumes the materials (and coins) immediately and begins a countdown; how long a craft takes depends on the cosmetic's rarity unless the recipe overrides it: roughly 5 minutes for Common, 15 minutes for Uncommon, 1 hour for Rare, 4 hours for Epic, 12 hours for Legendary, and 24 hours for Mythic. The countdown keeps running while you are offline or on another server and survives a restart. A finished craft glows in its slot until you click to collect it (right-click an unfinished one to cancel and get everything back); a finished-but-uncollected craft keeps occupying its slot.\n\nHow many crafts you can have running at once depends on your rank: Player 2, VIP 3, MVIP 4, Elite 5, Champion (and staff) 6. All six slots are always drawn; the ones above your rank are locked and say which rank opens them. Getting demoted never cancels a craft in progress.\n\nOnce you own a cosmetic, you wear it from the Cosmetics menu - the profile menu's Cosmetics button, or /cosmetics (also /wardrobe, and /offhand for the off-hand tab). It has one tab per slot: Hat, Body and Off Hand. Everything the network defines is listed; what you own is in colour and what you do not is greyed out and says to craft it at the altar. Clicking an owned cosmetic wears it, clicking it again takes it off, and 'Wear nothing' empties the slot. The Top Hat and the Headphones can be recoloured: right-click them while worn to open a page of colours. Only the parts drawn to take a colour change, so the top hat's band stays black.\n\nWhat you are wearing shows on your inventory screen: a hat sits in the helmet square, an off-hand cosmetic in the off-hand square, and a body cosmetic puts a marker in the chest square. None of them can be taken out, dropped or lost on death - they are not really items you own, they are how the game draws what you are wearing.\n\nA hat occupies your actual helmet slot, so a real helmet takes the square and the hat comes back the moment the helmet comes off; the same rule covers the off hand, which is only ever shown while your off hand is genuinely empty - hold a shield or a totem and the cosmetic simply is not put back until the hand is free. The off-hand slot is switched off on Diamond Trophy, where the off hand is a real weapon slot.\n\nSeveral cosmetics are animated: the Golden Crown turns and floats above your head, the Top Hat's feathers blow sideways, the Pumpkin Hat's insides bob, the Headphones pulse and let out a music note now and then, the Angel Wings flap and rise, the Jetpack shakes and flares when you jump, the Lantern's sparks drift and blink and the Bouquet's roses sway. Hats and held items animate by changing model several times a second, and wings and jetpacks are drawn beside you and move with you exactly, with no lag - you can see your own in third person.",
+  "how_to_access": "Right-click the physical crafting altar furniture in the world (open to everyone), or use /altar to open the same menu from anywhere (an MVIP+ convenience). Wear what you own from the profile menu's Cosmetics button, or /cosmetics (aliases /wardrobe and /offhand, which opens on the off-hand tab).",
   "guis": [
     {
       "id": "crafting-altar",
@@ -12,41 +12,91 @@
       "description": "The altar's one screen: craft slots, a preview card, a paged list with three tabs, search, filter and a showing toggle.",
       "how_to_open": "Right-click the crafting altar furniture, or run /altar (MVIP+).",
       "slots": [
-        { "slot": "top right, red tab", "item": "Close", "action": "Closes the menu" },
-        { "slot": "rows 2-4, columns 2-3 (six brown slots)", "item": "Craft slots", "action": "A running craft with its countdown and progress bar (right-click to cancel), a finished craft (click to collect), a free slot, or a slot locked until a named rank" },
-        { "slot": "row 2, column 5 (peach card)", "item": "Preview card", "action": "Full detail of whatever is selected in the list; clicking it starts the craft or uses the blueprint" },
-        { "slot": "row 2, columns 7-8", "item": "Previous / Next page", "action": "Pages the list when it has more than eight entries" },
-        { "slot": "row 2, column 9", "item": "Search", "action": "Opens a sign to type part of a name; right-click clears the search" },
-        { "slot": "row 3, column 9", "item": "Filter", "action": "On the craft tab, cycles Everything, Hat, Body, Off Hand, Item" },
-        { "slot": "row 4, column 9", "item": "Showing", "action": "Craft tab: show every recipe or hide the cosmetics you own. Materials tab: show every material or only the ones you have" },
-        { "slot": "rows 3-4, columns 5-8 (eight slots)", "item": "The list", "action": "Recipes, materials, or your crates/keys/blueprints depending on the tab; click one to select it" },
-        { "slot": "row 5, columns 5-7 (red, olive, teal banners)", "item": "Materials / Things to craft / Chests & blueprints", "action": "Switch what the list shows" }
+        {
+          "slot": "top right, red tab",
+          "item": "Close",
+          "action": "Closes the menu"
+        },
+        {
+          "slot": "rows 2-4, columns 2-3 (six brown slots)",
+          "item": "Craft slots",
+          "action": "A running craft with its countdown and progress bar (right-click to cancel), a finished craft (click to collect), a free slot, or a slot locked until a named rank"
+        },
+        {
+          "slot": "row 2, column 5 (peach card)",
+          "item": "Preview card",
+          "action": "Full detail of whatever is selected in the list; clicking it starts the craft or uses the blueprint"
+        },
+        {
+          "slot": "row 2, columns 7-8",
+          "item": "Previous / Next page",
+          "action": "Pages the list when it has more than eight entries"
+        },
+        {
+          "slot": "row 2, column 9",
+          "item": "Search",
+          "action": "Opens a sign to type part of a name; right-click clears the search"
+        },
+        {
+          "slot": "row 3, column 9",
+          "item": "Filter",
+          "action": "On the craft tab, cycles Everything, Hat, Body, Off Hand, Item"
+        },
+        {
+          "slot": "row 4, column 9",
+          "item": "Showing",
+          "action": "Craft tab: show every recipe or hide the cosmetics you own. Materials tab: show every material or only the ones you have"
+        },
+        {
+          "slot": "rows 3-4, columns 5-8 (eight slots)",
+          "item": "The list",
+          "action": "Recipes, materials, or your crates/keys/blueprints depending on the tab; click one to select it"
+        },
+        {
+          "slot": "row 5, columns 5-7 (red, olive, teal banners)",
+          "item": "Materials / Things to craft / Chests & blueprints",
+          "action": "Switch what the list shows"
+        }
       ],
       "notes": "A recipe you cannot craft says exactly why on its tile and its card: not loaded here, needs a blueprint, not enough materials, not enough coins, or all craft slots busy. Rarity is shown as a drawn tag rather than a word on every tooltip here and in the bag."
     },
     {
       "id": "offhand-picker",
       "title": "Off hand",
-      "description": "Pick which owned off-hand cosmetic to hold when your off hand is empty, or hold nothing.",
-      "how_to_open": "/offhand (not available on Diamond Trophy).",
+      "description": "The off-hand tab of the Cosmetics menu. /offhand still opens it directly.",
+      "how_to_open": "/offhand, or the Off Hand tab in /cosmetics (not on Diamond Trophy).",
       "slots": [
-        { "slot": "first row", "item": "One tile per owned off-hand cosmetic", "action": "Click to hold it; the one you hold glows" },
-        { "slot": "bottom right", "item": "Hold nothing", "action": "Puts the cosmetic away" }
+        {
+          "slot": "first row",
+          "item": "One tile per owned off-hand cosmetic",
+          "action": "Click to hold it; the one you hold glows"
+        },
+        {
+          "slot": "bottom right",
+          "item": "Hold nothing",
+          "action": "Puts the cosmetic away"
+        }
       ],
       "notes": "Plain menu with no background art of its own."
     },
     {
       "id": "cosmetics-wardrobe",
       "title": "Cosmetics (Wardrobe)",
-      "description": "Where you put on and take off hats and body cosmetics you have unlocked. This screen belongs to a separate third-party plugin (CosmeticsCore), not to the altar, so its exact internal layout is not something this document can verify in detail.",
-      "how_to_open": "Profile menu -> Cosmetics button (runs /cosmetics), or the /cosmetics command directly. A separate in-world wardrobe area also exists.",
-      "notes": "Covers Hat, Body and Balloon categories. The off hand is not part of this menu; use /offhand. Dyeing is not available for any current cosmetic."
+      "description": "Where you wear, take off and recolour what you have unlocked. One tab per slot; everything the network defines is listed, with what you do not own greyed out.",
+      "how_to_open": "Profile menu -> Cosmetics button (runs /cosmetics), or /cosmetics directly. /wardrobe is the same menu; /offhand opens it on the off-hand tab.",
+      "notes": "Tabs: Hat, Body, Off Hand (the off-hand tab is absent on Diamond Trophy). Click to wear, click again to take off, 'Wear nothing' to empty a slot. Right-click a worn Top Hat or Headphones to recolour it."
     }
   ],
-  "related_systems": ["materials-and-rarity", "daily-chest", "hub-guis", "ranks", "hub-cosmetics", "hub-blueprints"],
+  "related_systems": [
+    "materials-and-rarity",
+    "daily-chest",
+    "hub-guis",
+    "ranks",
+    "hub-cosmetics",
+    "hub-blueprints"
+  ],
   "open_questions": [
     "The exact physical location of the crafting altar furniture in the Hub is not written down anywhere in text form that this research could find (it is placed by hand in the world).",
-    "The in-world 'wardrobe' teleport command belongs to the third-party CosmeticsCore plugin, not this network's own code, so its exact name/aliases were not independently verified from source.",
     "Headphones (a hat obtainable only from Rare Crates, not the altar) has no rarity tier listed in configuration, so no rarity is given for it.",
     "Four cosmetics that existed as placeholders before this update (Turtle Shell, Cannon Pack, Blue Balloon, Plush) are not obtainable at all right now - no recipe, no crate, no wardrobe entry - until they have models. They are expected back."
   ]
