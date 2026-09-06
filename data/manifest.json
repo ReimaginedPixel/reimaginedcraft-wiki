@@ -29,8 +29,7 @@
   "open_coverage_notes": [
     "Achievements and Quest Board entries are representative samples, not the full pool (50 achievements and dozens of quests exist; see each file's own notes for counts).",
     "The in-game store (/store) and the real-money purchase flow for VIP/MVIP/Elite/Champion are not built yet - see ranks.json open_questions.",
-    "Off-hand cosmetics (Bouquet, Lantern, Plush) may not currently be equippable in-game - see cosmetics-altar.json open_questions.",
-    "Blueprint: Plush cannot currently be obtained by any active drop table (removed from the Rare Crate loot table pending the off-hand equip fix) - see hub-blueprints.json.",
+    "Four placeholder cosmetics (Turtle Shell, Cannon Pack, Blue Balloon, Plush) are not obtainable until they have models - see hub-cosmetics.json open_questions.",
     "The Cosmetic Shard bag item has no live sink - no altar recipe currently consumes it - see hub-bag-items.json open_questions."
   ]
 }

@@ -27,7 +27,7 @@
       "how_to_use": "Open it from the Bag (consumes one Rare Key) for a large coin payout, rarer crafting materials, and a guaranteed bonus 'chase' roll that can include a cosmetic. Trying to open one with no key just shows it locked.",
       "rank_requirement": null,
       "icon_hint": "an ornate purple-and-black trimmed chest with a faint magical glow, pixel-art icon",
-      "notes": "The main source of the rare Blueprint items that gate a handful of top-tier cosmetic recipes (Golden Crown, Jetpack, Angel Wings, Plush) at the crafting altar, and of the Headphones hat, which isn't craftable at all.",
+      "notes": "The main source of the Blueprint items (Legendary Hat, Epic Body, Mythic Wings) that open the top-tier cosmetic recipes at the crafting altar, and of the Headphones hat, which isn't craftable at all. Its chase roll can also hand out a finished Top Hat or Lantern.",
       "icon": "assets/icons/crates-and-keys/rare-crate.png"
     },
     {

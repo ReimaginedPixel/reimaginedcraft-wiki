@@ -2,56 +2,44 @@
   "id": "hub-blueprints",
   "title": "Blueprints",
   "scope": "network",
-  "summary": "Four rare Bag items that permanently unlock a top-tier cosmetic recipe at the Crafting Altar. A Blueprint is never consumed - finding one just means the recipe stops showing as a locked silhouette in the altar menu and becomes craftable for its normal material/coin cost, the same as any other recipe. They are their own category in NetworkCore's item registry (category materials, group blueprints) - not gathering materials, and not cosmetics themselves - which is why they get their own file here rather than living in hub-materials.json or hub-cosmetics.json.",
-  "how_to_access": "View owned Blueprints in the Bag under Materials, or from the Crafting Altar menu itself (a recipe you don't have the Blueprint for is shown locked). Once owned, the matching recipe unlocks permanently - it never needs to be found again, even after crafting the cosmetic.",
+  "summary": "Bag items that open the locked recipes at the Crafting Altar. A blueprint is typed and tiered - 'a Legendary Hat Blueprint' - rather than tied to one cosmetic: using it consumes it and permanently unlocks a random locked recipe of that type and rarity you do not already have; when you already know every recipe it could open, it pays out a bundle of materials of similar worth instead. They stack, so holding two is two chances at two different recipes. They are their own group in the Bag's Materials category (blueprints), not gathering materials and not cosmetics themselves.",
+  "how_to_access": "View owned Blueprints in the Bag under Materials, or on the Crafting Altar's Chests & blueprints tab. Use one there: select it, then click its preview card, which also lists which recipes it could still open. A locked recipe shows on the craft tab as a grey '???' tile naming the blueprint that opens it.",
   "entries": [
     {
-      "id": "blueprint-golden-crown",
-      "name": "Blueprint: Golden Crown",
-      "description": "Unlocks the Golden Crown recipe at the altar.",
+      "id": "blueprint-legendary-hat",
+      "name": "Legendary Hat Blueprint",
+      "description": "Unlocks a Legendary hat recipe at the altar.",
       "category": "materials/blueprints",
       "how_to_get": "A possible outcome of the guaranteed \"chase\" roll when opening a Rare Crate.",
-      "how_to_use": "Own it, then craft the Golden Crown at the altar (900 Base Material, 150 Leather, 70 Forged Steel, 11 Rainbow Powder, 10 Stardust, 6,000 coins; Legendary, roughly a 12-hour craft). The Blueprint itself is never consumed.",
+      "how_to_use": "At the altar's Chests & blueprints tab. Currently the only Legendary hat recipe is the Golden Crown (900 Base Material, 150 Leather, 70 Forged Steel, 11 Rainbow Powder, 10 Stardust, 6,000 coins; roughly a 12-hour craft), so the first one always opens that; a second one pays 900 Base Material, 11 Rainbow Powder and 10 Stardust instead.",
       "rank_requirement": null,
-      "icon_hint": "a rolled-up parchment scroll tied with a golden ribbon, a small crown sketch visible on the visible edge",
+      "icon_hint": "a rolled blueprint sheet with a small hat drawn on it; the rarity shows as a golden name and a Legendary tag in the tooltip",
       "rarity": "Legendary",
-      "notes": "Non-stackable - owning one is a permanent unlock, not a quantity. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_crown.png"
+      "notes": "Stackable and consumed on use. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_hat.png (shared by every hat blueprint of any rarity)."
     },
     {
-      "id": "blueprint-jetpack",
-      "name": "Blueprint: Jetpack",
-      "description": "Unlocks the Jetpack recipe at the altar.",
+      "id": "blueprint-epic-body",
+      "name": "Epic Body Blueprint",
+      "description": "Unlocks an Epic body cosmetic recipe at the altar.",
       "category": "materials/blueprints",
       "how_to_get": "A possible outcome of the guaranteed \"chase\" roll when opening a Rare Crate.",
-      "how_to_use": "Own it, then craft the Jetpack at the altar (500 Base Material, 100 Warm Powder, 30 Forged Steel, 4 Rainbow Powder, 2,000 coins; Epic, roughly a 4-hour craft). The Blueprint itself is never consumed.",
+      "how_to_use": "At the altar's Chests & blueprints tab. Currently the only Epic body recipe is the Jetpack (500 Base Material, 100 Warm Powder, 30 Forged Steel, 4 Rainbow Powder, 2,000 coins; roughly a 4-hour craft); a second one pays 500 Base Material, 30 Forged Steel and 4 Rainbow Powder instead.",
       "rank_requirement": null,
-      "icon_hint": "a rolled-up parchment scroll tied with a ribbon, a small jetpack sketch visible on the visible edge",
+      "icon_hint": "a rolled blueprint sheet with a small backpack shape drawn on it",
       "rarity": "Epic",
-      "notes": "Non-stackable - owning one is a permanent unlock, not a quantity. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_jetpack.png"
+      "notes": "Stackable and consumed on use. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_body.png."
     },
     {
-      "id": "blueprint-angel-wings",
-      "name": "Blueprint: Angel Wings",
-      "description": "Unlocks the Angel Wings recipe at the altar.",
+      "id": "blueprint-mythic-wings",
+      "name": "Mythic Wings Blueprint",
+      "description": "Unlocks a Mythic wings recipe at the altar.",
       "category": "materials/blueprints",
-      "how_to_get": "A possible outcome of the guaranteed \"chase\" roll when opening a Rare Crate - the rarest of the three active Blueprint outcomes in that pool, making this the hardest Blueprint to find.",
-      "how_to_use": "Own it, then craft Angel Wings at the altar (1,500 Base Material, 200 Cold Powder, 100 Glow Powder, 14 Luck Essence, 16 Stardust, 12,000 coins - the single most expensive cosmetic recipe on the network; Mythic, roughly a 24-hour craft). The Blueprint itself is never consumed.",
+      "how_to_get": "A possible outcome of the guaranteed \"chase\" roll when opening a Rare Crate - the rarest of the three Blueprint outcomes in that pool, making this the hardest Blueprint to find.",
+      "how_to_use": "At the altar's Chests & blueprints tab. Currently the only Mythic wings recipe is Angel Wings (1,500 Base Material, 200 Cold Powder, 100 Glow Powder, 14 Luck Essence, 16 Stardust, 12,000 coins - the most expensive recipe on the network; roughly a 24-hour craft); a second one pays 1,500 Base Material, 14 Luck Essence and 16 Stardust instead.",
       "rank_requirement": null,
-      "icon_hint": "a rolled-up parchment scroll tied with a white-and-pink ribbon, a small feather/wing sketch visible on the visible edge",
+      "icon_hint": "a rolled blueprint sheet with a small pair of wings drawn on it",
       "rarity": "Mythic",
-      "notes": "Non-stackable - owning one is a permanent unlock, not a quantity. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_angel_wings.png"
-    },
-    {
-      "id": "blueprint-plush",
-      "name": "Blueprint: Plush",
-      "description": "Unlocks the Plush off-hand recipe at the altar.",
-      "category": "materials/blueprints",
-      "how_to_get": "NOT CURRENTLY OBTAINABLE IN-GAME. Its item definition lists \"Rare Crates\" as the source, and it used to be a possible outcome of the Rare Crate's guaranteed \"chase\" roll, but that table entry has since been commented out of the live configuration (the same day, and for the same reason, that the Bouquet off-hand cosmetic was pulled from the Common Crate's chase table) pending a fix to how off-hand cosmetics get equipped. As of this audit no active drop table, quest, chest or altar recipe grants this item.",
-      "how_to_use": "Own it, then craft the Plush off-hand at the altar (500 Base Material, 100 Leather, 30 Glow Powder, 4 Luck Essence, 2,000 coins; Epic). The Blueprint itself is never consumed - but since it currently cannot be obtained, the Plush recipe is unreachable for any player who did not already own one before it was pulled.",
-      "rank_requirement": null,
-      "icon_hint": "a rolled-up parchment scroll tied with a ribbon, a small plush-toy sketch visible on the visible edge",
-      "rarity": "Epic",
-      "notes": "Non-stackable. Real texture exists (rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_plush.png) even though the item is not currently reachable in-game - it is fully defined, just not granted by anything live."
+      "notes": "Wings are worn as a body cosmetic but have their own blueprint type, so a Body blueprint can never open them and this one can never open the Jetpack. Real texture: rc_cosmetics/resourcepack/rc_cosmetics/textures/item/blueprint_wings.png."
     }
   ],
   "related_systems": [
@@ -62,6 +50,6 @@
     "materials-and-rarity"
   ],
   "open_questions": [
-    "Whether Blueprint: Plush will be restored to the Rare Crate table (or handed out another way) once the off-hand equip path exists is not decided anywhere in the current configuration - see hub-cosmetics.json's Plush and Bouquet entries and cosmetics-altar.json's open_questions for the underlying off-hand issue."
+    "Blueprint icons for balloon and off-hand types exist in the resource pack, but no balloon or off-hand recipe is currently locked, so no blueprint item of those types is defined yet."
   ]
 }
