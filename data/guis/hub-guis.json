@@ -63,6 +63,11 @@
           "action": "Opens the Leaderboards sub-page"
         },
         {
+          "slot": "Quests",
+          "item": "Quest board icon",
+          "action": "Closes the menu and runs /quests, which opens the quest board for VIP and above; everyone else is pointed to the quest board in the hub"
+        },
+        {
           "slot": "Cosmetics",
           "item": "Cosmetics icon",
           "action": "Closes the menu and runs /cosmetics (CosmeticsCore's wardrobe; see the dedicated cosmetics-altar data file)"
